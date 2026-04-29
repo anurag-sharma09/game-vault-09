@@ -1,220 +1,281 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { FiExternalLink, FiHeart, FiStar, FiMonitor, FiCpu, FiHardDrive } from 'react-icons/fi';
-import { GiGamepad } from 'react-icons/gi';
-import { fetchGameById } from '../services/api';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Play, Download, Heart, Star, ChevronLeft, Film, Monitor, Smartphone, Tv2, Globe, Calendar, Users } from 'lucide-react';
+import { fetchGameById, toggleFavorite, logPlayed, getReviews, addReview } from '../services/api';
+import { useAuth } from '../context/AuthContext';
+import DownloadModal from '../components/DownloadModal';
+import TrailerModal from '../components/TrailerModal';
+import ReviewCard from '../components/ReviewCard';
 import toast from 'react-hot-toast';
 
-const sourceColor = { Steam: '#1b2838', 'Epic Games': '#121212', 'Play Store': '#01875f', 'App Store': '#0071e3', GOG: '#86328a', 'Battle.net': '#009ae4', Origin: '#f56c2d', 'Official Site': '#374151' };
-const sourceEmoji = { Steam: '🎮', 'Epic Games': '🎯', 'Play Store': '📱', 'App Store': '🍎', GOG: '💾', 'Battle.net': '⚔️', 'Origin': '🔵', 'Official Site': '🌐' };
-
-const platformStyle = { PC: 'badge-pc', Mobile: 'badge-mobile', Console: 'badge-console', 'Cross-Platform': 'badge-genre' };
-
-const RatingBar = ({ label, value, max = 10 }) => (
-  <div style={{ marginBottom: '0.5rem' }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px', fontSize: '0.82rem', color: '#9CA3AF' }}>
-      <span>{label}</span><span style={{ color: '#8B5CF6' }}>{value}/10</span>
+function Stars({ rating, size = 14 }) {
+  const n = Math.round((rating / 10) * 5);
+  return (
+    <div className="flex items-center gap-[2px]">
+      {[1,2,3,4,5].map(i => <Star key={i} size={size} fill={i <= n ? '#FFD32A' : 'none'} color={i <= n ? '#FFD32A' : 'var(--text-4)'} />)}
     </div>
-    <div style={{ height: '4px', background: '#1F2D45', borderRadius: '2px', overflow: 'hidden' }}>
-      <div style={{ height: '100%', width: `${(value / max) * 100}%`, background: 'linear-gradient(90deg, #8B5CF6, #06B6D4)', borderRadius: '2px', transition: 'width 1s ease' }} />
+  );
+}
+
+function Stat({ icon: Icon, label, value }) {
+  return (
+    <div className="text-center">
+      <Icon size={16} color="var(--text-3)" className="mx-auto mb-1" />
+      <div className="font-[var(--font-head)] font-bold text-base text-white">{value}</div>
+      <div className="text-[0.72rem] text-[#475569]">{label}</div>
     </div>
-  </div>
-);
+  );
+}
+
+function SysRow({ k, v }) {
+  return (
+    <div className="flex justify-between items-start py-2.5 border-b border-white/[0.06]">
+      <span className="text-[0.8rem] text-[#475569] font-semibold min-w-[80px]">{k}</span>
+      <span className="text-[0.8rem] text-white text-right max-w-[55%]">{v}</span>
+    </div>
+  );
+}
+
+const TABS = ['Overview', 'Requirements', 'Reviews'];
 
 export default function GameDetailPage() {
   const { id } = useParams();
-  const [game, setGame]       = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError]     = useState('');
-  const [wishlisted, setWishlisted] = useState(false);
+  const { isAuthenticated, refreshUser } = useAuth();
+  const [game,        setGame]      = useState(null);
+  const [loading,     setLoading]   = useState(true);
+  const [reviews,     setReviews]   = useState([]);
+  const [tab,         setTab]       = useState('Overview');
+  const [showDl,      setShowDl]    = useState(false);
+  const [showTrailer, setTrailer]   = useState(false);
+  const [wishlisted,  setWishlisted] = useState(false);
+  const [newReview,   setNewReview] = useState({ rating: 5, comment: '' });
+  const [submitting,  setSubmitting] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    fetchGameById(id)
-      .then((res) => {
-        setGame(res.data.data);
-        const saved = JSON.parse(localStorage.getItem('gv_wishlist') || '[]');
-        setWishlisted(saved.includes(res.data.data._id));
-      })
-      .catch(() => setError('Game not found'))
-      .finally(() => setLoading(false));
+    (async () => {
+      setLoading(true);
+      try {
+        const [gr, rr] = await Promise.all([fetchGameById(id), getReviews(id)]);
+        setGame(gr.data.data);
+        setReviews(rr.data.data || []);
+        const saved = JSON.parse(localStorage.getItem('ag_wishlist') || '[]');
+        setWishlisted(saved.includes(id));
+      } catch { toast.error('Game not found'); }
+      finally { setLoading(false); }
+    })();
   }, [id]);
 
-  const toggleWishlist = () => {
-    const saved = JSON.parse(localStorage.getItem('gv_wishlist') || '[]');
-    let updated;
-    if (saved.includes(game._id)) {
-      updated = saved.filter(gid => gid !== game._id);
-      toast('Removed from wishlist', { icon: '💔' });
-    } else {
-      updated = [...saved, game._id];
-      toast.success('Added to wishlist!', { icon: '❤️' });
-    }
-    localStorage.setItem('gv_wishlist', JSON.stringify(updated));
+  const handlePlay = async () => {
+    if (!game) return;
+    if (isAuthenticated) { try { await logPlayed(id); refreshUser(); } catch (_) {} }
+    const url = game.playUrl || game.officialDownloadLink;
+    url ? window.open(url, '_blank', 'noopener') : setShowDl(true);
+  };
+
+  const handleWishlist = async () => {
+    if (isAuthenticated) { try { await toggleFavorite(id); } catch (_) {} }
+    const saved = JSON.parse(localStorage.getItem('ag_wishlist') || '[]');
+    const next = wishlisted ? saved.filter(x => x !== id) : [...saved, id];
+    localStorage.setItem('ag_wishlist', JSON.stringify(next));
     setWishlisted(!wishlisted);
+    toast.success(wishlisted ? 'Removed from favorites' : '♥ Added to favorites');
   };
 
-  const handleDownload = () => {
-    toast.success(`Redirecting to ${game.downloadSource}...`);
-    setTimeout(() => window.open(game.officialDownloadLink, '_blank', 'noopener,noreferrer'), 400);
+  const submitReview = async () => {
+    if (!isAuthenticated) { toast.error('Sign in to leave a review'); return; }
+    if (!newReview.comment.trim()) { toast.error('Write a comment'); return; }
+    setSubmitting(true);
+    try {
+      const res = await addReview(id, newReview);
+      setReviews(p => [res.data.data, ...p]);
+      setNewReview({ rating: 5, comment: '' });
+      toast.success('Review posted!');
+    } catch (e) { toast.error(e.response?.data?.message || 'Failed'); }
+    finally { setSubmitting(false); }
   };
 
-  if (loading) {
-    return (
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '3rem 1.5rem' }}>
-        <div className="skeleton" style={{ height: '400px', borderRadius: '16px', marginBottom: '2rem' }} />
-        <div className="skeleton" style={{ height: '30px', width: '60%', marginBottom: '1rem' }} />
-        <div className="skeleton" style={{ height: '16px', width: '40%' }} />
-      </div>
-    );
-  }
+  if (loading) return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="spinner" />
+    </div>
+  );
 
-  if (error || !game) {
-    return (
-      <div style={{ textAlign: 'center', padding: '5rem 1.5rem' }}>
-        <GiGamepad size={60} color="#4B5563" style={{ marginBottom: '1rem' }} />
-        <h2 style={{ fontFamily: 'Rajdhani', fontSize: '2rem', marginBottom: '0.5rem' }}>Game Not Found</h2>
-        <p style={{ color: '#6B7280', marginBottom: '1.5rem' }}>This game may have been removed or the link is invalid.</p>
-        <Link to="/" className="btn-primary">← Back to Home</Link>
-      </div>
-    );
-  }
-
-  const stars = Math.round((game.rating / 10) * 5);
+  if (!game) return (
+    <div className="min-h-screen flex items-center justify-center text-[#475569]">
+      Game not found.
+    </div>
+  );
 
   return (
-    <>
+    <div className="min-h-screen pb-20 w-full overflow-hidden">
       <Helmet>
-        <title>{game.title} — GameVault</title>
-        <meta name="description" content={`${game.description?.slice(0, 155)}...`} />
+        <title>{game.title} — AntiGravity Games</title>
+        <meta name="description" content={game.description?.slice(0, 155)} />
       </Helmet>
 
-      {/* ── Banner ─────── */}
-      <div style={{ position: 'relative', height: '380px', overflow: 'hidden' }}>
-        <img src={game.bannerUrl || game.imageUrl} alt={game.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { e.target.src = game.imageUrl; }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(8,11,20,0.1) 0%, rgba(8,11,20,0.98) 100%)' }} />
-        <div style={{ position: 'absolute', bottom: 0, left: 0, padding: '2rem 1.5rem', maxWidth: '1200px', width: '100%', margin: '0 auto', right: 0 }}>
-          <nav style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '1rem', fontSize: '0.82rem', color: '#6B7280' }}>
-            <Link to="/" style={{ color: '#6B7280', textDecoration: 'none' }}>Home</Link>
-            <span>/</span>
-            <Link to={`/category/${game.genre?.toLowerCase()}`} style={{ color: '#6B7280', textDecoration: 'none' }}>{game.genre}</Link>
-            <span>/</span>
-            <span style={{ color: '#D1D5DB' }}>{game.title}</span>
-          </nav>
-          <h1 style={{ fontFamily: 'Rajdhani, sans-serif', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700, color: '#F9FAFB', marginBottom: '0.5rem' }}>{game.title}</h1>
-          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-            {game.platform?.map(p => <span key={p} className={`badge ${platformStyle[p] || 'badge-genre'}`}>{p}</span>)}
-            <span className={`badge ${game.isFree ? 'badge-free' : 'badge-paid'}`}>{game.isFree ? 'FREE' : game.price}</span>
+      {/* Banner */}
+      <div className="relative h-[clamp(280px,45vw,520px)] overflow-hidden w-full">
+        <img src={game.bannerUrl || game.imageUrl} alt={game.title} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/15 via-[#0B0F19]/55 to-[#0B0F19]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19]/50 to-transparent" />
+
+        <div className="absolute top-20 left-0 right-0 px-6">
+          <div className="container">
+            <Link to="/games" className="inline-flex items-center gap-1.5 text-[0.82rem] font-semibold px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 text-white/60 bg-black/40 hover:text-white transition-colors w-fit">
+              <ChevronLeft size={14} /> Back to Games
+            </Link>
           </div>
         </div>
+
+        {game.trailerUrl && (
+          <motion.button whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
+            onClick={() => setTrailer(true)}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-black/60 border-2 border-white/40 backdrop-blur-md flex items-center justify-center transition-colors hover:border-white/80">
+            <Film size={26} color="white" />
+          </motion.button>
+        )}
       </div>
 
-      {/* ── Content ─────── */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1.5rem', display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 320px', gap: '2rem' }}>
-        
-        {/* Left Column */}
-        <div>
-          {/* Rating */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span className="stars" style={{ fontSize: '1.1rem' }}>{'★'.repeat(stars)}{'☆'.repeat(5 - stars)}</span>
-              <span style={{ fontFamily: 'Rajdhani', fontSize: '1.5rem', fontWeight: 700, color: '#F9FAFB' }}>{game.rating}/10</span>
-            </div>
-            <div style={{ color: '#6B7280', fontSize: '0.85rem' }}>{game.developer} • {game.releaseYear}</div>
-            <div style={{ color: '#6B7280', fontSize: '0.85rem' }}><FiStar size={12} style={{ marginRight: '4px' }} />{game.views?.toLocaleString()} views</div>
-          </div>
+      <div className="container relative z-10 -mt-8 w-full">
+        <div className="grid grid-cols-1 gap-8">
 
-          {/* Rating bar */}
-          <div style={{ background: '#111827', borderRadius: '12px', padding: '1.25rem', marginBottom: '1.5rem' }}>
-            <RatingBar label="Overall Rating" value={game.rating} />
-          </div>
+          {/* Layout: content left, sidebar right on lg */}
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-8">
 
-          {/* Description */}
-          <div style={{ background: '#111827', borderRadius: '12px', padding: '1.5rem', marginBottom: '1.5rem' }}>
-            <h2 style={{ fontFamily: 'Rajdhani', fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem', color: '#8B5CF6' }}>About This Game</h2>
-            <p style={{ color: '#D1D5DB', lineHeight: 1.8, fontSize: '0.95rem' }}>{game.description}</p>
-          </div>
-
-          {/* Tags */}
-          {game.tags?.length > 0 && (
-            <div style={{ background: '#111827', borderRadius: '12px', padding: '1.25rem', marginBottom: '1.5rem' }}>
-              <h2 style={{ fontFamily: 'Rajdhani', fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.75rem', color: '#F9FAFB' }}>Tags</h2>
-              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                {game.tags.map(tag => (
-                  <span key={tag} style={{ background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.2)', color: '#a78bfa', borderRadius: '20px', padding: '0.25rem 0.75rem', fontSize: '0.78rem' }}>
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* System Requirements */}
-          {game.systemRequirements && (
-            <div style={{ background: '#111827', borderRadius: '12px', padding: '1.5rem' }}>
-              <h2 style={{ fontFamily: 'Rajdhani', fontSize: '1.2rem', fontWeight: 700, marginBottom: '1rem', color: '#F9FAFB', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <FiMonitor size={18} color="#06B6D4" /> System Requirements
-              </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-                {[['OS', game.systemRequirements.os], ['CPU', game.systemRequirements.cpu], ['RAM', game.systemRequirements.ram], ['GPU', game.systemRequirements.gpu], ['Storage', game.systemRequirements.storage]].map(([key, val]) => (
-                  <div key={key} style={{ background: '#0D1117', borderRadius: '8px', padding: '0.75rem' }}>
-                    <div style={{ color: '#4B5563', fontSize: '0.72rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '4px' }}>{key}</div>
-                    <div style={{ color: '#D1D5DB', fontSize: '0.85rem' }}>{val}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Right Column — Download Card */}
-        <div>
-          <div style={{ background: '#111827', borderRadius: '16px', border: '1px solid #1F2D45', padding: '1.5rem', position: 'sticky', top: '80px' }}>
-            <img src={game.imageUrl} alt={game.title} style={{ width: '100%', borderRadius: '10px', marginBottom: '1.25rem', objectFit: 'cover', aspectRatio: '16/9' }} onError={e => e.target.style.display = 'none'} />
-
-            <div style={{ textAlign: 'center', marginBottom: '1.25rem' }}>
-              <div style={{ fontFamily: 'Rajdhani', fontSize: '2rem', fontWeight: 700, color: game.isFree ? '#10B981' : '#F97316' }}>
-                {game.isFree ? 'FREE' : game.price}
-              </div>
-              <div style={{ color: '#6B7280', fontSize: '0.82rem' }}>via {game.downloadSource}</div>
-            </div>
-
-            <button
-              id={`download-btn-${game._id}`}
-              onClick={handleDownload}
-              className="btn-download"
-              style={{ width: '100%', justifyContent: 'center', marginBottom: '0.75rem' }}
-            >
-              <FiExternalLink size={18} />
-              {game.isFree ? 'Play Free' : 'Get on ' + game.downloadSource}
-            </button>
-
-            <button
-              onClick={toggleWishlist}
-              style={{
-                width: '100%', background: wishlisted ? 'rgba(236,72,153,0.1)' : 'transparent',
-                border: `1px solid ${wishlisted ? '#EC4899' : '#1F2D45'}`, borderRadius: '10px',
-                color: wishlisted ? '#EC4899' : '#9CA3AF', padding: '0.65rem', cursor: 'pointer',
-                fontFamily: 'Rajdhani', fontWeight: 600, fontSize: '0.95rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', transition: 'all 0.2s',
-              }}
-            >
-              <FiHeart size={16} fill={wishlisted ? '#EC4899' : 'none'} />
-              {wishlisted ? 'Wishlisted' : 'Add to Wishlist'}
-            </button>
-
-            {/* Meta info */}
-            <div style={{ marginTop: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              {[['Developer', game.developer], ['Publisher', game.publisher], ['Genre', game.genre], ['Release', game.releaseYear]].map(([k, v]) => (
-                <div key={k} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.82rem', paddingBottom: '0.5rem', borderBottom: '1px solid #1F2D45' }}>
-                  <span style={{ color: '#6B7280' }}>{k}</span>
-                  <span style={{ color: '#D1D5DB', fontWeight: 500 }}>{v}</span>
+            {/* Main */}
+            <div className="flex flex-col min-w-0 w-full">
+              {/* Title row */}
+              <div className="bg-[#111827] border border-white/[0.06] rounded-2xl p-6 mb-6">
+                <div className="flex flex-wrap gap-1.5 mb-3.5">
+                  <span className="badge badge-primary">{game.genre}</span>
+                  {game.isFree && <span className="badge badge-green">Free to Play</span>}
+                  {game.isTrending && <span className="badge badge-orange">🔥 Trending</span>}
+                  {game.platform?.map(p => <span key={p} className="badge badge-gray">{p}</span>)}
                 </div>
-              ))}
+
+                <h1 className="font-[var(--font-head)] font-extrabold text-[clamp(1.8rem,4vw,2.5rem)] tracking-tight mb-2 text-white">{game.title}</h1>
+
+                <div className="flex flex-wrap gap-6 items-center mt-4">
+                  <div className="flex items-center gap-2">
+                    <Stars rating={game.rating} />
+                    <span className="font-[var(--font-head)] font-bold text-[1.1rem] text-white">{game.rating?.toFixed(1)}</span>
+                    <span className="text-[#475569] text-[0.82rem]">/ 10</span>
+                  </div>
+                  <div className="flex gap-6">
+                    <Stat icon={Calendar} label="Released" value={game.releaseYear} />
+                    <Stat icon={Users} label="Developer" value={game.developer?.split(' ')[0]} />
+                  </div>
+                </div>
+              </div>
+
+              {/* Tabs */}
+              <div className="flex flex-wrap gap-1 bg-[#0B1220] rounded-xl p-1 border border-white/[0.06] mb-6 w-full sm:w-fit">
+                {TABS.map(t => (
+                  <button key={t} onClick={() => setTab(t)}
+                    className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-150 flex-1 sm:flex-none ${
+                      tab === t ? 'bg-[#7C3AED] text-white shadow-[0_0_16px_rgba(124,58,237,0.35)]' : 'bg-transparent text-[#94A3B8] hover:text-white'
+                    }`}>
+                    {t}
+                  </button>
+                ))}
+              </div>
+
+              <AnimatePresence mode="wait">
+                {tab === 'Overview' && (
+                  <motion.div key="ov" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="bg-[#111827] border border-white/[0.06] rounded-2xl p-6">
+                    <p className="text-[#94A3B8] leading-relaxed mb-6">{game.description}</p>
+                    {game.tags?.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {game.tags.map(tag => <span key={tag} className="badge badge-gray">#{tag}</span>)}
+                      </div>
+                    )}
+                    {game.screenshots?.length > 0 && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+                        {game.screenshots.map((url, i) => (
+                          <img key={i} src={url} alt={`Screenshot ${i+1}`} className="rounded-xl object-cover w-full aspect-[16/9]" />
+                        ))}
+                      </div>
+                    )}
+                  </motion.div>
+                )}
+
+                {tab === 'Requirements' && (
+                  <motion.div key="req" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+                    className="bg-[#111827] border border-white/[0.06] rounded-2xl p-6">
+                    <h3 className="font-[var(--font-head)] font-bold text-[0.9rem] text-[#94A3B8] uppercase tracking-widest mb-4">System Requirements</h3>
+                    <SysRow k="OS"      v={game.systemRequirements?.os} />
+                    <SysRow k="CPU"     v={game.systemRequirements?.cpu} />
+                    <SysRow k="RAM"     v={game.systemRequirements?.ram} />
+                    <SysRow k="GPU"     v={game.systemRequirements?.gpu} />
+                    <SysRow k="Storage" v={game.systemRequirements?.storage} />
+                  </motion.div>
+                )}
+
+                {tab === 'Reviews' && (
+                  <motion.div key="rev" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex flex-col gap-4">
+                    {isAuthenticated && (
+                      <div className="bg-[#111827] border border-white/[0.06] rounded-2xl p-6">
+                        <h4 className="font-[var(--font-head)] font-bold text-[0.95rem] mb-3 text-white">Write a Review</h4>
+                        <div className="flex gap-1 mb-3.5">
+                          {[1,2,3,4,5].map(n => (
+                            <button key={n} onClick={() => setNewReview(r => ({ ...r, rating: n }))} className="text-2xl transition-transform duration-100 hover:scale-125">
+                              {n <= newReview.rating ? '★' : '☆'}
+                            </button>
+                          ))}
+                        </div>
+                        <textarea value={newReview.comment} onChange={e => setNewReview(r => ({ ...r, comment: e.target.value }))}
+                          className="input mb-3" rows={3} placeholder="Share your experience..." />
+                        <button onClick={submitReview} disabled={submitting} className={`btn btn-primary btn-sm ${submitting ? 'opacity-60 cursor-not-allowed' : ''}`}>
+                          {submitting ? 'Posting...' : 'Post Review'}
+                        </button>
+                      </div>
+                    )}
+                    {reviews.length === 0
+                      ? <p className="text-[#475569] text-center py-12 text-sm">No reviews yet. Be the first!</p>
+                      : reviews.map(r => <ReviewCard key={r._id} review={r} onDeleted={rid => setReviews(p => p.filter(x => x._id !== rid))} />)
+                    }
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Sidebar */}
+            <div className="w-full">
+              <div className="sticky top-[84px]">
+                <div className="bg-[#111827] border border-white/[0.06] rounded-2xl overflow-hidden w-full">
+                  <img src={game.imageUrl} alt={game.title} className="w-full aspect-[16/9] object-cover" />
+                  <div className="p-6 flex flex-col gap-3">
+                    <button onClick={handlePlay} className="btn btn-primary w-full justify-center py-3.5">
+                      <Play size={16} fill="white" /> Play Now
+                    </button>
+                    <button onClick={() => setShowDl(true)} className="btn btn-green w-full justify-center py-3.5">
+                      <Download size={16} /> Download Game
+                    </button>
+                    <button onClick={handleWishlist} className={`btn btn-ghost w-full justify-center py-3 ${wishlisted ? 'text-[#FF6B9D] border-[#FF6B9D]/40' : ''}`}>
+                      <Heart size={15} fill={wishlisted ? '#FF6B9D' : 'none'} color={wishlisted ? '#FF6B9D' : undefined} />
+                      {wishlisted ? 'In Favorites' : 'Add to Favorites'}
+                    </button>
+
+                    <div className="border-t border-white/[0.06] mt-2 pt-4 flex flex-col gap-2">
+                      {[['Developer', game.developer], ['Publisher', game.publisher], ['Released', game.releaseYear], ['Source', game.downloadSource], ['Price', game.isFree ? 'Free' : game.price]].map(([k,v]) => (
+                        <div key={k} className="flex justify-between text-[0.82rem]">
+                          <span className="text-[#475569]">{k}</span>
+                          <span className="font-semibold text-white">{v}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+
+      {showDl && <DownloadModal game={game} onClose={() => setShowDl(false)} />}
+      {showTrailer && <TrailerModal game={game} onClose={() => setTrailer(false)} />}
+    </div>
   );
 }

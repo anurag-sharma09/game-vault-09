@@ -36,13 +36,13 @@ const connectDB = async () => {
 const seedInMemoryDB = async () => {
   try {
     const Game = require('../models/Game');
-    const { games } = require('../scripts/seedGamesData'); // I'll split the data out
+    const { games: gamesData } = require('../scripts/seedGamesData');
     
     const count = await Game.countDocuments();
     if (count === 0) {
       console.log('🌱 Seeding in-memory database...');
-      await Game.insertMany(games);
-      console.log(`🎮 Seeded ${games.length} games successfully!`);
+      await Game.insertMany(gamesData);
+      console.log(`🎮 Seeded ${gamesData.length} games successfully!`);
     }
   } catch (error) {
     console.error('❌ In-memory seeding error:', error.message);

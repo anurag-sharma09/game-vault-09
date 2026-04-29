@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 /**
- * Game Schema — core data model for GameVault
+ * Game Schema — AntiGravity Games Platform
  */
 const gameSchema = new mongoose.Schema(
   {
@@ -27,7 +27,7 @@ const gameSchema = new mongoose.Schema(
     platform: {
       type: [String],
       required: true,
-      enum: ['PC', 'Mobile', 'Console', 'Cross-Platform'],
+      enum: ['PC', 'Mobile', 'Console', 'Cross-Platform', 'Browser'],
     },
     imageUrl: {
       type: String,
@@ -44,25 +44,46 @@ const gameSchema = new mongoose.Schema(
       default: 0,
     },
     systemRequirements: {
-      os: { type: String, default: 'Windows 10 64-bit' },
-      cpu: { type: String, default: 'Intel Core i5' },
-      ram: { type: String, default: '8 GB' },
-      gpu: { type: String, default: 'NVIDIA GTX 1060' },
+      os:      { type: String, default: 'Windows 10 64-bit' },
+      cpu:     { type: String, default: 'Intel Core i5' },
+      ram:     { type: String, default: '8 GB' },
+      gpu:     { type: String, default: 'NVIDIA GTX 1060' },
       storage: { type: String, default: '20 GB' },
     },
+    // Official primary download link (legacy)
     officialDownloadLink: {
       type: String,
-      required: [true, 'Official download link is required'],
+      default: '',
+    },
+    // Per-platform download links
+    downloadLinks: {
+      pc:      { type: String, default: '' },
+      android: { type: String, default: '' },
+      ios:     { type: String, default: '' },
+      console: { type: String, default: '' },
     },
     downloadSource: {
       type: String,
-      enum: ['Steam', 'Epic Games', 'Play Store', 'App Store', 'GOG', 'Battle.net', 'Origin', 'Official Site'],
+      enum: ['Steam', 'Epic Games', 'Play Store', 'App Store', 'GOG', 'Battle.net', 'Origin', 'Official Site', 'Xbox', 'PlayStation'],
       required: true,
+    },
+    // Browser play URL (null = not browser playable)
+    playUrl: {
+      type: String,
+      default: '',
+    },
+    isBrowserPlayable: {
+      type: Boolean,
+      default: false,
+    },
+    // YouTube video ID for trailer embed
+    trailerUrl: {
+      type: String,
+      default: '',
     },
     tags: {
       type: [String],
       default: [],
-      // e.g. ['free', 'low-end', 'multiplayer', 'open-world', 'singleplayer']
     },
     isFree: {
       type: Boolean,
@@ -100,10 +121,10 @@ const gameSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Text index for full-text search on title and description
+// Full-text search
 gameSchema.index({ title: 'text', description: 'text', tags: 'text' });
 
-// Virtual: compute trending score
+// Virtual trending score
 gameSchema.virtual('trendingScore').get(function () {
   return this.views * 0.4 + this.rating * 0.6;
 });

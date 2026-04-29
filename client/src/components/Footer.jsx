@@ -1,92 +1,89 @@
 import { Link } from 'react-router-dom';
-import { GiGamepad } from 'react-icons/gi';
-import { FiGithub, FiTwitter, FiYoutube } from 'react-icons/fi';
+import { Zap, GitBranch, MessageSquare, Video, MessageCircle, ExternalLink } from 'lucide-react';
 
-const GENRES = ['Action', 'RPG', 'Shooter', 'Strategy', 'Sports', 'Horror', 'Puzzle', 'Adventure'];
+const LINKS = {
+  'Browse': [
+    { label: 'All Games',   to: '/games' },
+    { label: 'Trending',    to: '/games?sort=views' },
+    { label: 'Free Games',  to: '/category/free' },
+    { label: 'Action',      to: '/category/action' },
+    { label: 'RPG',         to: '/category/rpg' },
+    { label: 'Multiplayer', to: '/category/multiplayer' },
+  ],
+  'Account': [
+    { label: 'Sign In',    to: '/login' },
+    { label: 'Register',   to: '/login' },
+    { label: 'Dashboard',  to: '/dashboard' },
+    { label: 'Favorites',  to: '/dashboard' },
+  ],
+  'Company': [
+    { label: 'Contact',    to: '/contact' },
+    { label: 'FAQ',        to: '/contact#faq' },
+    { label: 'Privacy',    to: '/' },
+    { label: 'Admin',      to: '/admin/login' },
+  ],
+};
+
+const SOCIALS = [
+  { Icon: MessageSquare, href: '#', label: 'Twitter' },
+  { Icon: Video,         href: '#', label: 'YouTube' },
+  { Icon: MessageCircle, href: '#', label: 'Discord' },
+  { Icon: GitBranch,     href: '#', label: 'GitHub' },
+];
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#080B14', borderTop: '1px solid #1F2D45', marginTop: '5rem', padding: '3rem 1.5rem 1.5rem' }}>
-      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2.5rem', marginBottom: '2.5rem' }}>
-          
+    <footer className="border-t border-white/[0.04] mt-20" style={{ background: '#0B1220' }}>
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+
           {/* Brand */}
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-              <div style={{ background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)', borderRadius: '8px', padding: '6px', display: 'flex' }}>
-                <GiGamepad size={18} color="white" />
+          <div className="lg:col-span-1">
+            <Link to="/" className="flex items-center gap-2.5 mb-4 shrink-0 w-fit">
+              <div className="w-[32px] h-[32px] rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7C3AED, #00D9FF)' }}>
+                <Zap size={16} fill="white" color="white" />
               </div>
-              <span style={{ fontFamily: 'Rajdhani, sans-serif', fontWeight: 700, fontSize: '1.3rem', background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>GameVault</span>
-            </div>
-            <p style={{ color: '#6B7280', fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '1rem' }}>
-              Discover, explore, and get redirected to official sources for your favorite games. We never host game files.
+              <span className="font-[var(--font-head)] font-extrabold text-[1.05rem] tracking-tight">
+                <span className="text-white">Anti</span><span className="text-[#00D9FF]">Gravity</span>
+              </span>
+            </Link>
+            <p className="text-[#475569] text-sm leading-relaxed mb-5 max-w-[280px]">
+              Discover and play the best games. Every link goes to the official source.
             </p>
-            <div style={{ display: 'flex', gap: '0.75rem' }}>
-              {[FiGithub, FiTwitter, FiYoutube].map((Icon, i) => (
-                <a key={i} href="#" style={{ color: '#4B5563', background: '#111827', padding: '8px', borderRadius: '8px', display: 'flex', transition: 'color 0.2s, background 0.2s' }}
-                  onMouseEnter={e => { e.currentTarget.style.color='#8B5CF6'; e.currentTarget.style.background='rgba(139,92,246,0.1)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.color='#4B5563'; e.currentTarget.style.background='#111827'; }}
-                >
-                  <Icon size={16} />
+            <div className="flex gap-2.5">
+              {SOCIALS.map(({ Icon, href, label }) => (
+                <a key={label} href={href}
+                  className="w-[34px] h-[34px] rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-[#475569] hover:text-white hover:border-white/[0.12] hover:bg-white/[0.08] transition-all duration-200"
+                  aria-label={label}>
+                  <Icon size={15} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Categories */}
-          <div>
-            <h4 style={{ fontFamily: 'Rajdhani, sans-serif', fontWeight: 700, color: '#F9FAFB', marginBottom: '1rem', fontSize: '1rem', letterSpacing: '0.05em' }}>CATEGORIES</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {GENRES.map(g => (
-                <Link key={g} to={`/category/${g.toLowerCase()}`}
-                  style={{ color: '#6B7280', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.target.style.color='#8B5CF6'}
-                  onMouseLeave={e => e.target.style.color='#6B7280'}
-                >
-                  {g}
-                </Link>
-              ))}
+          {/* Link cols */}
+          {Object.entries(LINKS).map(([group, links]) => (
+            <div key={group}>
+              <p className="text-[0.72rem] font-bold tracking-widest uppercase text-[#475569] mb-4">{group}</p>
+              <ul className="flex flex-col gap-2.5">
+                {links.map(l => (
+                  <li key={l.label}>
+                    <Link to={l.to} className="text-sm text-[#94A3B8] hover:text-white transition-colors duration-200">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 style={{ fontFamily: 'Rajdhani, sans-serif', fontWeight: 700, color: '#F9FAFB', marginBottom: '1rem', fontSize: '1rem', letterSpacing: '0.05em' }}>QUICK LINKS</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {[['Free Games', '/category/free'], ['Trending', '/'], ['Low-End PC', '/category/low-end'], ['Mobile Games', '/category/mobile'], ['Admin Panel', '/admin/login']].map(([label, path]) => (
-                <Link key={label} to={path}
-                  style={{ color: '#6B7280', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.target.style.color='#06B6D4'}
-                  onMouseLeave={e => e.target.style.color='#6B7280'}
-                >
-                  {label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Disclaimer */}
-          <div>
-            <h4 style={{ fontFamily: 'Rajdhani, sans-serif', fontWeight: 700, color: '#F9FAFB', marginBottom: '1rem', fontSize: '1rem', letterSpacing: '0.05em' }}>DISCLAIMER</h4>
-            <p style={{ color: '#4B5563', fontSize: '0.8rem', lineHeight: 1.7 }}>
-              GameVault does not host or distribute any game files. All "Download" buttons redirect users to official platforms like Steam, Epic Games, or Google Play Store. All trademarks belong to their respective owners.
-            </p>
-          </div>
+          ))}
         </div>
 
         {/* Bottom bar */}
-        <div style={{ borderTop: '1px solid #1F2D45', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          <p style={{ color: '#4B5563', fontSize: '0.8rem' }}>© 2024 GameVault. Built with MERN Stack.</p>
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            {['Privacy', 'Terms', 'Contact'].map(item => (
-              <a key={item} href="#" style={{ color: '#4B5563', textDecoration: 'none', fontSize: '0.8rem', transition: 'color 0.2s' }}
-                onMouseEnter={e => e.target.style.color='#9CA3AF'}
-                onMouseLeave={e => e.target.style.color='#4B5563'}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
+        <div className="border-t border-white/[0.04] mt-12 pt-6 flex flex-col sm:flex-row gap-4 justify-between items-center text-center sm:text-left">
+          <p className="text-sm text-[#475569]">© 2026 AntiGravity Games. All rights reserved.</p>
+          <p className="text-xs text-[#334155] flex items-center gap-1.5 justify-center sm:justify-start">
+            <ExternalLink size={12} /> All downloads redirect to official sources only
+          </p>
         </div>
       </div>
     </footer>

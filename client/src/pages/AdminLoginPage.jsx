@@ -1,91 +1,78 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { FiLock, FiMail, FiEye, FiEyeOff } from 'react-icons/fi';
-import { GiGamepad } from 'react-icons/gi';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Shield, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 
 export default function AdminLoginPage() {
-  const [form, setForm]         = useState({ email: '', password: '' });
-  const [showPass, setShowPass] = useState(false);
-  const [loading, setLoading]   = useState(false);
-  const { login } = useAuth();
-  const navigate  = useNavigate();
+  const [form, setForm]  = useState({ email: '', password: '' });
+  const [show, setShow]  = useState(false);
+  const [busy, setBusy]  = useState(false);
+  const { adminLogin }   = useAuth();
+  const navigate         = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const submit = async e => {
     e.preventDefault();
-    setLoading(true);
+    setBusy(true);
     try {
-      await login(form.email, form.password);
-      toast.success('Welcome back, Admin! 🎮');
+      await adminLogin(form.email, form.password);
+      toast.success('Welcome, Admin!');
       navigate('/admin');
     } catch (err) {
       toast.error(err.response?.data?.message || 'Invalid credentials');
-    } finally {
-      setLoading(false);
-    }
+    } finally { setBusy(false); }
   };
 
   return (
-    <>
-      <Helmet>
-        <title>Admin Login — GameVault</title>
-      </Helmet>
+    <div style={{ minHeight: '100svh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem', position: 'relative', overflow: 'hidden' }}>
+      <Helmet><title>Admin Login — AntiGravity Games</title></Helmet>
 
-      <div style={{ minHeight: '85vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem 1.5rem', background: 'radial-gradient(ellipse at center, rgba(139,92,246,0.08) 0%, transparent 60%)' }}>
-        <div style={{ width: '100%', maxWidth: '420px' }}>
-          {/* Logo */}
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <div style={{ display: 'inline-flex', background: 'linear-gradient(135deg, #8B5CF6, #06B6D4)', borderRadius: '16px', padding: '16px', marginBottom: '1rem' }}>
-              <GiGamepad size={36} color="white" />
-            </div>
-            <h1 style={{ fontFamily: 'Rajdhani, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '0.25rem' }}>Admin Login</h1>
-            <p style={{ color: '#6B7280', fontSize: '0.9rem' }}>GameVault Control Panel</p>
+      <div style={{ position: 'absolute', width: '500px', height: '500px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(108,92,231,0.1) 0%, transparent 70%)', top: '-150px', left: '-100px', pointerEvents: 'none' }} />
+
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+        style={{ width: '100%', maxWidth: '400px', position: 'relative', zIndex: 1 }}>
+
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <div style={{ width: '64px', height: '64px', borderRadius: '18px', background: 'linear-gradient(135deg, var(--primary), #9C89FF)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
+            <Shield size={28} color="white" />
           </div>
-
-          <div style={{ background: '#111827', border: '1px solid #1F2D45', borderRadius: '16px', padding: '2rem' }}>
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              {/* Email */}
-              <div>
-                <label htmlFor="admin-email" style={{ display: 'block', color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 500 }}>Email Address</label>
-                <div style={{ position: 'relative' }}>
-                  <FiMail style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#4B5563' }} size={16} />
-                  <input id="admin-email" type="email" required className="input-dark" placeholder="admin@gamevault.com"
-                    value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
-                    style={{ width: '100%', paddingLeft: '38px' }}
-                  />
-                </div>
-              </div>
-
-              {/* Password */}
-              <div>
-                <label htmlFor="admin-password" style={{ display: 'block', color: '#9CA3AF', fontSize: '0.85rem', marginBottom: '0.5rem', fontWeight: 500 }}>Password</label>
-                <div style={{ position: 'relative' }}>
-                  <FiLock style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#4B5563' }} size={16} />
-                  <input id="admin-password" type={showPass ? 'text' : 'password'} required className="input-dark" placeholder="••••••••"
-                    value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
-                    style={{ width: '100%', paddingLeft: '38px', paddingRight: '38px' }}
-                  />
-                  <button type="button" onClick={() => setShowPass(!showPass)}
-                    style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: '#4B5563', cursor: 'pointer', display: 'flex' }}>
-                    {showPass ? <FiEyeOff size={15} /> : <FiEye size={15} />}
-                  </button>
-                </div>
-              </div>
-
-              <button id="admin-login-submit" type="submit" className="btn-primary" disabled={loading}
-                style={{ justifyContent: 'center', padding: '0.75rem', fontSize: '1rem', opacity: loading ? 0.7 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}>
-                <FiLock size={16} /> {loading ? 'Signing in…' : 'Sign In'}
-              </button>
-            </form>
-
-            <p style={{ color: '#4B5563', fontSize: '0.78rem', textAlign: 'center', marginTop: '1.25rem', lineHeight: 1.6 }}>
-              First time? Register via <code style={{ color: '#8B5CF6', background: 'rgba(139,92,246,0.1)', padding: '2px 6px', borderRadius: '4px' }}>POST /api/auth/register</code>
-            </p>
-          </div>
+          <h1 style={{ fontFamily: 'var(--font-head)', fontWeight: 800, fontSize: '1.75rem', letterSpacing: '-0.03em', marginBottom: '0.375rem' }}>Admin Panel</h1>
+          <p style={{ color: 'var(--text-3)', fontSize: '0.875rem' }}>AntiGravity Games Control Center</p>
         </div>
-      </div>
-    </>
+
+        <div style={{ background: 'var(--card)', border: '1px solid var(--border-md)', borderRadius: 'var(--r-2xl)', padding: '2rem', boxShadow: 'var(--shadow-lg)' }}>
+          <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ position: 'relative' }}>
+              <Mail size={16} style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-3)', pointerEvents: 'none' }} />
+              <input type="email" placeholder="Admin email" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} required
+                className="input" style={{ paddingLeft: '42px' }} />
+            </div>
+            <div style={{ position: 'relative' }}>
+              <Lock size={16} style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-3)', pointerEvents: 'none' }} />
+              <input type={show ? 'text' : 'password'} placeholder="Password" value={form.password} onChange={e => setForm(f => ({ ...f, password: e.target.value }))} required
+                className="input" style={{ paddingLeft: '42px', paddingRight: '42px' }} />
+              <button type="button" onClick={() => setShow(!show)} style={{ position: 'absolute', right: '14px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-3)' }}>
+                {show ? <EyeOff size={16} /> : <Eye size={16} />}
+              </button>
+            </div>
+            <button type="submit" disabled={busy} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', padding: '0.875rem', marginTop: '0.5rem', opacity: busy ? 0.7 : 1 }}>
+              {busy
+                ? <div className="spinner" style={{ width: '18px', height: '18px', borderWidth: '2px', borderTopColor: '#fff' }} />
+                : <>Sign In as Admin <ArrowRight size={16} /></>
+              }
+            </button>
+          </form>
+          <p style={{ fontSize: '0.78rem', color: 'var(--text-3)', textAlign: 'center', marginTop: '1rem' }}>
+            Register first via <code style={{ color: 'var(--primary)', background: 'rgba(108,92,231,0.1)', padding: '2px 6px', borderRadius: '4px' }}>POST /api/auth/register</code>
+          </p>
+        </div>
+
+        <p style={{ textAlign: 'center', fontSize: '0.78rem', color: 'var(--text-3)', marginTop: '1rem' }}>
+          <Link to="/login" style={{ color: 'var(--primary)', fontWeight: 600 }}>← User Login</Link>
+        </p>
+      </motion.div>
+    </div>
   );
 }
