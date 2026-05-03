@@ -9,766 +9,1135 @@ export const categories = [
   {
     slug: 'action',
     name: 'Action',
-    blurb: 'Fast reaction shooters, battle royales, and high-pressure combat loops.',
+    blurb:
+      'Open combat sandboxes, high-speed battle royales, and aggressive gameplay built for instant momentum.',
     accent: 'from-fuchsia-500/30 via-violet-500/10 to-sky-500/30',
-  },
-  {
-    slug: 'adventure',
-    name: 'Adventure',
-    blurb: 'Quest-led worlds built for exploration, discovery, and cinematic pacing.',
-    accent: 'from-cyan-500/30 via-sky-500/10 to-indigo-500/30',
   },
   {
     slug: 'rpg',
     name: 'RPG',
-    blurb: 'Story-rich builds, gear systems, and progression-first worlds.',
+    blurb:
+      'Quest-heavy worlds, character builds, progression systems, and deep stories with official source links.',
     accent: 'from-violet-500/30 via-fuchsia-500/10 to-cyan-500/30',
+  },
+  {
+    slug: 'fps',
+    name: 'FPS',
+    blurb:
+      'First-person shooters spanning tactical team play, cinematic campaigns, and battle royale firefights.',
+    accent: 'from-rose-500/30 via-violet-500/10 to-blue-500/30',
   },
   {
     slug: 'racing',
     name: 'Racing',
-    blurb: 'Arcade speed, licensed tracks, and adrenaline-heavy driving.',
+    blurb:
+      'Festival racers, arcade time-trials, and mobile drift builds tuned for speed and style.',
     accent: 'from-blue-500/30 via-cyan-500/10 to-violet-500/30',
-  },
-  {
-    slug: 'sports',
-    name: 'Sports',
-    blurb: 'Competitive seasons, team play, and officially licensed arenas.',
-    accent: 'from-emerald-500/30 via-cyan-500/10 to-blue-500/30',
   },
   {
     slug: 'strategy',
     name: 'Strategy',
-    blurb: 'Smart macro decisions, long-session planning, and tactical dominance.',
-    accent: 'from-violet-500/30 via-slate-500/10 to-cyan-500/30',
+    blurb:
+      'Empire building, tactical planning, city management, and smart macro play that rewards patience.',
+    accent: 'from-indigo-500/30 via-violet-500/10 to-cyan-500/30',
   },
   {
-    slug: 'simulation',
-    name: 'Simulation',
-    blurb: 'Creative sandboxes and systems-heavy worlds that reward experimentation.',
-    accent: 'from-cyan-500/30 via-sky-500/10 to-teal-500/30',
+    slug: 'sports',
+    name: 'Sports',
+    blurb:
+      'Licensed football, basketball, skating, and competitive multiplayer sports experiences.',
+    accent: 'from-emerald-500/30 via-cyan-500/10 to-blue-500/30',
   },
   {
-    slug: 'horror',
-    name: 'Horror',
-    blurb: 'Dark atmosphere, survival tension, and pulse-raising co-op scares.',
-    accent: 'from-rose-500/30 via-fuchsia-500/10 to-blue-500/30',
-  },
-  {
-    slug: 'mobile-games',
-    name: 'Mobile Games',
-    blurb: 'Official mobile launches, live-service updates, and touchscreen-ready play.',
+    slug: 'indie',
+    name: 'Indie',
+    blurb:
+      'Stylish smaller-team releases with standout art direction, replayability, and inventive mechanics.',
     accent: 'from-cyan-500/30 via-violet-500/10 to-fuchsia-500/30',
   },
   {
-    slug: 'pc-games',
-    name: 'PC Games',
-    blurb: 'Launchers, storefronts, and premium desktop releases from legal sources.',
-    accent: 'from-indigo-500/30 via-violet-500/10 to-cyan-500/30',
+    slug: 'open-world',
+    name: 'Open World',
+    blurb:
+      'Large map-driven adventures, exploration loops, and sandbox freedom across premium legal destinations.',
+    accent: 'from-sky-500/30 via-blue-500/10 to-violet-500/30',
   },
 ]
 
 export const featuredStats = [
-  { value: 'Official Only', label: 'Every CTA opens a verified game or publisher source.' },
-  { value: 'PC + Mobile', label: 'Cross-platform browsing for desktop, console, and mobile players.' },
-  { value: 'Zero Piracy', label: 'No cracked files, mirrors, or unsafe redirects anywhere in the flow.' },
+  {
+    value: 'Official Links',
+    label: 'Every CTA opens an official store, publisher, or verified platform page.',
+  },
+  {
+    value: 'Image Driven',
+    label: 'Each game now includes a thumbnail, banner, and screenshot gallery in the data layer.',
+  },
+  {
+    value: 'Cross Platform',
+    label: 'PC, console, mobile, and Switch titles live together inside one premium discovery flow.',
+  },
 ]
 
-export const games = [
+const paletteMap = {
+  action: ['#d946ef', '#7c3aed', '#2563eb'],
+  rpg: ['#8b5cf6', '#22d3ee', '#3b82f6'],
+  fps: ['#fb7185', '#8b5cf6', '#2563eb'],
+  racing: ['#38bdf8', '#3b82f6', '#8b5cf6'],
+  strategy: ['#6366f1', '#0ea5e9', '#8b5cf6'],
+  sports: ['#22c55e', '#22d3ee', '#2563eb'],
+  indie: ['#2dd4bf', '#60a5fa', '#8b5cf6'],
+  'open-world': ['#38bdf8', '#7dd3fc', '#7c3aed'],
+}
+
+const priceLabels = {
+  Free: 'Free to Play',
+  Paid: 'Premium',
+  'Coming Soon': 'Coming Soon',
+}
+
+const screenshotLabels = ['Combat View', 'World Scan', 'Official Access']
+
+const gameConfigs = [
   {
-    id: 'cyberpunk-2077',
-    slug: 'cyberpunk-2077',
-    title: 'Cyberpunk 2077',
-    tagline: 'A neon-soaked open world built for players who want premium RPG scale.',
-    shortDescription:
-      'Browse Night City safely, check platform support, and jump to the official CD PROJEKT RED destination in one click.',
-    overview:
-      'Cyberpunk 2077 delivers a first-person action RPG experience filled with cinematic quests, layered character builds, and a sprawling futuristic cityscape.',
-    vaultNote:
-      'Game Vault keeps the discovery flow clean by routing players to the official source instead of random mirrors, fake installers, or questionable resale pages.',
-    genres: ['RPG', 'Action'],
-    categories: ['rpg', 'action', 'pc-games'],
-    platforms: ['PC', 'PlayStation 5', 'Xbox Series X|S'],
-    rating: 4.7,
-    popularity: 91,
-    releaseRank: 8,
-    priceModel: 'Paid',
-    priceLabel: 'Premium',
-    store: 'Official Store',
-    publisher: 'CD PROJEKT RED',
-    launchWindow: 'Ultimate Edition live now',
-    officialUrl: 'https://www.cyberpunk.net/us/en/',
-    websiteUrl: 'https://www.cyberpunk.net/us/en/',
-    playUrl: 'https://www.cyberpunk.net/us/en/',
-    palette: [
-      'rgba(192, 132, 252, 0.94)',
-      'rgba(56, 189, 248, 0.82)',
-      'rgba(37, 99, 235, 0.86)',
-    ],
-    featureTag: 'Story Rich',
-    supportedStores: ['Official Site', 'Steam', 'Epic Games', 'PlayStation Store', 'Xbox Store'],
-    highlights: ['Branching builds', 'Dense world design', 'Official expansion support'],
-    screenshots: [
-      {
-        title: 'Night City skyline',
-        caption: 'Skyscraper neon, traffic trails, and high-contrast city vibes.',
-      },
-      {
-        title: 'Mercenary loadouts',
-        caption: 'Swap implants, weapons, and hacking styles around your build.',
-      },
-      {
-        title: 'Cinematic story beats',
-        caption: 'Large-scale missions with premium presentation from start to finish.',
-      },
-    ],
-  },
-  {
-    id: 'fortnite',
-    slug: 'fortnite',
-    title: 'Fortnite',
-    tagline: 'Live events, creative islands, and squad drops inside one official ecosystem.',
-    shortDescription:
-      'Queue into Battle Royale, Zero Build, or creator-made experiences through Epic’s real platform links.',
-    overview:
-      'Fortnite mixes fast PvP action, creator-driven worlds, and a constant stream of seasonal content in a single cross-platform experience.',
-    vaultNote:
-      'Players can hit the official Epic destination directly from Game Vault without sorting through scam download pages or unofficial launchers.',
-    genres: ['Action', 'Shooter'],
-    categories: ['action', 'pc-games', 'mobile-games'],
-    platforms: ['PC', 'PlayStation 5', 'Xbox Series X|S', 'Nintendo Switch', 'Mobile'],
+    title: 'Grand Theft Auto V',
+    tagline:
+      'Open-world crime sandbox with driving, shooting, and deep side activities.',
+    description:
+      'Open-world crime sandbox with driving, shooting, and deep side activities.',
+    genres: ['Action', 'Open World'],
+    categories: ['action', 'open-world'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
     rating: 4.8,
     popularity: 99,
-    releaseRank: 12,
-    priceModel: 'Free',
-    priceLabel: 'Free to Play',
-    store: 'Epic Games',
-    publisher: 'Epic Games',
-    launchWindow: 'Current season live',
-    officialUrl: 'https://www.fortnite.com/',
-    websiteUrl: 'https://www.fortnite.com/',
-    playUrl: 'https://www.fortnite.com/',
-    palette: [
-      'rgba(168, 85, 247, 0.94)',
-      'rgba(34, 211, 238, 0.84)',
-      'rgba(37, 99, 235, 0.84)',
-    ],
-    featureTag: 'Live Event',
-    supportedStores: ['Epic Games', 'PlayStation Store', 'Xbox Store', 'Nintendo eShop'],
-    highlights: ['Cross-platform squads', 'Creator islands', 'Zero Build mode'],
-    screenshots: [
-      {
-        title: 'Battle Pass hub',
-        caption: 'Track season progression, cosmetics, and live quests in one place.',
-      },
-      {
-        title: 'Creator experiences',
-        caption: 'Jump from official modes into community islands without leaving the ecosystem.',
-      },
-      {
-        title: 'Squad landing zones',
-        caption: 'Fast drops, smart rotations, and cinematic late-game finishes.',
-      },
-    ],
+    releaseRank: 18,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Rockstar Games',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/3493/Grand_Theft_Auto_V/',
+    featureTag: 'Crime Sandbox',
   },
   {
-    id: 'genshin-impact',
-    slug: 'genshin-impact',
+    title: 'Cyberpunk 2077',
+    tagline:
+      'Futuristic open-world RPG with fast-paced combat and deep story choices.',
+    description:
+      'Futuristic open-world RPG with fast-paced combat and deep story choices.',
+    genres: ['Action RPG', 'Open World'],
+    categories: ['action', 'rpg', 'open-world'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.7,
+    popularity: 96,
+    releaseRank: 20,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'CD PROJEKT RED',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/1091500/Cyberpunk_2077/',
+    featureTag: 'Neon RPG',
+  },
+  {
+    title: 'Hades',
+    tagline:
+      'Fast-paced roguelike dungeon crawler with stylish combat and great writing.',
+    description:
+      'Fast-paced roguelike dungeon crawler with stylish combat and great writing.',
+    genres: ['Action', 'Roguelike', 'Indie'],
+    categories: ['action', 'indie'],
+    platforms: ['PC', 'PS4', 'PS5', 'Switch', 'iOS'],
+    rating: 4.9,
+    popularity: 90,
+    releaseRank: 14,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Supergiant Games',
+    launchWindow: 'Available now',
+    officialUrl: 'https://store.steampowered.com/app/1145360/Hades/',
+    featureTag: 'Roguelike Hit',
+  },
+  {
     title: 'Genshin Impact',
-    tagline: 'Elemental combat and anime-styled exploration across an ever-expanding world.',
-    shortDescription:
-      'Discover official downloads, launcher access, and supported device info for HoYoverse’s flagship RPG.',
-    overview:
-      'Genshin Impact blends open-zone exploration, elemental party combat, and regular live updates into a polished free-to-play fantasy adventure.',
-    vaultNote:
-      'The redirect flow takes players to the official HoYoverse property instead of risky APK mirrors or fake desktop installers.',
-    genres: ['Adventure', 'RPG'],
-    categories: ['adventure', 'rpg', 'mobile-games', 'pc-games'],
-    platforms: ['PC', 'PlayStation 5', 'Mobile'],
+    tagline:
+      'Anime-style open-world action RPG with gacha mechanics and co-op.',
+    description:
+      'Anime-style open-world action RPG with gacha mechanics and co-op.',
+    genres: ['Action RPG', 'Open World'],
+    categories: ['action', 'rpg', 'open-world'],
+    platforms: ['PC', 'PS4', 'PS5', 'iOS', 'Android'],
     rating: 4.7,
     popularity: 95,
-    releaseRank: 10,
+    releaseRank: 19,
     priceModel: 'Free',
-    priceLabel: 'Free to Play',
-    store: 'Official Launcher',
+    store: 'Official Site',
     publisher: 'HoYoverse',
-    launchWindow: 'Ongoing live update cadence',
-    officialUrl: 'https://genshin.hoyoverse.com/en/',
-    websiteUrl: 'https://genshin.hoyoverse.com/en/',
-    playUrl: 'https://genshin.hoyoverse.com/en/',
-    palette: [
-      'rgba(125, 211, 252, 0.92)',
-      'rgba(96, 165, 250, 0.78)',
-      'rgba(124, 58, 237, 0.86)',
-    ],
+    launchWindow: 'Available now',
+    officialUrl: 'https://genshin.hoyoverse.com/',
     featureTag: 'Open World',
-    supportedStores: ['Official Site', 'App Store', 'Google Play', 'PlayStation Store'],
-    highlights: ['Party-based combat', 'Frequent region updates', 'Cross-save support'],
-    screenshots: [
-      {
-        title: 'Open-zone traversal',
-        caption: 'Climb, glide, and roam across large fantasy regions at your own pace.',
-      },
-      {
-        title: 'Element reactions',
-        caption: 'Mix team compositions and chain effects for stylish combat loops.',
-      },
-      {
-        title: 'Seasonal event cadence',
-        caption: 'Limited-time festivals and story beats keep the world feeling alive.',
-      },
-    ],
   },
   {
-    id: 'forza-horizon-5',
-    slug: 'forza-horizon-5',
-    title: 'Forza Horizon 5',
-    tagline: 'Festival-scale racing with bold environments and instant controller appeal.',
-    shortDescription:
-      'Explore official Forza links for Horizon 5, from store access to device compatibility at a glance.',
-    overview:
-      'Forza Horizon 5 is an open-world racing showcase filled with licensed cars, flexible difficulty, and high-speed multiplayer events.',
-    vaultNote:
-      'Instead of relying on unofficial repacks, players can head straight to the official Forza ecosystem from the game detail page.',
-    genres: ['Racing'],
-    categories: ['racing', 'pc-games'],
-    platforms: ['PC', 'Xbox Series X|S'],
-    rating: 4.8,
-    popularity: 93,
-    releaseRank: 7,
-    priceModel: 'Paid',
-    priceLabel: 'Premium',
-    store: 'Xbox Store',
-    publisher: 'Xbox Game Studios',
-    launchWindow: 'Festival edition available',
-    officialUrl: 'https://forza.net/games/fh5',
-    websiteUrl: 'https://forza.net/games/fh5',
-    playUrl: 'https://forza.net/games/fh5',
-    palette: [
-      'rgba(56, 189, 248, 0.9)',
-      'rgba(99, 102, 241, 0.76)',
-      'rgba(168, 85, 247, 0.84)',
-    ],
-    featureTag: 'Open Road',
-    supportedStores: ['Xbox Store', 'Steam'],
-    highlights: ['Open-world races', 'Massive car roster', 'Seasonal festival playlists'],
-    screenshots: [
-      {
-        title: 'Festival coastline',
-        caption: 'Bright skies, scenic roads, and quick transitions between event types.',
-      },
-      {
-        title: 'Collector garage',
-        caption: 'Tune, swap, and personalize a deep catalogue of performance cars.',
-      },
-      {
-        title: 'Online convoys',
-        caption: 'Drop into group events and social races across a shared world.',
-      },
-    ],
-  },
-  {
-    id: 'ea-sports-fc-25',
-    slug: 'ea-sports-fc-25',
-    title: 'EA SPORTS FC 25',
-    tagline: 'Licensed football presentation with club progression and season-ready competition.',
-    shortDescription:
-      'Jump from discovery to the official EA page for FC 25 with platform availability and direct store references.',
-    overview:
-      'EA SPORTS FC 25 focuses on polished football presentation, licensed clubs, online progression, and fast replayability for competitive sports fans.',
-    vaultNote:
-      'The platform links stay official-only, so visitors avoid counterfeit key pages and fake early-access downloads.',
-    genres: ['Sports'],
-    categories: ['sports', 'pc-games'],
-    platforms: ['PC', 'PlayStation 5', 'Xbox Series X|S', 'Nintendo Switch'],
+    title: 'PUBG Mobile',
+    tagline: 'Mobile-focused battle royale shooter set in large open maps.',
+    description:
+      'Mobile-focused battle royale shooter set in large open maps.',
+    genres: ['Battle Royale', 'Action'],
+    categories: ['action', 'fps'],
+    platforms: ['Android', 'iOS'],
     rating: 4.4,
+    popularity: 88,
+    releaseRank: 15,
+    priceModel: 'Free',
+    store: 'Google Play',
+    publisher: 'Level Infinite',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://play.google.com/store/apps/details?id=com.tencent.ig',
+    featureTag: 'Mobile BR',
+  },
+  {
+    title: 'Elden Ring',
+    tagline:
+      'Souls-style open-world RPG with deep lore, tough combat, and exploration.',
+    description:
+      'Souls-style open-world RPG with deep lore, tough combat, and exploration.',
+    genres: ['Action RPG', 'Open World'],
+    categories: ['rpg', 'open-world'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.9,
+    popularity: 97,
+    releaseRank: 21,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'FromSoftware',
+    launchWindow: 'Available now',
+    officialUrl: 'https://store.steampowered.com/app/1245620/ELDEN_RING/',
+    featureTag: 'Souls Epic',
+  },
+  {
+    title: 'The Witcher 3: Wild Hunt',
+    tagline:
+      'Story-driven fantasy RPG with vast open world and rich side quests.',
+    description:
+      'Story-driven fantasy RPG with vast open world and rich side quests.',
+    genres: ['RPG', 'Open World'],
+    categories: ['rpg', 'open-world'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.9,
+    popularity: 94,
+    releaseRank: 16,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'CD PROJEKT RED',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/',
+    featureTag: 'Fantasy Classic',
+  },
+  {
+    title: 'Diablo IV',
+    tagline:
+      'Dark fantasy ARPG with loot-driven progression and online co-op.',
+    description:
+      'Dark fantasy ARPG with loot-driven progression and online co-op.',
+    genres: ['Action RPG'],
+    categories: ['rpg'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.5,
+    popularity: 87,
+    releaseRank: 17,
+    priceModel: 'Paid',
+    store: 'Official Site',
+    publisher: 'Blizzard Entertainment',
+    launchWindow: 'Available now',
+    officialUrl: 'https://www.blizzard.com/en-in/games/d4',
+    featureTag: 'Loot Grind',
+  },
+  {
+    title: 'Sea of Stars',
+    tagline:
+      'Modern retro-style RPG with pixel art and tactical turn-based combat.',
+    description:
+      'Modern retro-style RPG with pixel art and tactical turn-based combat.',
+    genres: ['Turn-based RPG'],
+    categories: ['rpg'],
+    platforms: ['PC', 'PS4', 'PS5', 'Switch', 'Xbox Series X/S', 'Mobile'],
+    rating: 4.7,
+    popularity: 80,
+    releaseRank: 13,
+    priceModel: 'Paid',
+    store: 'Official Site',
+    publisher: 'Sabotage Studio',
+    launchWindow: 'Available now',
+    officialUrl: 'https://www.seaofstars.com/',
+    featureTag: 'Retro Quest',
+  },
+  {
+    title: 'Ni no Kuni II: Revenant Kingdom',
+    tagline:
+      'Charming fantasy JRPG with kingdom-building and real-time battles.',
+    description:
+      'Charming fantasy JRPG with kingdom-building and real-time battles.',
+    genres: ['JRPG'],
+    categories: ['rpg'],
+    platforms: ['PC', 'PS4', 'PS5', 'Switch'],
+    rating: 4.4,
+    popularity: 73,
+    releaseRank: 11,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Bandai Namco Entertainment',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/810380/Nino_Kuni_II_Revenant_Kingdom/',
+    featureTag: 'JRPG Charm',
+  },
+  {
+    title: 'Call of Duty: Warzone',
+    tagline:
+      'Large-scale free-to-play battle royale within the Call of Duty universe.',
+    description:
+      'Large-scale free-to-play battle royale within the Call of Duty universe.',
+    genres: ['Battle Royale', 'FPS'],
+    categories: ['fps', 'action'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.5,
+    popularity: 93,
+    releaseRank: 18,
+    priceModel: 'Free',
+    store: 'Official Site',
+    publisher: 'Activision',
+    launchWindow: 'Available now',
+    officialUrl: 'https://www.callofduty.com/warzone',
+    featureTag: 'Large-Scale PvP',
+  },
+  {
+    title: 'Valorant',
+    tagline:
+      '5v5 hero-based tactical shooter inspired by classic objective play.',
+    description:
+      '5v5 hero-based tactical shooter inspired by classic objective play.',
+    genres: ['FPS', 'Tactical'],
+    categories: ['fps'],
+    platforms: ['PC', 'PS5', 'Xbox Series X/S'],
+    rating: 4.7,
+    popularity: 92,
+    releaseRank: 20,
+    priceModel: 'Free',
+    store: 'Official Site',
+    publisher: 'Riot Games',
+    launchWindow: 'Available now',
+    officialUrl: 'https://playvalorant.com/',
+    featureTag: 'Tactical 5v5',
+  },
+  {
+    title: 'Halo: The Master Chief Collection',
+    tagline:
+      'Compilation of classic Halo titles with modern matchmaking.',
+    description:
+      'Compilation of classic Halo titles with modern matchmaking.',
+    genres: ['FPS', 'Multiplayer'],
+    categories: ['fps'],
+    platforms: ['PC', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.7,
+    popularity: 84,
+    releaseRank: 12,
+    priceModel: 'Paid',
+    store: 'Microsoft Store',
+    publisher: 'Xbox Game Studios',
+    launchWindow: 'Available now',
+    officialUrl: 'https://www.microsoft.com/store/productId/9N5PZK82ZQZP',
+    featureTag: 'Halo Bundle',
+  },
+  {
+    title: 'Metro Exodus',
+    tagline:
+      'Atmospheric post-apocalyptic FPS with survival and story focus.',
+    description:
+      'Atmospheric post-apocalyptic FPS with survival and story focus.',
+    genres: ['FPS', 'Story'],
+    categories: ['fps'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.6,
+    popularity: 78,
+    releaseRank: 10,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Deep Silver',
+    launchWindow: 'Available now',
+    officialUrl: 'https://store.steampowered.com/app/412020/Metro_Exodus/',
+    featureTag: 'Story FPS',
+  },
+  {
+    title: 'Doom Eternal',
+    tagline:
+      'Fast-paced supernatural shooter with heavy combat and movement.',
+    description:
+      'Fast-paced supernatural shooter with heavy combat and movement.',
+    genres: ['FPS', 'Action'],
+    categories: ['fps', 'action'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.8,
     popularity: 89,
     releaseRank: 14,
     priceModel: 'Paid',
-    priceLabel: 'Premium',
-    store: 'EA',
-    publisher: 'Electronic Arts',
-    launchWindow: 'Current season release',
-    officialUrl: 'https://www.ea.com/games/ea-sports-fc/fc-25',
-    websiteUrl: 'https://www.ea.com/games/ea-sports-fc/fc-25',
-    playUrl: 'https://www.ea.com/games/ea-sports-fc/fc-25',
-    palette: [
-      'rgba(34, 197, 94, 0.82)',
-      'rgba(34, 211, 238, 0.74)',
-      'rgba(37, 99, 235, 0.78)',
-    ],
-    featureTag: 'Season Ready',
-    supportedStores: ['EA App', 'Steam', 'Epic Games', 'Xbox Store', 'PlayStation Store'],
-    highlights: ['Licensed clubs', 'Ultimate Team loops', 'Competitive online modes'],
-    screenshots: [
-      {
-        title: 'Matchday broadcast',
-        caption: 'Presentation-first visuals with licensed teams and stadium energy.',
-      },
-      {
-        title: 'Club progression',
-        caption: 'Build squads, refine tactics, and keep momentum across seasons.',
-      },
-      {
-        title: 'Rush moments',
-        caption: 'Fast small-sided sessions keep play tight and social.',
-      },
-    ],
+    store: 'Steam',
+    publisher: 'Bethesda Softworks',
+    launchWindow: 'Available now',
+    officialUrl: 'https://store.steampowered.com/app/481970/DOOM_Eternal/',
+    featureTag: 'High-Speed Combat',
   },
   {
-    id: 'apex-legends',
-    slug: 'apex-legends',
-    title: 'Apex Legends',
-    tagline: 'Hero-based battle royale combat tuned for mobility, teamwork, and pace.',
-    shortDescription:
-      'Find official Apex access fast, compare platforms, and launch toward the real EA and publisher destinations.',
-    overview:
-      'Apex Legends combines ability-based squad play with fluid movement, large-scale firefights, and constant live-service refreshes.',
-    vaultNote:
-      'Players click through to EA’s official property rather than third-party launchers claiming exclusive installers or bonus clients.',
-    genres: ['Action', 'Shooter'],
-    categories: ['action', 'pc-games'],
-    platforms: ['PC', 'PlayStation 5', 'Xbox Series X|S', 'Nintendo Switch'],
-    rating: 4.6,
-    popularity: 94,
-    releaseRank: 11,
-    priceModel: 'Free',
-    priceLabel: 'Free to Play',
-    store: 'EA',
-    publisher: 'Respawn Entertainment',
-    launchWindow: 'Live season active',
-    officialUrl: 'https://www.ea.com/games/apex-legends',
-    websiteUrl: 'https://www.ea.com/games/apex-legends',
-    playUrl: 'https://www.ea.com/games/apex-legends',
-    palette: [
-      'rgba(244, 114, 182, 0.88)',
-      'rgba(56, 189, 248, 0.8)',
-      'rgba(99, 102, 241, 0.82)',
-    ],
-    featureTag: 'Squad Tactics',
-    supportedStores: ['EA App', 'Steam', 'PlayStation Store', 'Xbox Store', 'Nintendo eShop'],
-    highlights: ['Hero synergy', 'Fast movement', 'Seasonal ranked play'],
-    screenshots: [
-      {
-        title: 'Legend ability loops',
-        caption: 'Distinct roles create strong tactical identity between squads.',
-      },
-      {
-        title: 'Ring rotations',
-        caption: 'Positioning and movement are just as important as raw aim.',
-      },
-      {
-        title: 'Season refreshes',
-        caption: 'New maps, balance shifts, and cosmetics keep the loop evolving.',
-      },
-    ],
-  },
-  {
-    id: 'minecraft',
-    slug: 'minecraft',
-    title: 'Minecraft',
-    tagline: 'Build, survive, and create at your own pace across one of gaming’s biggest worlds.',
-    shortDescription:
-      'Use the vault to reach the official Minecraft purchase path without digging through fake launcher pages.',
-    overview:
-      'Minecraft remains a flexible sandbox for survival runs, multiplayer servers, redstone builds, and creativity-led play across devices.',
-    vaultNote:
-      'The official redirect path matters here because fake launchers and unofficial clients are extremely common around the game.',
-    genres: ['Adventure', 'Simulation'],
-    categories: ['adventure', 'simulation', 'pc-games', 'mobile-games'],
-    platforms: ['PC', 'Xbox Series X|S', 'PlayStation 5', 'Nintendo Switch', 'Mobile'],
-    rating: 4.9,
-    popularity: 97,
-    releaseRank: 6,
+    title: 'Forza Horizon 5',
+    tagline:
+      'Vibrant open-world racing festival with cars, events, and online modes.',
+    description:
+      'Vibrant open-world racing festival with cars, events, and online modes.',
+    genres: ['Racing', 'Open World'],
+    categories: ['racing', 'open-world'],
+    platforms: ['PC', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.8,
+    popularity: 91,
+    releaseRank: 15,
     priceModel: 'Paid',
-    priceLabel: 'Premium',
-    store: 'Minecraft Store',
-    publisher: 'Mojang Studios',
-    launchWindow: 'Creator update ready',
-    officialUrl: 'https://www.minecraft.net/en-us/get-minecraft',
-    websiteUrl: 'https://www.minecraft.net/en-us/',
-    playUrl: 'https://www.minecraft.net/en-us/get-minecraft',
-    palette: [
-      'rgba(52, 211, 153, 0.84)',
-      'rgba(34, 197, 94, 0.72)',
-      'rgba(59, 130, 246, 0.8)',
-    ],
-    featureTag: 'Sandbox',
-    supportedStores: ['Official Site', 'Xbox Store', 'PlayStation Store', 'App Store', 'Google Play'],
-    highlights: ['Creative sandbox', 'Survival worlds', 'Massive community scene'],
-    screenshots: [
-      {
-        title: 'Block-built worlds',
-        caption: 'Go from tiny shelters to massive city-scale creations over time.',
-      },
-      {
-        title: 'Survival prep',
-        caption: 'Mine, craft, and optimize resources before the night cycle hits.',
-      },
-      {
-        title: 'Cross-device play',
-        caption: 'Keep building with friends across console, PC, and mobile.',
-      },
-    ],
+    store: 'Microsoft Store',
+    publisher: 'Xbox Game Studios',
+    launchWindow: 'Available now',
+    officialUrl: 'https://www.microsoft.com/store/productId/9NKSQGP7F26G',
+    featureTag: 'Festival Racer',
   },
   {
-    id: 'dead-by-daylight',
-    slug: 'dead-by-daylight',
-    title: 'Dead by Daylight',
-    tagline: 'Asymmetrical horror built around stealth, teamwork, and escalating panic.',
-    shortDescription:
-      'Review supported stores and go to the official source for one of the biggest multiplayer horror titles around.',
-    overview:
-      'Dead by Daylight pits survivors against a powerful killer in tense multiplayer rounds where timing, mind games, and map awareness decide each escape.',
-    vaultNote:
-      'Horror games are frequent targets for fake DLC and cracked patch sites, so official-only redirects are especially important here.',
-    genres: ['Horror', 'Action'],
-    categories: ['horror', 'action', 'pc-games'],
-    platforms: ['PC', 'PlayStation 5', 'Xbox Series X|S', 'Nintendo Switch'],
-    rating: 4.5,
-    popularity: 86,
-    releaseRank: 5,
-    priceModel: 'Paid',
-    priceLabel: 'Premium',
+    title: 'Forza Horizon 6 (2026)',
+    tagline:
+      'Sequel with Japan-based open world, huge car roster, and online racing.',
+    description:
+      'Sequel with Japan-based open world, huge car roster, and online racing.',
+    genres: ['Racing', 'Open World'],
+    categories: ['racing', 'open-world'],
+    platforms: ['PC', 'PS5', 'Xbox Series X/S'],
+    rating: 4.8,
+    popularity: 90,
+    releaseRank: 31,
+    priceModel: 'Coming Soon',
     store: 'Official Site',
-    publisher: 'Behaviour Interactive',
-    launchWindow: 'Chapter updates ongoing',
-    officialUrl: 'https://deadbydaylight.com/',
-    websiteUrl: 'https://deadbydaylight.com/',
-    playUrl: 'https://deadbydaylight.com/',
-    palette: [
-      'rgba(251, 113, 133, 0.86)',
-      'rgba(168, 85, 247, 0.74)',
-      'rgba(37, 99, 235, 0.74)',
-    ],
-    featureTag: 'Survival Horror',
-    supportedStores: ['Official Site', 'Steam', 'Epic Games', 'PlayStation Store', 'Xbox Store'],
-    highlights: ['Asymmetrical matches', 'Licensed horror crossovers', 'Long-term progression'],
-    screenshots: [
-      {
-        title: 'Night map tension',
-        caption: 'Low-visibility zones and audio cues keep every chase unpredictable.',
-      },
-      {
-        title: 'Generator pressure',
-        caption: 'Tight teamwork and route planning matter as much as raw reactions.',
-      },
-      {
-        title: 'Killer rosters',
-        caption: 'Distinct power kits change the rhythm and fear factor of every round.',
-      },
-    ],
+    publisher: 'Xbox Game Studios',
+    launchWindow: 'Upcoming listing',
+    officialUrl: 'https://forzahorizon.com/',
+    featureTag: '2026 Sequel',
   },
   {
-    id: 'the-sims-4',
-    slug: 'the-sims-4',
-    title: 'The Sims 4',
-    tagline: 'Design homes, direct stories, and shape a social sandbox around every household.',
-    shortDescription:
-      'Explore EA’s official Sims destination for the base game, updates, and expansion details from a clean redirect flow.',
-    overview:
-      'The Sims 4 is a simulation sandbox built around player creativity, social storytelling, and endlessly customizable spaces and characters.',
-    vaultNote:
-      'The safest experience is the official EA property, especially for players trying to avoid fake content bundles and outdated installers.',
-    genres: ['Simulation'],
-    categories: ['simulation', 'pc-games'],
-    platforms: ['PC', 'PlayStation 5', 'Xbox Series X|S'],
-    rating: 4.4,
-    popularity: 88,
+    title: 'Rocket League',
+    tagline:
+      'Soccer with rocket-powered cars, cross-platform and highly competitive.',
+    description:
+      'Soccer with rocket-powered cars, cross-platform and highly competitive.',
+    genres: ['Sports', 'Racing'],
+    categories: ['sports', 'racing'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S', 'Switch'],
+    rating: 4.8,
+    popularity: 90,
+    releaseRank: 16,
+    priceModel: 'Free',
+    store: 'Official Site',
+    publisher: 'Psyonix',
+    launchWindow: 'Available now',
+    officialUrl: 'https://www.rocketleague.com/',
+    featureTag: 'Car Football',
+  },
+  {
+    title: 'Trackmania',
+    tagline:
+      'Level-based arcade racing with fast times and online leaderboards.',
+    description:
+      'Level-based arcade racing with fast times and online leaderboards.',
+    genres: ['Racing', 'Arcade'],
+    categories: ['racing'],
+    platforms: ['PC', 'Xbox One', 'PS4', 'PS5'],
+    rating: 4.5,
+    popularity: 75,
     releaseRank: 9,
     priceModel: 'Free',
-    priceLabel: 'Free Base Game',
-    store: 'EA',
-    publisher: 'Electronic Arts',
-    launchWindow: 'Base game live',
-    officialUrl: 'https://www.ea.com/games/the-sims/the-sims-4',
-    websiteUrl: 'https://www.ea.com/games/the-sims/the-sims-4',
-    playUrl: 'https://www.ea.com/games/the-sims/the-sims-4',
-    palette: [
-      'rgba(45, 212, 191, 0.84)',
-      'rgba(56, 189, 248, 0.72)',
-      'rgba(99, 102, 241, 0.8)',
-    ],
-    featureTag: 'Creative Sandbox',
-    supportedStores: ['EA App', 'Steam', 'PlayStation Store', 'Xbox Store'],
-    highlights: ['Character creator depth', 'Home building', 'Life-sim storytelling'],
-    screenshots: [
-      {
-        title: 'Build mode flow',
-        caption: 'Create premium-looking spaces with flexible room and décor systems.',
-      },
-      {
-        title: 'Household stories',
-        caption: 'Guide careers, friendships, and day-to-day drama across each save.',
-      },
-      {
-        title: 'Expansion ecosystem',
-        caption: 'Official add-ons expand neighborhoods, themes, and lifestyle systems.',
-      },
-    ],
+    store: 'Official Site',
+    publisher: 'Ubisoft Nadeo',
+    launchWindow: 'Available now',
+    officialUrl: 'https://trackmania.com/',
+    featureTag: 'Arcade Time Trials',
   },
   {
-    id: 'civilization-vi',
-    slug: 'civilization-vi',
-    title: "Sid Meier's Civilization VI",
-    tagline: 'Turn-based strategy for players who want long-form decisions and empire-building depth.',
-    shortDescription:
-      'Review official availability for Civ VI and jump to the real publisher source without detours.',
-    overview:
-      'Civilization VI rewards planning, diplomacy, expansion, and layered win conditions across match sessions that can stretch for hours.',
-    vaultNote:
-      'Strategy players often search for bundles and expansions, which makes a clean official redirect especially valuable.',
-    genres: ['Strategy'],
-    categories: ['strategy', 'pc-games'],
-    platforms: ['PC', 'Nintendo Switch', 'Mobile'],
-    rating: 4.6,
-    popularity: 84,
-    releaseRank: 4,
-    priceModel: 'Paid',
-    priceLabel: 'Premium',
-    store: '2K',
-    publisher: '2K',
-    launchWindow: 'Anthology available',
-    officialUrl: 'https://civilization.2k.com/civ-vi/',
-    websiteUrl: 'https://civilization.2k.com/civ-vi/',
-    playUrl: 'https://civilization.2k.com/civ-vi/',
-    palette: [
-      'rgba(168, 85, 247, 0.82)',
-      'rgba(14, 165, 233, 0.74)',
-      'rgba(59, 130, 246, 0.8)',
-    ],
-    featureTag: '4X Strategy',
-    supportedStores: ['Official Site', 'Steam', 'Epic Games', 'Nintendo eShop', 'App Store'],
-    highlights: ['Empire building', 'Multiple victory paths', 'Long-session replayability'],
-    screenshots: [
-      {
-        title: 'Map expansion',
-        caption: 'Claim land, route districts, and shape the geography of your empire.',
-      },
-      {
-        title: 'Diplomatic pressure',
-        caption: 'Trade, negotiate, or provoke rivals as your objectives evolve.',
-      },
-      {
-        title: 'Late-game scale',
-        caption: 'Infrastructure, military posture, and science pacing all come together.',
-      },
-    ],
-  },
-  {
-    id: 'clash-of-clans',
-    slug: 'clash-of-clans',
-    title: 'Clash of Clans',
-    tagline: 'Mobile-first strategy with long-term village building and raid-based progression.',
-    shortDescription:
-      'Jump to the official Supercell home for install paths, updates, and secure mobile discovery.',
-    overview:
-      'Clash of Clans combines base building, raid planning, and clan collaboration into a session-friendly mobile strategy loop.',
-    vaultNote:
-      'Because mobile strategy titles are often copied into unsafe APK portals, the official Supercell route is the safest path.',
-    genres: ['Strategy', 'Mobile'],
-    categories: ['strategy', 'mobile-games'],
-    platforms: ['Mobile'],
-    rating: 4.5,
-    popularity: 83,
-    releaseRank: 3,
+    title: 'CarX Street',
+    tagline:
+      'Mobile drift-style racing with realistic physics and custom cars.',
+    description:
+      'Mobile drift-style racing with realistic physics and custom cars.',
+    genres: ['Racing', 'Mobile'],
+    categories: ['racing'],
+    platforms: ['Android', 'iOS'],
+    rating: 4.3,
+    popularity: 70,
+    releaseRank: 8,
     priceModel: 'Free',
-    priceLabel: 'Free to Play',
-    store: 'Supercell',
-    publisher: 'Supercell',
-    launchWindow: 'Current season live',
-    officialUrl: 'https://supercell.com/en/games/clashofclans/',
-    websiteUrl: 'https://supercell.com/en/games/clashofclans/',
-    playUrl: 'https://supercell.com/en/games/clashofclans/',
-    palette: [
-      'rgba(34, 197, 94, 0.82)',
-      'rgba(56, 189, 248, 0.68)',
-      'rgba(79, 70, 229, 0.82)',
-    ],
-    featureTag: 'Mobile Strategy',
-    supportedStores: ['Official Site', 'App Store', 'Google Play'],
-    highlights: ['Village building', 'Clan wars', 'Long-term progression'],
-    screenshots: [
-      {
-        title: 'Base layout planning',
-        caption: 'Position defenses, storages, and walls around evolving threat patterns.',
-      },
-      {
-        title: 'Clan raid loops',
-        caption: 'Coordinate attacks and resource goals with a long-term squad.',
-      },
-      {
-        title: 'Season milestones',
-        caption: 'Short-form sessions still feed into a satisfying progression arc.',
-      },
-    ],
+    store: 'Google Play',
+    publisher: 'CarX Technologies',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://play.google.com/store/apps/details?id=com.carxtech.carxstreet',
+    featureTag: 'Drift Focus',
   },
   {
-    id: 'rocket-league',
-    slug: 'rocket-league',
-    title: 'Rocket League',
-    tagline: 'Competitive car-football built around mechanical skill and instant match readability.',
-    shortDescription:
-      'Open the official Rocket League source to start playing from legal Epic-owned destinations only.',
-    overview:
-      'Rocket League stays easy to understand but hard to master, mixing driving precision, aerial control, and fast team coordination.',
-    vaultNote:
-      'Official redirects prevent players from landing on imitation installers or unreliable tournament clients.',
-    genres: ['Sports', 'Racing'],
-    categories: ['sports', 'racing', 'pc-games'],
-    platforms: ['PC', 'PlayStation 5', 'Xbox Series X|S', 'Nintendo Switch'],
+    title: 'Civilization VI',
+    tagline:
+      'Turn-based empire-building with deep diplomacy and tech progression.',
+    description:
+      'Turn-based empire-building with deep diplomacy and tech progression.',
+    genres: ['4X Strategy'],
+    categories: ['strategy'],
+    platforms: ['PC', 'Android', 'iOS'],
     rating: 4.7,
-    popularity: 87,
-    releaseRank: 6,
-    priceModel: 'Free',
-    priceLabel: 'Free to Play',
-    store: 'Epic Games',
-    publisher: 'Psyonix',
-    launchWindow: 'Competitive season active',
-    officialUrl: 'https://www.rocketleague.com/en',
-    websiteUrl: 'https://www.rocketleague.com/en',
-    playUrl: 'https://www.rocketleague.com/en',
-    palette: [
-      'rgba(59, 130, 246, 0.88)',
-      'rgba(34, 211, 238, 0.72)',
-      'rgba(168, 85, 247, 0.74)',
-    ],
-    featureTag: 'Competitive Freebie',
-    supportedStores: ['Epic Games', 'PlayStation Store', 'Xbox Store', 'Nintendo eShop'],
-    highlights: ['Short matches', 'High skill ceiling', 'Cross-platform play'],
-    screenshots: [
-      {
-        title: 'Arena kickoffs',
-        caption: 'Fast starts force quick reads and immediate team coordination.',
-      },
-      {
-        title: 'Aerial mechanics',
-        caption: 'Control, timing, and recovery separate good players from great ones.',
-      },
-      {
-        title: 'Ranked grind',
-        caption: 'Simple match structure makes competitive progression easy to track.',
-      },
-    ],
+    popularity: 83,
+    releaseRank: 11,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: '2K',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI/',
+    featureTag: 'Empire Builder',
   },
   {
-    id: 'league-of-legends',
-    slug: 'league-of-legends',
-    title: 'League of Legends',
-    tagline: 'A genre-defining competitive strategy game with deep champion mastery.',
-    shortDescription:
-      'Browse Riot’s official portal and jump directly to the real install and account destination for League.',
-    overview:
-      'League of Legends revolves around champion knowledge, macro strategy, and team coordination across high-pressure competitive matches.',
-    vaultNote:
-      'Account-focused titles especially benefit from official redirects because scam clients and phishing installers are common.',
-    genres: ['Strategy', 'MOBA'],
-    categories: ['strategy', 'pc-games'],
-    platforms: ['PC'],
+    title: 'XCOM 2',
+    tagline:
+      'Turn-based tactical combat against alien occupation with permadeath.',
+    description:
+      'Turn-based tactical combat against alien occupation with permadeath.',
+    genres: ['Tactical Strategy'],
+    categories: ['strategy'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.7,
+    popularity: 79,
+    releaseRank: 10,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: '2K',
+    launchWindow: 'Available now',
+    officialUrl: 'https://store.steampowered.com/app/268500/XCOM_2/',
+    featureTag: 'Tactical Classic',
+  },
+  {
+    title: 'Manor Lords',
+    tagline:
+      'Medieval city-builder with real-time battles and economy simulation.',
+    description:
+      'Medieval city-builder with real-time battles and economy simulation.',
+    genres: ['Strategy', 'City Builder'],
+    categories: ['strategy'],
+    platforms: ['PC', 'PS5', 'PS4', 'Xbox', 'Switch'],
     rating: 4.6,
-    popularity: 92,
-    releaseRank: 7,
-    priceModel: 'Free',
-    priceLabel: 'Free to Play',
-    store: 'Riot Games',
-    publisher: 'Riot Games',
-    launchWindow: 'Current ranked split live',
-    officialUrl: 'https://www.leagueoflegends.com/en-us/',
-    websiteUrl: 'https://www.leagueoflegends.com/en-us/',
-    playUrl: 'https://www.leagueoflegends.com/en-us/',
-    palette: [
-      'rgba(56, 189, 248, 0.82)',
-      'rgba(37, 99, 235, 0.74)',
-      'rgba(168, 85, 247, 0.78)',
-    ],
-    featureTag: 'Competitive MOBA',
-    supportedStores: ['Official Site', 'Riot Client'],
-    highlights: ['Champion mastery', 'Ranked depth', 'Esports-scale competition'],
-    screenshots: [
-      {
-        title: 'Lane phase control',
-        caption: 'Timing, matchup knowledge, and map pressure drive early momentum.',
-      },
-      {
-        title: 'Objective fights',
-        caption: 'Team execution peaks around dragons, barons, and late-game setups.',
-      },
-      {
-        title: 'Patch evolution',
-        caption: 'Frequent balance changes keep metas shifting and fresh.',
-      },
-    ],
+    popularity: 81,
+    releaseRank: 22,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Slavic Magic',
+    launchWindow: 'Available now',
+    officialUrl: 'https://store.steampowered.com/app/1943230/Manor_Lords/',
+    featureTag: 'City Builder',
   },
   {
-    id: 'pubg-mobile',
-    slug: 'pubg-mobile',
-    title: 'PUBG MOBILE',
-    tagline: 'Battle royale survival tuned for mobile controls, quick queues, and global squads.',
-    shortDescription:
-      'Send players to the official PUBG MOBILE property instead of unofficial APK or emulator hubs.',
-    overview:
-      'PUBG MOBILE focuses on grounded gunplay, survival pacing, and map-scale match structure optimized for touch devices.',
-    vaultNote:
-      'Because the title is widely copied into untrusted app portals, directing users to the official site is one of the most important safety steps.',
-    genres: ['Action', 'Mobile'],
-    categories: ['action', 'mobile-games'],
-    platforms: ['Mobile'],
+    title: 'StarCraft II',
+    tagline:
+      'Iconic real-time strategy game with strong multiplayer and ladder system.',
+    description:
+      'Iconic real-time strategy game with strong multiplayer and ladder system.',
+    genres: ['RTS'],
+    categories: ['strategy'],
+    platforms: ['PC'],
+    rating: 4.8,
+    popularity: 82,
+    releaseRank: 9,
+    priceModel: 'Free',
+    store: 'Official Site',
+    publisher: 'Blizzard Entertainment',
+    launchWindow: 'Free to start',
+    officialUrl: 'https://starcraft2.com/',
+    featureTag: 'RTS Icon',
+  },
+  {
+    title: 'Triangle Strategy',
+    tagline:
+      'Story-driven turn-based tactical RPG with branching paths.',
+    description:
+      'Story-driven turn-based tactical RPG with branching paths.',
+    genres: ['Tactical RPG'],
+    categories: ['strategy', 'rpg'],
+    platforms: ['PC', 'Switch'],
+    rating: 4.5,
+    popularity: 72,
+    releaseRank: 8,
+    priceModel: 'Paid',
+    store: 'Official Site',
+    publisher: 'Square Enix',
+    launchWindow: 'Available now',
+    officialUrl: 'https://trianglesstrategy.com/',
+    featureTag: 'Branching Tactics',
+  },
+  {
+    title: 'EA SPORTS FC 26',
+    tagline:
+      'Modern football sim with realistic graphics and online modes.',
+    description:
+      'Modern football sim with realistic graphics and online modes.',
+    genres: ['Sports'],
+    categories: ['sports'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
+    rating: 4.5,
+    popularity: 93,
+    releaseRank: 32,
+    priceModel: 'Coming Soon',
+    store: 'Official Site',
+    publisher: 'Electronic Arts',
+    launchWindow: 'Upcoming listing',
+    officialUrl: 'https://www.ea.com/games/ea-sports-fc',
+    featureTag: 'Football Sim',
+  },
+  {
+    title: 'NBA 2K26',
+    tagline:
+      'Popular basketball simulation with MyCareer and online modes.',
+    description:
+      'Popular basketball simulation with MyCareer and online modes.',
+    genres: ['Sports'],
+    categories: ['sports'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S'],
     rating: 4.4,
     popularity: 89,
-    releaseRank: 13,
-    priceModel: 'Free',
-    priceLabel: 'Free to Play',
+    releaseRank: 30,
+    priceModel: 'Coming Soon',
     store: 'Official Site',
-    publisher: 'Level Infinite',
-    launchWindow: 'Mobile season active',
-    officialUrl: 'https://www.pubgmobile.com/en-US/home.shtml',
-    websiteUrl: 'https://www.pubgmobile.com/en-US/home.shtml',
-    playUrl: 'https://www.pubgmobile.com/en-US/home.shtml',
-    palette: [
-      'rgba(251, 191, 36, 0.78)',
-      'rgba(56, 189, 248, 0.68)',
-      'rgba(99, 102, 241, 0.84)',
-    ],
-    featureTag: 'Mobile BR',
-    supportedStores: ['Official Site', 'App Store', 'Google Play'],
-    highlights: ['Battle royale survival', 'Squad voice play', 'Touch-optimized controls'],
-    screenshots: [
-      {
-        title: 'Drop zones',
-        caption: 'Choose risk, loot routes, and pacing before the circle closes in.',
-      },
-      {
-        title: 'Mobile firefights',
-        caption: 'Responsive touch layouts keep movement and aim readable on small screens.',
-      },
-      {
-        title: 'Squad survival',
-        caption: 'Communication and revive timing often decide the final circle.',
-      },
-    ],
+    publisher: '2K Sports',
+    launchWindow: 'Upcoming listing',
+    officialUrl: 'https://www.2k.com/',
+    featureTag: 'Basketball Sim',
+  },
+  {
+    title: "Tony Hawk's Pro Skater 1+2",
+    tagline:
+      'Modern remake of classic skateboarding games with updated visuals.',
+    description:
+      'Modern remake of classic skateboarding games with updated visuals.',
+    genres: ['Sports'],
+    categories: ['sports'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S', 'Switch'],
+    rating: 4.6,
+    popularity: 76,
+    releaseRank: 12,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Activision',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/1132000/Tony_Hawks_Pro_Skater_1__2/',
+    featureTag: 'Skate Remake',
+  },
+  {
+    title: 'Nintendo Switch Sports',
+    tagline:
+      'Casual sports collection with tennis, bowling, badminton, and more.',
+    description:
+      'Casual sports collection with tennis, bowling, badminton, and more.',
+    genres: ['Sports'],
+    categories: ['sports'],
+    platforms: ['Switch'],
+    rating: 4.3,
+    popularity: 71,
+    releaseRank: 7,
+    priceModel: 'Paid',
+    store: 'Official Site',
+    publisher: 'Nintendo',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://www.nintendo.com/store/products/nintendo-switch-sports-switch/',
+    featureTag: 'Party Sports',
+  },
+  {
+    title: 'Hollow Knight',
+    tagline:
+      'Hand-drawn 2D metroidvania with deep exploration and challenge.',
+    description:
+      'Hand-drawn 2D metroidvania with deep exploration and challenge.',
+    genres: ['Indie', 'Action Platformer'],
+    categories: ['indie', 'action'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S', 'Switch'],
+    rating: 4.9,
+    popularity: 88,
+    releaseRank: 13,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Team Cherry',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/367520/Hollow_Knight/',
+    featureTag: 'Metroidvania',
+  },
+  {
+    title: 'Celeste',
+    tagline:
+      'Challenging pixel-art platformer with emotional story and assists.',
+    description:
+      'Challenging pixel-art platformer with emotional story and assists.',
+    genres: ['Indie', 'Platformer'],
+    categories: ['indie'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox One', 'Xbox Series X/S', 'Switch'],
+    rating: 4.8,
+    popularity: 79,
+    releaseRank: 11,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Extremely OK Games',
+    launchWindow: 'Available now',
+    officialUrl: 'https://store.steampowered.com/app/504230/Celeste/',
+    featureTag: 'Narrative Platformer',
+  },
+  {
+    title: 'Dead Cells',
+    tagline:
+      'Fast-paced rogue-lite action roguelike with procedural levels.',
+    description:
+      'Fast-paced rogue-lite action roguelike with procedural levels.',
+    genres: ['Indie', 'Rogue-lite'],
+    categories: ['indie', 'action'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox', 'Switch', 'Mobile'],
+    rating: 4.8,
+    popularity: 82,
+    releaseRank: 12,
+    priceModel: 'Paid',
+    store: 'Official Site',
+    publisher: 'Motion Twin',
+    launchWindow: 'Available now',
+    officialUrl: 'https://www.dead-cells.com/',
+    featureTag: 'Rogue-lite',
+  },
+  {
+    title: 'Spiritfarer',
+    tagline:
+      'Relaxing management game about guiding spirits to the afterlife.',
+    description:
+      'Relaxing management game about guiding spirits to the afterlife.',
+    genres: ['Indie', 'Cozy'],
+    categories: ['indie'],
+    platforms: ['PC', 'PS4', 'PS5', 'Xbox', 'Switch', 'Mobile'],
+    rating: 4.7,
+    popularity: 74,
+    releaseRank: 10,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Thunder Lotus Games',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/737960/Spiritfarer/',
+    featureTag: 'Cozy Management',
+  },
+  {
+    title: 'Grand Theft Auto VI',
+    tagline:
+      'Highly anticipated crime-driven open-world sandbox with next-gen visuals.',
+    description:
+      'Highly anticipated crime-driven open-world sandbox with next-gen visuals.',
+    genres: ['Action', 'Open World'],
+    categories: ['action', 'open-world'],
+    platforms: ['PC', 'PS5', 'Xbox Series X/S'],
+    rating: 4.9,
+    popularity: 100,
+    releaseRank: 33,
+    priceModel: 'Coming Soon',
+    store: 'Official Site',
+    publisher: 'Rockstar Games',
+    launchWindow: 'Upcoming listing',
+    officialUrl: 'https://www.rockstargames.com/gta6',
+    featureTag: 'Upcoming Giant',
+  },
+  {
+    title: 'Horizon Forbidden West',
+    tagline:
+      'Beautiful sci-fi wildlife open world with exploration and combat.',
+    description:
+      'Beautiful sci-fi wildlife open world with exploration and combat.',
+    genres: ['Action RPG', 'Open World'],
+    categories: ['open-world', 'rpg'],
+    platforms: ['PC', 'PS4', 'PS5'],
+    rating: 4.7,
+    popularity: 86,
+    releaseRank: 18,
+    priceModel: 'Paid',
+    store: 'PlayStation',
+    publisher: 'Guerrilla',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://www.playstation.com/en-in/games/horizon-forbidden-west/',
+    featureTag: 'Sci-Fi Open World',
+  },
+  {
+    title: "Dragon's Dogma 2",
+    tagline:
+      'Large open world with dynamic monsters and Pawn-style allies.',
+    description:
+      'Large open world with dynamic monsters and Pawn-style allies.',
+    genres: ['Action RPG', 'Open World'],
+    categories: ['open-world', 'rpg'],
+    platforms: ['PC', 'PS5', 'Xbox Series X/S'],
+    rating: 4.6,
+    popularity: 84,
+    releaseRank: 24,
+    priceModel: 'Paid',
+    store: 'Steam',
+    publisher: 'Capcom',
+    launchWindow: 'Available now',
+    officialUrl:
+      'https://store.steampowered.com/app/1972150/Dragons_Dogma_2/',
+    featureTag: 'Pawn Adventure',
+  },
+  {
+    title: "Assassin's Creed 4: Black Flag Remastered",
+    tagline:
+      'Golden-age pirate open world with naval combat and side activities.',
+    description:
+      'Golden-age pirate open world with naval combat and side activities.',
+    genres: ['Action', 'Open World'],
+    categories: ['action', 'open-world'],
+    platforms: ['PC', 'PS5', 'Xbox Series X/S'],
+    rating: 4.6,
+    popularity: 85,
+    releaseRank: 29,
+    priceModel: 'Coming Soon',
+    store: 'Official Site',
+    publisher: 'Ubisoft',
+    launchWindow: 'Upcoming listing',
+    officialUrl: 'https://www.assassinscreed.com/',
+    featureTag: 'Pirate Remaster',
   },
 ]
 
-export const platformOptions = [
+function slugify(value) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+function escapeXml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&apos;')
+}
+
+function encodeSvg(svg) {
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`
+}
+
+function wrapLines(value, maxLength = 18) {
+  const words = value.split(' ')
+  const lines = []
+  let current = ''
+
+  words.forEach((word) => {
+    const next = current ? `${current} ${word}` : word
+
+    if (next.length > maxLength && current) {
+      lines.push(current)
+      current = word
+    } else {
+      current = next
+    }
+  })
+
+  if (current) {
+    lines.push(current)
+  }
+
+  return lines.slice(0, 3)
+}
+
+function buildVisual({
+  title,
+  subtitle,
+  palette,
+  surfaceLabel,
+  width,
+  height,
+  lines,
+}) {
+  const [primary, secondary, tertiary] = palette
+  const titleLines = wrapLines(title)
+  const safeSubtitle = escapeXml(subtitle)
+  const safeSurface = escapeXml(surfaceLabel)
+
+  const lineMarkup = titleLines
+    .map(
+      (line, index) => `
+        <text x="84" y="${height - 164 + index * 48}" fill="white" font-size="${
+          width > 1200 ? 44 : 34
+        }" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+          ${escapeXml(line)}
+        </text>
+      `,
+    )
+    .join('')
+
+  const microLines = lines
+    .map(
+      (line, index) => `
+        <text x="${width - 328}" y="${132 + index * 24}" fill="rgba(226,232,240,0.86)" font-size="14" font-family="Arial, Helvetica, sans-serif">
+          ${escapeXml(line)}
+        </text>
+      `,
+    )
+    .join('')
+
+  return encodeSvg(`
+    <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+      <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="${primary}" />
+          <stop offset="48%" stop-color="${secondary}" />
+          <stop offset="100%" stop-color="${tertiary}" />
+        </linearGradient>
+        <linearGradient id="sheen" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.28)" />
+          <stop offset="45%" stop-color="rgba(255,255,255,0.04)" />
+          <stop offset="100%" stop-color="rgba(2,6,23,0.44)" />
+        </linearGradient>
+        <filter id="blur">
+          <feGaussianBlur stdDeviation="40" />
+        </filter>
+      </defs>
+
+      <rect width="${width}" height="${height}" rx="40" fill="#020617" />
+      <rect width="${width}" height="${height}" rx="40" fill="url(#bg)" opacity="0.92" />
+      <rect width="${width}" height="${height}" rx="40" fill="url(#sheen)" />
+
+      <g opacity="0.24">
+        <circle cx="${width * 0.18}" cy="${height * 0.24}" r="${Math.round(
+          width * 0.14,
+        )}" fill="white" filter="url(#blur)" />
+        <circle cx="${width * 0.86}" cy="${height * 0.18}" r="${Math.round(
+          width * 0.1,
+        )}" fill="${secondary}" filter="url(#blur)" />
+      </g>
+
+      <g opacity="0.14">
+        <path d="M0 ${height * 0.18} H${width}" stroke="white" stroke-width="2" />
+        <path d="M0 ${height * 0.72} H${width}" stroke="white" stroke-width="2" />
+        <path d="M${width * 0.14} 0 V${height}" stroke="white" stroke-width="2" />
+        <path d="M${width * 0.78} 0 V${height}" stroke="white" stroke-width="2" />
+      </g>
+
+      <g opacity="0.28">
+        <path d="M${width * 0.58} ${height * 0.12} L${width * 0.92} ${height * 0.12} L${
+          width * 0.76
+        } ${height * 0.64} Z" fill="rgba(255,255,255,0.1)" />
+        <path d="M${width * 0.54} ${height * 0.26} L${width * 0.86} ${height * 0.28} L${
+          width * 0.7
+        } ${height * 0.88} Z" fill="rgba(2,6,23,0.26)" />
+      </g>
+
+      <rect x="48" y="48" rx="999" width="220" height="42" fill="rgba(2,6,23,0.36)" stroke="rgba(255,255,255,0.16)" />
+      <text x="72" y="75" fill="white" font-size="16" font-family="Arial, Helvetica, sans-serif" letter-spacing="4">
+        ${safeSurface}
+      </text>
+
+      <rect x="${width - 360}" y="60" rx="28" width="300" height="100" fill="rgba(2,6,23,0.22)" stroke="rgba(255,255,255,0.12)" />
+      ${microLines}
+
+      <text x="84" y="${height - 248}" fill="rgba(226,232,240,0.86)" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="5">
+        ANTIGRAVITY
+      </text>
+      ${lineMarkup}
+      <text x="84" y="${height - 56}" fill="rgba(226,232,240,0.84)" font-size="20" font-family="Arial, Helvetica, sans-serif">
+        ${safeSubtitle}
+      </text>
+    </svg>
+  `)
+}
+
+function buildMediaSet({ title, tagline, description, palette, featureTag, genres, store }) {
+  const image = buildVisual({
+    title,
+    subtitle: tagline,
+    palette,
+    surfaceLabel: featureTag,
+    width: 900,
+    height: 1120,
+    lines: [genres[0] ?? 'Featured', store, 'Official redirect'],
+  })
+
+  const banner = buildVisual({
+    title,
+    subtitle: tagline,
+    palette,
+    surfaceLabel: `${featureTag} BANNER`,
+    width: 1600,
+    height: 900,
+    lines: [genres.join(' / '), store, 'Premium marketplace'],
+  })
+
+  const screenshotGallery = screenshotLabels.map((label, index) => ({
+    src: buildVisual({
+      title,
+      subtitle: description,
+      palette,
+      surfaceLabel: label.toUpperCase(),
+      width: 1280,
+      height: 720,
+      lines: [label, store, `Shot 0${index + 1}`],
+    }),
+    title: label,
+    caption:
+      index === 0
+        ? `${genres[0] ?? 'Gameplay'} showcase for ${title}.`
+        : index === 1
+          ? `Preview the premium atmosphere before redirecting to the official ${store} destination.`
+          : 'Every CTA stays legal-first and sends players to a verified source only.',
+  }))
+
+  return {
+    image,
+    banner,
+    screenshots: screenshotGallery,
+  }
+}
+
+function createGame(config) {
+  const primaryCategory = config.categories[0]
+  const palette = config.palette ?? paletteMap[primaryCategory] ?? paletteMap.action
+  const media = buildMediaSet({
+    title: config.title,
+    tagline: config.tagline,
+    description: config.description,
+    palette,
+    featureTag: config.featureTag,
+    genres: config.genres,
+    store: config.store,
+  })
+
+  return {
+    id: slugify(config.title),
+    slug: slugify(config.title),
+    title: config.title,
+    image: config.image ?? media.image,
+    banner: config.banner ?? media.banner,
+    screenshots: config.screenshots ?? media.screenshots,
+    genre: config.genres.join(' / '),
+    rating: config.rating,
+    description: config.description,
+    official_url: config.officialUrl,
+    officialUrl: config.officialUrl,
+    websiteUrl: config.websiteUrl ?? config.officialUrl,
+    playUrl: config.playUrl ?? config.officialUrl,
+    tagline: config.tagline,
+    shortDescription: config.description,
+    overview: config.description,
+    vaultNote:
+      config.vaultNote ??
+      `AntiGravity sends players to the official ${config.store} destination for ${config.title} so the browsing flow stays legal and trustworthy.`,
+    genres: config.genres,
+    categories: config.categories,
+    platforms: config.platforms,
+    popularity: config.popularity,
+    releaseRank: config.releaseRank,
+    priceModel: config.priceModel,
+    priceLabel: priceLabels[config.priceModel] ?? config.priceModel,
+    store: config.store,
+    publisher: config.publisher,
+    launchWindow: config.launchWindow,
+    palette,
+    featureTag: config.featureTag,
+    supportedStores: config.supportedStores ?? [config.store],
+    highlights:
+      config.highlights ?? [
+        config.genres[0] ?? 'Featured gameplay',
+        `${config.platforms.slice(0, 2).join(' + ')} support`,
+        `${config.store} redirect`,
+      ],
+  }
+}
+
+export const games = gameConfigs.map(createGame)
+
+const platformOrder = [
   'PC',
-  'PlayStation 5',
-  'Xbox Series X|S',
-  'Nintendo Switch',
+  'PS4',
+  'PS5',
+  'Xbox One',
+  'Xbox Series X/S',
+  'Xbox',
+  'Switch',
+  'iOS',
+  'Android',
   'Mobile',
 ]
 
-export const genreOptions = [
+const genreOrder = [
   'Action',
-  'Adventure',
+  'Action RPG',
+  'Open World',
   'RPG',
+  'JRPG',
+  'Turn-based RPG',
+  'Battle Royale',
+  'FPS',
+  'Tactical',
+  'Multiplayer',
+  'Story',
   'Racing',
+  'Arcade',
+  'Mobile',
   'Sports',
+  '4X Strategy',
+  'Tactical Strategy',
+  'RTS',
+  'Tactical RPG',
   'Strategy',
-  'Simulation',
-  'Horror',
-  'Shooter',
-  'MOBA',
+  'City Builder',
+  'Indie',
+  'Roguelike',
+  'Rogue-lite',
+  'Action Platformer',
+  'Platformer',
+  'Cozy',
 ]
+
+function sortByPreset(values, preset) {
+  return values.sort((left, right) => {
+    const leftIndex = preset.indexOf(left)
+    const rightIndex = preset.indexOf(right)
+
+    if (leftIndex === -1 && rightIndex === -1) {
+      return left.localeCompare(right)
+    }
+
+    if (leftIndex === -1) {
+      return 1
+    }
+
+    if (rightIndex === -1) {
+      return -1
+    }
+
+    return leftIndex - rightIndex
+  })
+}
+
+export const platformOptions = sortByPreset(
+  [...new Set(games.flatMap((game) => game.platforms))],
+  platformOrder,
+)
+
+export const genreOptions = sortByPreset(
+  [...new Set(games.flatMap((game) => game.genres))],
+  genreOrder,
+)
 
 export const categoryLookup = Object.fromEntries(
   categories.map((category) => [category.slug, category]),

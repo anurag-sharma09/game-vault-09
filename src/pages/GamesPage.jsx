@@ -21,7 +21,8 @@ function GamesPage() {
       const matchesQuery =
         !query ||
         game.title.toLowerCase().includes(query.toLowerCase()) ||
-        game.shortDescription.toLowerCase().includes(query.toLowerCase())
+        game.description.toLowerCase().includes(query.toLowerCase()) ||
+        game.genre.toLowerCase().includes(query.toLowerCase())
       const matchesPlatform = !platform || game.platforms.includes(platform)
       const matchesGenre = !genre || game.genres.includes(genre)
       const matchesPricing = !pricing || game.priceModel === pricing
@@ -58,15 +59,15 @@ function GamesPage() {
   const activeCategory = category ? categoryLookup[category] : null
 
   return (
-    <div className="space-y-10">
+    <div className="mx-auto max-w-[92rem] space-y-10 px-4 pt-32 sm:px-6 lg:px-10">
       <section className="glass-panel rounded-[36px] px-6 py-10 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Games Listing"
-          title={activeCategory ? `${activeCategory.name} Games` : 'Discover official game links'}
+          title={activeCategory ? `${activeCategory.name} Games` : 'Discover Premium Official Game Links'}
           description={
             activeCategory
               ? `${activeCategory.blurb} Filter by platform, price model, and popularity while keeping every redirect legal and official.`
-              : 'Search live by title, narrow the catalog by platform or genre, and keep every click pointed toward official sources only.'
+              : 'Search live by title, narrow the catalog by platform or genre, and keep every click pointed toward official sources only inside the AntiGravity experience.'
           }
         />
 
@@ -132,6 +133,7 @@ function GamesPage() {
               { label: 'All Pricing', value: '' },
               { label: 'Free', value: 'Free' },
               { label: 'Paid', value: 'Paid' },
+              { label: 'Coming Soon', value: 'Coming Soon' },
             ]}
           />
 

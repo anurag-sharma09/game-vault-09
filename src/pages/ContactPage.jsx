@@ -19,7 +19,7 @@ function ContactPage() {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    const subject = encodeURIComponent(`[Game Vault] ${form.topic} from ${form.name || 'Website Visitor'}`)
+    const subject = encodeURIComponent(`[AntiGravity Games] ${form.topic} from ${form.name || 'Website Visitor'}`)
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nTopic: ${form.topic}\n\nMessage:\n${form.message}`,
     )
@@ -27,17 +27,17 @@ function ContactPage() {
     setMessageReady(true)
 
     if (typeof window !== 'undefined') {
-      window.location.href = `mailto:contact@gamevault.com?subject=${subject}&body=${body}`
+      window.location.href = `mailto:contact@antigravitygames.com?subject=${subject}&body=${body}`
     }
   }
 
   return (
-    <div className="space-y-10">
+    <div className="mx-auto max-w-[92rem] space-y-10 px-4 pt-32 sm:px-6 lg:px-10">
       <section className="glass-panel rounded-[36px] px-6 py-10 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Contact"
           title="Talk partnerships, support, or legal requests"
-          description="The form below opens an email draft using the message details you enter, keeping the sample project fully frontend-ready while still giving you a real contact flow."
+          description="The form below opens an email draft using the message details you enter, keeping the AntiGravity frontend fully static-friendly while still giving you a real contact flow."
         />
       </section>
 
@@ -51,8 +51,8 @@ function ContactPage() {
             <p className="mt-3 text-sm leading-7 text-slate-300/78">
               For store integrations, sponsored shelves, and publisher submissions.
             </p>
-            <a href="mailto:partners@gamevault.com" className="mt-4 inline-block text-sm font-semibold text-cyan-100">
-              partners@gamevault.com
+            <a href="mailto:partners@antigravitygames.com" className="mt-4 inline-block text-sm font-semibold text-cyan-100">
+              partners@antigravitygames.com
             </a>
           </article>
 
@@ -64,8 +64,8 @@ function ContactPage() {
             <p className="mt-3 text-sm leading-7 text-slate-300/78">
               Questions about redirects, missing games, or catalog updates.
             </p>
-            <a href="mailto:support@gamevault.com" className="mt-4 inline-block text-sm font-semibold text-cyan-100">
-              support@gamevault.com
+            <a href="mailto:support@antigravitygames.com" className="mt-4 inline-block text-sm font-semibold text-cyan-100">
+              support@antigravitygames.com
             </a>
           </article>
 
@@ -77,8 +77,8 @@ function ContactPage() {
             <p className="mt-3 text-sm leading-7 text-slate-300/78">
               Report ownership concerns, brand issues, or redirects that need removal.
             </p>
-            <a href="mailto:legal@gamevault.com" className="mt-4 inline-block text-sm font-semibold text-cyan-100">
-              legal@gamevault.com
+            <a href="mailto:legal@antigravitygames.com" className="mt-4 inline-block text-sm font-semibold text-cyan-100">
+              legal@antigravitygames.com
             </a>
           </article>
         </div>

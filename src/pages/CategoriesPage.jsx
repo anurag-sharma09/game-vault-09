@@ -10,12 +10,12 @@ function countGames(categorySlug) {
 
 function CategoriesPage() {
   return (
-    <div className="space-y-10">
+    <div className="mx-auto max-w-[92rem] space-y-10 px-4 pt-32 sm:px-6 lg:px-10">
       <section className="glass-panel rounded-[36px] px-6 py-10 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="Categories"
           title="Explore every discovery lane"
-          description="From action and RPGs to mobile-first strategy and premium PC releases, these categories help players reach the official destination faster."
+          description="Your attached catalog is now organized into Action, RPG, FPS, Racing, Strategy, Sports, Indie, and Open World discovery lanes."
           action={
             <Link
               to="/games"
