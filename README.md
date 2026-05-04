@@ -1,16 +1,37 @@
-# React + Vite
+# 🎮 Game Vault
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Game Vault** is a premium, high-fidelity game discovery platform built with React and Vite. It features a stunning "Dark Futuristic" aesthetic, neon-cyberpunk accents, and a seamless user experience for exploring the latest titles across PC, Console, and Mobile.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Premium UI/UX**: A state-of-the-art dark theme with glassmorphism and fluid animations (powered by Framer Motion).
+- **Extensive Game Library**: Detailed data for hundreds of titles, including genre tags, platform availability, and official store links.
+- **Dynamic Categories**: Discover games through curated categories like Action, RPG, FPS, Indie, and more.
+- **Responsive Design**: Fully optimized for Desktop, Tablet, and Mobile devices.
+- **Real-time Search**: Instant discovery of your favorite gaming worlds.
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, Vite 8
+- **Styling**: Tailwind CSS 4 (Vanilla CSS fallback for custom components)
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Routing**: React Router 7
 
-## Expanding the ESLint configuration
+## 🛠️ Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To start the development server:
+
+```bash
+npm run dev
+```
+
+To build for production:
+
+```bash
+npm run build
+```
+
+## 📄 License
+
+This project is for demonstration purposes. All game images and trademarks are property of their respective owners.
