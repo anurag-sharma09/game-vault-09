@@ -67,7 +67,7 @@ function GamesPage() {
           description={
             activeCategory
               ? `${activeCategory.blurb} Filter by platform, price model, and popularity while keeping every redirect legal and official.`
-              : 'Search live by title, narrow the catalog by platform or genre, and keep every click pointed toward official sources only inside the AntiGravity experience.'
+              : 'Search live by title, narrow the catalog by platform or genre, and keep every click pointed toward official sources only inside the Game Vault experience.'
           }
         />
 

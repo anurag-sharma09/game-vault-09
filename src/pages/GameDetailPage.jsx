@@ -278,7 +278,7 @@ function GameDetailPage() {
               <div className="flex items-start gap-3 rounded-[24px] border border-emerald-300/14 bg-emerald-300/8 p-4">
                 <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-emerald-100" />
                 <p className="text-sm leading-7 text-emerald-50/84">
-                  AntiGravity routes this page to official sources only. No pirated files, cracked
+                  Game Vault routes this page to official sources only. No pirated files, cracked
                   installers, or mirrored downloads are used anywhere in the experience.
                 </p>
               </div>
@@ -423,7 +423,7 @@ function GameDetailPage() {
                 Brand Energy
               </p>
               <p className="mt-3 text-sm leading-8 text-slate-300/78">
-                AntiGravity frames each game page like a premium studio microsite while preserving
+                Game Vault frames each game page like a premium studio microsite while preserving
                 the practical redirect flow players actually need.
               </p>
               <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-violet-300/14 bg-violet-300/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-violet-100">

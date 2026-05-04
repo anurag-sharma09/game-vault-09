@@ -4,7 +4,7 @@ import Footer from './Footer.jsx'
 import Navbar from './Navbar.jsx'
 import SignInModal from './SignInModal.jsx'
 
-const PLAYER_TAG_KEY = 'antigravity-player-tag'
+const PLAYER_TAG_KEY = 'gamevault-player-tag'
 
 function Layout() {
   const [signInOpen, setSignInOpen] = useState(false)

@@ -21,6 +21,7 @@ const navItems = [
 
 function Navbar({ playerTag, onOpenSignIn }) {
   const navigate = useNavigate()
+  const PLAYER_TAG_KEY = 'gamevault-player-tag'
   const location = useLocation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -103,7 +104,7 @@ function Navbar({ playerTag, onOpenSignIn }) {
 
           <div>
             <p className="font-display text-[1.9rem] uppercase leading-none tracking-[0.1em] text-white">
-              AntiGravity
+              Game Vault
             </p>
             <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.42em] text-cyan-100/72">
               Premium Game Discovery

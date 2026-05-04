@@ -24,7 +24,7 @@ function Footer() {
           <div className="relative grid gap-10 lg:grid-cols-[1.3fr_0.7fr_0.9fr]">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.42em] text-cyan-100/72">
-                AntiGravity Games
+                Game Vault
               </p>
               <h2 className="mt-5 font-display text-5xl uppercase leading-none text-white sm:text-6xl">
                 Discover. Launch. Play.
@@ -76,15 +76,29 @@ function Footer() {
                 Legal Promise
               </p>
               <p className="mt-5 text-sm leading-8 text-slate-300/76">
-                AntiGravity Games does not host pirated files, cracked installers, or unofficial
+                Game Vault does not host pirated files, cracked installers, or unofficial
                 mirrors. Every CTA points toward an official publisher, store, or platform source.
               </p>
+            </div>
+          </div>
+
+          <div className="mt-16 border-t border-white/5 pt-8">
+            <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+              <p className="max-w-2xl text-xs leading-relaxed text-slate-500">
+                Game Vault does not host pirated files, cracked installers, or unofficial
+                distributions. We only aggregate and link to verified legal sources
+                provided by original developers and publishers.
+              </p>
+              <div className="flex items-center gap-2 text-xs font-medium text-slate-400">
+                <span>&copy; {new Date().getFullYear()}</span>
+                <p>Game Vault</p>
+              </div>
             </div>
           </div>
         </motion.div>
 
         <div className="mt-8 flex flex-col gap-4 border-t border-white/8 pt-6 text-xs uppercase tracking-[0.32em] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>AntiGravity Games</p>
+          <p>Game Vault</p>
           <p>Premium Game Discovery Platform</p>
         </div>
       </div>

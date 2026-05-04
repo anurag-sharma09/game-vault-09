@@ -34,7 +34,7 @@ const stagger = {
 const communityQuotes = [
   {
     quote:
-      'AntiGravity feels like a real launch platform, not a random link directory. The art direction sells the entire experience.',
+      'Game Vault feels like a real launch platform, not a random link directory. The art direction sells the entire experience.',
     name: 'Aarav Kapoor',
     role: 'PC Community Member',
   },
@@ -60,7 +60,7 @@ const newsroom = [
   },
   {
     title: 'Safe Redirect Promise',
-    body: 'AntiGravity only sends players to verified publishers, official launchers, storefronts, and legal download pages.',
+    body: 'Game Vault only sends players to verified publishers, official launchers, storefronts, and legal download pages.',
     slug: 'cyberpunk-2077',
   },
   {
@@ -200,7 +200,7 @@ function HomePage() {
                 variants={reveal}
                 className="mt-6 max-w-2xl text-base leading-8 text-slate-200/80 sm:text-lg"
               >
-                AntiGravity Games blends premium launch-page presentation with a safe official-link
+                Game Vault Games blends premium launch-page presentation with a safe official-link
                 platform, so players can discover, explore, and jump directly into verified game
                 destinations without the noise.
               </motion.p>
@@ -418,7 +418,7 @@ function HomePage() {
         <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr]">
           <motion.div variants={reveal}>
             <SectionHeading
-              eyebrow="Why AntiGravity"
+              eyebrow="Why Game Vault"
               title="Built with brand-level presentation and player trust in mind"
               description="This isn’t just a list of outbound links. It’s a launch-ready frontend built to feel cinematic, safe, and premium from first scroll to final click."
             />
@@ -450,7 +450,7 @@ function HomePage() {
         <SectionHeading
           eyebrow="Community"
           title="Players should feel like they entered an official AAA site"
-          description="The goal of AntiGravity is simple: turn discovery into a premium moment while keeping every redirect clean, legal, and trustworthy."
+          description="The goal of Game Vault is simple: turn discovery into a premium moment while keeping every redirect clean, legal, and trustworthy."
         />
 
         <div className="mt-10 grid gap-6 xl:grid-cols-3">
@@ -568,7 +568,7 @@ function HomePage() {
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/14 bg-white/8 px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-white/12"
               >
-                Contact AntiGravity
+                Contact Game Vault
                 <Sparkles className="h-4 w-4" />
               </Link>
             </div>

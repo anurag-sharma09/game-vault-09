@@ -258,7 +258,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://www.blizzard.com/en-in/games/d4",
     featureTag: "Loot Grind",
-    image: "/images/games/rpg_game_1777832923045.png",
+    image: "/images/games/diablo_iv.png",
   },
   {
     title: "Sea of Stars",
@@ -278,7 +278,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://www.seaofstars.com/",
     featureTag: "Retro Quest",
-    image: "/images/games/rpg_game_1777832923045.png",
+    image: "/images/games/sea_of_stars.png",
   },
   {
     title: "Ni no Kuni II: Revenant Kingdom",
@@ -339,7 +339,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://playvalorant.com/",
     featureTag: "Tactical 5v5",
-    image: "/images/games/fps_game_1777832939474.png",
+    image: "/images/games/valorant.png",
   },
   {
     title: "Halo: The Master Chief Collection",
@@ -357,7 +357,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://www.microsoft.com/store/productId/9N5PZK82ZQZP",
     featureTag: "Halo Bundle",
-    image: "/images/games/fps_game_1777832939474.png",
+    image: "/images/games/halo_mcc.png",
   },
   {
     title: "Metro Exodus",
@@ -395,7 +395,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://store.steampowered.com/app/481970/DOOM_Eternal/",
     featureTag: "High-Speed Combat",
-    image: "/images/games/fps_game_1777832939474.png",
+    image: "/images/games/doom_eternal.png",
   },
   {
     title: "Forza Horizon 5",
@@ -517,7 +517,7 @@ const gameConfigs = [
     officialUrl:
       "https://store.steampowered.com/app/289070/Sid_Meiers_Civilization_VI/",
     featureTag: "Empire Builder",
-    image: "/images/games/strategy_game_1777832972711.png",
+    image: "/images/games/civ_vi.png",
   },
   {
     title: "XCOM 2",
@@ -537,7 +537,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://store.steampowered.com/app/268500/XCOM_2/",
     featureTag: "Tactical Classic",
-    image: "/images/games/strategy_game_1777832972711.png",
+    image: "/images/games/xcom_2.png",
   },
   {
     title: "Manor Lords",
@@ -557,7 +557,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://store.steampowered.com/app/1943230/Manor_Lords/",
     featureTag: "City Builder",
-    image: "/images/games/strategy_game_1777832972711.png",
+    image: "/images/games/manor_lords.png",
   },
   {
     title: "StarCraft II",
@@ -577,7 +577,7 @@ const gameConfigs = [
     launchWindow: "Free to start",
     officialUrl: "https://starcraft2.com/",
     featureTag: "RTS Icon",
-    image: "/images/games/strategy_game_1777832972711.png",
+    image: "/images/games/starcraft_2.png",
   },
   {
     title: "Triangle Strategy",
@@ -595,7 +595,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://trianglesstrategy.com/",
     featureTag: "Branching Tactics",
-    image: "/images/games/strategy_game_1777832972711.png",
+    image: "/images/games/triangle_strategy.png",
   },
   {
     title: "EA SPORTS FC 26",
@@ -633,7 +633,7 @@ const gameConfigs = [
     launchWindow: "Upcoming listing",
     officialUrl: "https://www.2k.com/",
     featureTag: "Basketball Sim",
-    image: "/images/games/sports_game_1777832986020.png",
+    image: "/images/games/nba_2k26.png",
   },
   {
     title: "Tony Hawk's Pro Skater 1+2",
@@ -714,7 +714,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://store.steampowered.com/app/504230/Celeste/",
     featureTag: "Narrative Platformer",
-    image: "/images/games/indie_game_1777832999890.png",
+    image: "/images/games/celeste.png",
   },
   {
     title: "Dead Cells",
@@ -811,7 +811,7 @@ const gameConfigs = [
     officialUrl:
       "https://www.playstation.com/en-in/games/horizon-forbidden-west/",
     featureTag: "Sci-Fi Open World",
-    image: "/images/games/open_world_game_1777833015156.png",
+    image: "/images/games/horizon_fw.png",
   },
   {
     title: "Dragon's Dogma 2",
@@ -830,7 +830,7 @@ const gameConfigs = [
     launchWindow: "Available now",
     officialUrl: "https://store.steampowered.com/app/1972150/Dragons_Dogma_2/",
     featureTag: "Pawn Adventure",
-    image: "/images/games/open_world_game_1777833015156.png",
+    image: "/images/games/dragons_dogma_2.png",
   },
   {
     title: "Assassin's Creed 4: Black Flag Remastered",
@@ -850,7 +850,7 @@ const gameConfigs = [
     launchWindow: "Upcoming listing",
     officialUrl: "https://www.assassinscreed.com/",
     featureTag: "Pirate Remaster",
-    image: "/images/games/action_game_1777832899430.png",
+    image: "/images/games/ac4_black_flag.png",
   },
 ];
 
@@ -989,7 +989,7 @@ function buildVisual({
       ${microLines}
 
       <text x="84" y="${height - 248}" fill="rgba(226,232,240,0.86)" font-size="18" font-family="Arial, Helvetica, sans-serif" letter-spacing="5">
-        ANTIGRAVITY
+        GAME VAULT
       </text>
       ${lineMarkup}
       <text x="84" y="${height - 56}" fill="rgba(226,232,240,0.84)" font-size="20" font-family="Arial, Helvetica, sans-serif">
@@ -1091,7 +1091,7 @@ function createGame(config) {
     overview: config.description,
     vaultNote:
       config.vaultNote ??
-      `AntiGravity sends players to the official ${config.store} destination for ${config.title} so the browsing flow stays legal and trustworthy.`,
+      `Game Vault sends players to the official ${config.store} destination for ${config.title} so the browsing flow stays legal and trustworthy.`,
     genres: config.genres,
     categories: config.categories,
     platforms: config.platforms,

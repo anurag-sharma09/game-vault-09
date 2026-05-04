@@ -8,7 +8,7 @@ function NotFoundPage() {
         <p className="text-[10px] font-semibold uppercase tracking-[0.38em] text-cyan-100/72">404</p>
         <h1 className="mt-5 font-display text-6xl uppercase leading-none text-white">Page not found</h1>
         <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-slate-300/76">
-          The page you requested does not exist in the current AntiGravity build. Use the main games listing to continue browsing official game links safely.
+          The page you requested does not exist in the current Game Vault build. Use the main games listing to continue browsing official game links safely.
         </p>
         <Link
           to="/games"

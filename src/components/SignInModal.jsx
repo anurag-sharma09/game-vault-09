@@ -34,7 +34,7 @@ function SignInModal({ open, onClose, onSave, playerTag }) {
             </p>
             <h2 className="font-display text-3xl text-white">Sign In</h2>
             <p className="mt-3 text-sm leading-7 text-slate-300/78">
-              Save a quick player tag for this browser and keep your AntiGravity experience feeling premium.
+              Save a quick player tag for this browser and keep your Game Vault experience feeling premium.
             </p>
           </div>
           <button
@@ -54,7 +54,7 @@ function SignInModal({ open, onClose, onSave, playerTag }) {
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                placeholder="player@antigravitygames.com"
+                placeholder="player@gamevault.com"
                 className="mt-2 w-full rounded-2xl border border-white/12 bg-slate-950/60 px-4 py-3 text-white placeholder:text-slate-500 focus:border-cyan-300/36 focus:outline-none"
               />
           </label>
@@ -84,7 +84,7 @@ function SignInModal({ open, onClose, onSave, playerTag }) {
             type="submit"
             className="inline-flex w-full items-center justify-center rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.95),rgba(34,211,238,0.95))] px-5 py-3.5 text-sm font-semibold text-slate-950 transition hover:brightness-110"
           >
-            Enter AntiGravity
+            Enter Game Vault
           </button>
         </form>
       </div>
