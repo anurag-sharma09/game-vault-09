@@ -3031,8 +3031,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=valorant",
     "featureTag": "FPS",
-    "image": "https://cdn.playvalorant.com/playvalorant-com/img/share-graphic.png",
-    "banner": "https://cdn.playvalorant.com/playvalorant-com/img/bg-ep8-act2.jpg",
+    "image": "/images/games/valorant.png",
+    "banner": "/images/games/valorant.png",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3051,17 +3051,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "https://cdn.playvalorant.com/playvalorant-com/img/bg-ep8-act2.jpg"
+        "src": "/images/games/valorant.png"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "https://cdn.playvalorant.com/playvalorant-com/img/bg-ep8-act2.jpg"
+        "src": "/images/games/valorant.png"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "https://cdn.playvalorant.com/playvalorant-com/img/bg-ep8-act2.jpg"
+        "src": "/images/games/valorant.png"
       }
     ]
   },
