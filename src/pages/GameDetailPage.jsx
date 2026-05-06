@@ -260,16 +260,28 @@ function GameDetailPage() {
             </p>
             <div className="mt-6 space-y-4 text-sm text-slate-300/78">
               <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4">
-                <span>Supported Platforms</span>
-                <span className="max-w-[15rem] text-right text-white">{game.platforms.join(', ')}</span>
+                <span>Developer</span>
+                <span className="text-right text-white">{game.developer}</span>
               </div>
               <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4">
-                <span>Official Publisher</span>
-                <span className="text-right text-white">{game.publisher}</span>
+                <span>Price</span>
+                <span className="text-right text-white">{game.price}</span>
+              </div>
+              <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4">
+                <span>Release Year</span>
+                <span className="text-right text-white">{game.releaseYear}</span>
+              </div>
+              <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4">
+                <span>Supported Platforms</span>
+                <span className="max-w-[15rem] text-right text-white">
+                  {game.platforms.join(', ')}
+                </span>
               </div>
               <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4">
                 <span>Store Coverage</span>
-                <span className="max-w-[15rem] text-right text-white">{game.supportedStores.join(', ')}</span>
+                <span className="max-w-[15rem] text-right text-white">
+                  {game.supportedStores.join(', ')}
+                </span>
               </div>
               <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4">
                 <span>Availability</span>
@@ -334,6 +346,44 @@ function GameDetailPage() {
           </div>
         </div>
       </motion.section>
+
+      {game.systemRequirements ? (
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.18 }}
+          variants={stagger}
+          className="mx-auto mt-24 max-w-[92rem] px-4 sm:px-6 lg:px-10"
+        >
+          <SectionHeading
+            eyebrow="Technical Specs"
+            title="System Requirements"
+            description="Ensure your machine is ready for the experience. These specifications are provided by the official developers."
+          />
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              { label: 'OS', value: game.systemRequirements.os },
+              { label: 'CPU', value: game.systemRequirements.cpu },
+              { label: 'RAM', value: game.systemRequirements.ram },
+              { label: 'GPU', value: game.systemRequirements.gpu },
+              { label: 'Storage', value: game.systemRequirements.storage },
+            ].map((spec) => (
+              <div
+                key={spec.label}
+                className="glass-panel rounded-[26px] bg-white/4 p-6 transition hover:bg-white/6"
+              >
+                <p className="text-[10px] font-semibold uppercase tracking-[0.34em] text-cyan-100/72">
+                  {spec.label}
+                </p>
+                <p className="mt-4 text-sm font-medium leading-relaxed text-white">
+                  {spec.value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.section>
+      ) : null}
 
       <motion.section
         initial="hidden"

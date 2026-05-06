@@ -28,7 +28,7 @@ function GameCard({ game, compact = false }) {
         <div className="flex items-start justify-between gap-4">
           <div>
             <Link to={`/games/${game.slug}`}>
-              <h3 className="font-display text-[2rem] uppercase leading-none text-white transition group-hover:text-cyan-100">
+              <h3 className="line-clamp-2 font-display text-[2rem] uppercase leading-none text-white transition group-hover:text-cyan-100">
                 {game.title}
               </h3>
             </Link>
@@ -46,7 +46,7 @@ function GameCard({ game, compact = false }) {
                   : 'bg-violet-400/14 text-violet-200'
             }`}
           >
-            {game.priceLabel}
+            {game.price || game.priceLabel}
           </span>
         </div>
 
