@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
   ArrowRight,
@@ -19,7 +20,7 @@ const reveal = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.72, ease: 'easeOut' },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
   },
 }
 
@@ -36,6 +37,11 @@ function GameDetailPage() {
   const { scrollY } = useScroll()
   const bannerY = useTransform(scrollY, [0, 800], [0, 90])
   const bannerScale = useTransform(scrollY, [0, 800], [1, 1.06])
+
+  const [imgStatus, setImgStatus] = useState('loading')
+  useEffect(() => {
+    setImgStatus('loading')
+  }, [slug])
 
   if (!game) {
     return (
@@ -72,16 +78,32 @@ function GameDetailPage() {
     .sort((left, right) => right.popularity - left.popularity)
     .slice(0, 3)
 
+  const showFallback = !game.banner || imgStatus === 'error'
+
   return (
     <div className="overflow-hidden">
       <section className="relative min-h-[100svh]">
         <motion.div style={{ y: bannerY, scale: bannerScale }} className="absolute inset-0">
-          <img
-            src={game.banner}
-            alt={`${game.title} cinematic banner`}
-            loading="eager"
-            className="h-full w-full object-cover object-center"
-          />
+          {showFallback ? (
+            <div className="absolute inset-0 bg-slate-900 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.15),transparent_60%)]" />
+          ) : (
+            <img
+              src={game.banner}
+              alt={`${game.title} cinematic banner`}
+              loading="eager"
+              onLoad={() => setImgStatus('loaded')}
+              onError={() => {
+                console.warn(`Failed to load banner for: ${game.title}`)
+                setImgStatus('error')
+              }}
+              className={`h-full w-full object-cover object-center transition-opacity duration-700 ${
+                imgStatus === 'loaded' ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          )}
+          {imgStatus === 'loading' && !showFallback && (
+            <div className="absolute inset-0 animate-pulse bg-slate-800/80 backdrop-blur-md" />
+          )}
         </motion.div>
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,7,13,0.18),rgba(5,7,13,0.48)_34%,rgba(5,7,13,0.94)_84%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(168,85,247,0.2),transparent_24%),radial-gradient(circle_at_82%_16%,rgba(34,211,238,0.14),transparent_22%)]" />

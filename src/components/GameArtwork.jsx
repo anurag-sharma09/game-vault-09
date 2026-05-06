@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 function GameArtwork({
   title,
   subtitle,
@@ -11,32 +13,54 @@ function GameArtwork({
   priority = false,
 }) {
   const [primary, secondary, tertiary] = palette
+  const [imgStatus, setImgStatus] = useState('loading')
+
+  useEffect(() => {
+    setImgStatus('loading')
+  }, [imageSrc])
+
+  const showFallback = !imageSrc || imgStatus === 'error'
 
   return (
     <div
       className={`scan-lines relative overflow-hidden border border-white/12 bg-slate-950 ${className}`}
     >
-      {imageSrc ? (
+      {/* Background/Fallback Gradient */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 18% 20%, ${primary} 0%, transparent 34%),
+            radial-gradient(circle at 88% 8%, ${secondary} 0%, transparent 36%),
+            linear-gradient(135deg, rgba(2, 6, 23, 0.96) 0%, rgba(15, 23, 42, 0.86) 42%, ${tertiary} 140%)
+          `,
+        }}
+      />
+
+      {/* Actual Image */}
+      {!showFallback && (
         <img
           src={imageSrc}
           alt={alt ?? title}
           loading={loading}
           decoding="async"
           fetchPriority={priority ? 'high' : 'auto'}
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
-      ) : (
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              radial-gradient(circle at 18% 20%, ${primary} 0%, transparent 34%),
-              radial-gradient(circle at 88% 8%, ${secondary} 0%, transparent 36%),
-              linear-gradient(135deg, rgba(2, 6, 23, 0.96) 0%, rgba(15, 23, 42, 0.86) 42%, ${tertiary} 140%)
-            `,
+          onLoad={() => setImgStatus('loaded')}
+          onError={() => {
+            console.warn(`Failed to load image for: ${title}`)
+            setImgStatus('error')
           }}
+          className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-300 ${
+            imgStatus === 'loaded' ? 'opacity-100' : 'opacity-0'
+          }`}
         />
       )}
+
+      {/* Loading Skeleton Overlay */}
+      {imgStatus === 'loading' && !showFallback && (
+        <div className="absolute inset-0 animate-pulse bg-slate-800/80 backdrop-blur-sm" />
+      )}
+
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_18%,rgba(255,255,255,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.06),transparent_22%,rgba(2,6,23,0.78))]" />
       <div className="hero-orb absolute -left-10 top-1/2 h-36 w-36 -translate-y-1/2 rounded-full bg-white/10 blur-3xl" />

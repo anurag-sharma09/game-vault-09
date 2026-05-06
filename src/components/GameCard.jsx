@@ -18,7 +18,7 @@ function GameCard({ game, compact = false }) {
           alt={`${game.title} cover art`}
           palette={game.palette}
           badges={[game.featureTag, game.platforms[0], game.priceModel]}
-          className={compact ? 'h-80 rounded-none' : 'h-72 rounded-none'}
+          className={compact ? 'aspect-[2/3] w-full rounded-none' : 'aspect-[2/3] w-full rounded-none'}
           titleSize={compact ? 'text-3xl' : 'text-[2.2rem]'}
           loading="lazy"
         />

@@ -139,8 +139,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=grand-theft-auto-v",
     "featureTag": "Action",
-    "image": "/images/games/grand-theft-auto-v.webp",
-    "banner": "/images/banners/grand-theft-auto-v.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -159,17 +159,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/grand-theft-auto-v.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/grand-theft-auto-v.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/grand-theft-auto-v.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg"
       }
     ]
   },
@@ -210,8 +210,8 @@ const gameConfigs = [
     "launchWindow": "Upcoming",
     "officialUrl": "https://google.com/search?q=grand-theft-auto-vi",
     "featureTag": "Action",
-    "image": "/images/games/grand-theft-auto-vi.webp",
-    "banner": "/images/banners/grand-theft-auto-vi.webp",
+    "image": "/images/games/gta6_enhanced.png",
+    "banner": "/images/games/gta6_enhanced.png",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -230,17 +230,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/grand-theft-auto-vi.webp"
+        "src": "/images/games/gta6_enhanced.png"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/grand-theft-auto-vi.webp"
+        "src": "/images/games/gta6_enhanced.png"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/grand-theft-auto-vi.webp"
+        "src": "/images/games/gta6_enhanced.png"
       }
     ]
   },
@@ -281,8 +281,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=red-dead-redemption-2",
     "featureTag": "Action",
-    "image": "/images/games/red-dead-redemption-2.webp",
-    "banner": "/images/banners/red-dead-redemption-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -301,17 +301,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/red-dead-redemption-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/red-dead-redemption-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/red-dead-redemption-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg"
       }
     ]
   },
@@ -352,8 +352,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=marvel-s-spider-man-remastered",
     "featureTag": "Action",
-    "image": "/images/games/marvel-s-spider-man-remastered.webp",
-    "banner": "/images/banners/marvel-s-spider-man-remastered.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817040/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817040/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -372,17 +372,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/marvel-s-spider-man-remastered.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817040/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/marvel-s-spider-man-remastered.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817040/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/marvel-s-spider-man-remastered.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817040/header.jpg"
       }
     ]
   },
@@ -423,8 +423,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=marvel-s-spider-man-2",
     "featureTag": "Action",
-    "image": "/images/games/marvel-s-spider-man-2.webp",
-    "banner": "/images/banners/marvel-s-spider-man-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3138240/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3138240/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -443,17 +443,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/marvel-s-spider-man-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3138240/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/marvel-s-spider-man-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3138240/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/marvel-s-spider-man-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3138240/header.jpg"
       }
     ]
   },
@@ -494,8 +494,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=batman-arkham-knight",
     "featureTag": "Action",
-    "image": "/images/games/batman-arkham-knight.webp",
-    "banner": "/images/banners/batman-arkham-knight.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/208650/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/208650/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -514,17 +514,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/batman-arkham-knight.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/208650/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/batman-arkham-knight.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/208650/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/batman-arkham-knight.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/208650/header.jpg"
       }
     ]
   },
@@ -565,8 +565,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=ghost-of-tsushima",
     "featureTag": "Action",
-    "image": "/images/games/ghost-of-tsushima.webp",
-    "banner": "/images/banners/ghost-of-tsushima.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -585,17 +585,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/ghost-of-tsushima.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/ghost-of-tsushima.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/ghost-of-tsushima.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg"
       }
     ]
   },
@@ -636,8 +636,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=assassin-s-creed-valhalla",
     "featureTag": "Action",
-    "image": "/images/games/assassin-s-creed-valhalla.webp",
-    "banner": "/images/banners/assassin-s-creed-valhalla.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -656,17 +656,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/assassin-s-creed-valhalla.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/assassin-s-creed-valhalla.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/assassin-s-creed-valhalla.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg"
       }
     ]
   },
@@ -707,8 +707,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=assassin-s-creed-mirage",
     "featureTag": "Action",
-    "image": "/images/games/assassin-s-creed-mirage.webp",
-    "banner": "/images/banners/assassin-s-creed-mirage.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2896350/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2896350/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -727,17 +727,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/assassin-s-creed-mirage.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2896350/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/assassin-s-creed-mirage.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2896350/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/assassin-s-creed-mirage.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2896350/header.jpg"
       }
     ]
   },
@@ -778,8 +778,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=horizon-zero-dawn",
     "featureTag": "Action",
-    "image": "/images/games/horizon-zero-dawn.webp",
-    "banner": "/images/banners/horizon-zero-dawn.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -798,17 +798,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/horizon-zero-dawn.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/horizon-zero-dawn.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/horizon-zero-dawn.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/header.jpg"
       }
     ]
   },
@@ -849,8 +849,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=horizon-forbidden-west",
     "featureTag": "Action",
-    "image": "/images/games/horizon-forbidden-west.webp",
-    "banner": "/images/banners/horizon-forbidden-west.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -869,17 +869,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/horizon-forbidden-west.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/horizon-forbidden-west.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/horizon-forbidden-west.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg"
       }
     ]
   },
@@ -918,8 +918,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=god-of-war",
     "featureTag": "Action",
-    "image": "/images/games/god-of-war.webp",
-    "banner": "/images/banners/god-of-war.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -938,17 +938,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/god-of-war.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/god-of-war.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/god-of-war.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/header.jpg"
       }
     ]
   },
@@ -987,8 +987,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=god-of-war-ragnar-k",
     "featureTag": "Action",
-    "image": "/images/games/god-of-war-ragnar-k.webp",
-    "banner": "/images/banners/god-of-war-ragnar-k.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1007,17 +1007,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/god-of-war-ragnar-k.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/god-of-war-ragnar-k.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/god-of-war-ragnar-k.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg"
       }
     ]
   },
@@ -1056,8 +1056,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=devil-may-cry-5",
     "featureTag": "Action",
-    "image": "/images/games/devil-may-cry-5.webp",
-    "banner": "/images/banners/devil-may-cry-5.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1076,17 +1076,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/devil-may-cry-5.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/devil-may-cry-5.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/devil-may-cry-5.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/header.jpg"
       }
     ]
   },
@@ -1125,8 +1125,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=sekiro-shadows-die-twice",
     "featureTag": "Action",
-    "image": "/images/games/sekiro-shadows-die-twice.webp",
-    "banner": "/images/banners/sekiro-shadows-die-twice.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1145,17 +1145,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/sekiro-shadows-die-twice.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/sekiro-shadows-die-twice.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/sekiro-shadows-die-twice.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg"
       }
     ]
   },
@@ -1196,8 +1196,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=monster-hunter-world",
     "featureTag": "Action RPG",
-    "image": "/images/games/monster-hunter-world.webp",
-    "banner": "/images/banners/monster-hunter-world.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1216,17 +1216,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/monster-hunter-world.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/monster-hunter-world.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/monster-hunter-world.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg"
       }
     ]
   },
@@ -1267,8 +1267,8 @@ const gameConfigs = [
     "launchWindow": "Upcoming",
     "officialUrl": "https://google.com/search?q=monster-hunter-wilds",
     "featureTag": "Action RPG",
-    "image": "/images/games/monster-hunter-wilds.webp",
-    "banner": "/images/banners/monster-hunter-wilds.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1287,17 +1287,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/monster-hunter-wilds.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/monster-hunter-wilds.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/monster-hunter-wilds.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/header.jpg"
       }
     ]
   },
@@ -1338,8 +1338,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=the-witcher-3-wild-hunt",
     "featureTag": "RPG",
-    "image": "/images/games/the-witcher-3-wild-hunt.webp",
-    "banner": "/images/banners/the-witcher-3-wild-hunt.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1358,17 +1358,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/the-witcher-3-wild-hunt.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/the-witcher-3-wild-hunt.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/the-witcher-3-wild-hunt.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg"
       }
     ]
   },
@@ -1410,8 +1410,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=cyberpunk-2077",
     "featureTag": "Action RPG",
-    "image": "/images/games/cyberpunk-2077.webp",
-    "banner": "/images/banners/cyberpunk-2077.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1430,17 +1430,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/cyberpunk-2077.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/cyberpunk-2077.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/cyberpunk-2077.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg"
       }
     ]
   },
@@ -1482,8 +1482,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=elden-ring",
     "featureTag": "Action RPG",
-    "image": "/images/games/elden-ring.webp",
-    "banner": "/images/banners/elden-ring.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1502,17 +1502,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/elden-ring.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/elden-ring.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/elden-ring.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg"
       }
     ]
   },
@@ -1552,8 +1552,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=dark-souls-iii",
     "featureTag": "Action RPG",
-    "image": "/images/games/dark-souls-iii.webp",
-    "banner": "/images/banners/dark-souls-iii.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1572,17 +1572,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/dark-souls-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/dark-souls-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/dark-souls-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/header.jpg"
       }
     ]
   },
@@ -1622,8 +1622,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=bloodborne",
     "featureTag": "Action RPG",
-    "image": "/images/games/bloodborne.webp",
-    "banner": "/images/banners/bloodborne.webp",
+    "image": "https://image.api.playstation.com/vulcan/img/rnd/202010/2614/B421w7n7cR8L2oG2J4B5Y1xT.png",
+    "banner": "https://image.api.playstation.com/vulcan/img/rnd/202010/2614/xRhyy4aT4rM7rLqP3g6W4aY4.png",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1642,17 +1642,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/bloodborne.webp"
+        "src": "https://image.api.playstation.com/vulcan/img/rnd/202010/2614/xRhyy4aT4rM7rLqP3g6W4aY4.png"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/bloodborne.webp"
+        "src": "https://image.api.playstation.com/vulcan/img/rnd/202010/2614/xRhyy4aT4rM7rLqP3g6W4aY4.png"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/bloodborne.webp"
+        "src": "https://image.api.playstation.com/vulcan/img/rnd/202010/2614/xRhyy4aT4rM7rLqP3g6W4aY4.png"
       }
     ]
   },
@@ -1691,8 +1691,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=baldur-s-gate-3",
     "featureTag": "RPG",
-    "image": "/images/games/baldur-s-gate-3.webp",
-    "banner": "/images/banners/baldur-s-gate-3.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1711,17 +1711,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/baldur-s-gate-3.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/baldur-s-gate-3.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/baldur-s-gate-3.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg"
       }
     ]
   },
@@ -1762,8 +1762,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=skyrim-special-edition",
     "featureTag": "RPG",
-    "image": "/images/games/skyrim-special-edition.webp",
-    "banner": "/images/banners/skyrim-special-edition.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1782,17 +1782,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/skyrim-special-edition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/skyrim-special-edition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/skyrim-special-edition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg"
       }
     ]
   },
@@ -1833,8 +1833,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=fallout-4",
     "featureTag": "RPG",
-    "image": "/images/games/fallout-4.webp",
-    "banner": "/images/banners/fallout-4.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1853,17 +1853,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/fallout-4.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/fallout-4.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/fallout-4.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg"
       }
     ]
   },
@@ -1904,8 +1904,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=fallout-new-vegas",
     "featureTag": "RPG",
-    "image": "/images/games/fallout-new-vegas.webp",
-    "banner": "/images/banners/fallout-new-vegas.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1924,17 +1924,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/fallout-new-vegas.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/fallout-new-vegas.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/fallout-new-vegas.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/header.jpg"
       }
     ]
   },
@@ -1975,8 +1975,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=starfield",
     "featureTag": "RPG",
-    "image": "/images/games/starfield.webp",
-    "banner": "/images/banners/starfield.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -1995,17 +1995,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/starfield.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/starfield.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/starfield.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg"
       }
     ]
   },
@@ -2044,8 +2044,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=persona-5-royal",
     "featureTag": "JRPG",
-    "image": "/images/games/persona-5-royal.webp",
-    "banner": "/images/banners/persona-5-royal.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2064,17 +2064,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/persona-5-royal.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/persona-5-royal.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/persona-5-royal.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/header.jpg"
       }
     ]
   },
@@ -2113,8 +2113,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=persona-3-reload",
     "featureTag": "JRPG",
-    "image": "/images/games/persona-3-reload.webp",
-    "banner": "/images/banners/persona-3-reload.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2133,17 +2133,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/persona-3-reload.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/persona-3-reload.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/persona-3-reload.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/header.jpg"
       }
     ]
   },
@@ -2183,8 +2183,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=final-fantasy-vii-remake-intergrade",
     "featureTag": "Action RPG",
-    "image": "/images/games/final-fantasy-vii-remake-intergrade.webp",
-    "banner": "/images/banners/final-fantasy-vii-remake-intergrade.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1462040/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1462040/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2203,17 +2203,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/final-fantasy-vii-remake-intergrade.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1462040/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/final-fantasy-vii-remake-intergrade.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1462040/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/final-fantasy-vii-remake-intergrade.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1462040/header.jpg"
       }
     ]
   },
@@ -2255,8 +2255,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=final-fantasy-vii-rebirth",
     "featureTag": "Action RPG",
-    "image": "/images/games/final-fantasy-vii-rebirth.webp",
-    "banner": "/images/banners/final-fantasy-vii-rebirth.webp",
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202309/0107/867f08bf6a7f33d7c5040e6918d363b469bcf27734a66a1e.png",
+    "banner": "https://image.api.playstation.com/vulcan/ap/rnd/202309/0107/1169fcbb88db1261d76384dbf389fbff289a710bc88e14b2.png",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2275,17 +2275,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/final-fantasy-vii-rebirth.webp"
+        "src": "https://image.api.playstation.com/vulcan/ap/rnd/202309/0107/1169fcbb88db1261d76384dbf389fbff289a710bc88e14b2.png"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/final-fantasy-vii-rebirth.webp"
+        "src": "https://image.api.playstation.com/vulcan/ap/rnd/202309/0107/1169fcbb88db1261d76384dbf389fbff289a710bc88e14b2.png"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/final-fantasy-vii-rebirth.webp"
+        "src": "https://image.api.playstation.com/vulcan/ap/rnd/202309/0107/1169fcbb88db1261d76384dbf389fbff289a710bc88e14b2.png"
       }
     ]
   },
@@ -2325,8 +2325,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=final-fantasy-xvi",
     "featureTag": "Action RPG",
-    "image": "/images/games/final-fantasy-xvi.webp",
-    "banner": "/images/banners/final-fantasy-xvi.webp",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600&h=900",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2345,17 +2345,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/final-fantasy-xvi.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/final-fantasy-xvi.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/final-fantasy-xvi.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       }
     ]
   },
@@ -2395,8 +2395,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=mass-effect-legendary-edition",
     "featureTag": "Action RPG",
-    "image": "/images/games/mass-effect-legendary-edition.webp",
-    "banner": "/images/banners/mass-effect-legendary-edition.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1328670/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1328670/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2415,17 +2415,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/mass-effect-legendary-edition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1328670/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/mass-effect-legendary-edition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1328670/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/mass-effect-legendary-edition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1328670/header.jpg"
       }
     ]
   },
@@ -2464,8 +2464,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=dragon-age-inquisition",
     "featureTag": "RPG",
-    "image": "/images/games/dragon-age-inquisition.webp",
-    "banner": "/images/banners/dragon-age-inquisition.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222650/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222650/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2484,17 +2484,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/dragon-age-inquisition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222650/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/dragon-age-inquisition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222650/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/dragon-age-inquisition.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222650/header.jpg"
       }
     ]
   },
@@ -2535,8 +2535,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=diablo-iv",
     "featureTag": "Action RPG",
-    "image": "/images/games/diablo-iv.webp",
-    "banner": "/images/banners/diablo-iv.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2555,17 +2555,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/diablo-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/diablo-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/diablo-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/header.jpg"
       }
     ]
   },
@@ -2605,8 +2605,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=path-of-exile",
     "featureTag": "Action RPG",
-    "image": "/images/games/path-of-exile.webp",
-    "banner": "/images/banners/path-of-exile.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238960/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238960/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2625,17 +2625,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/path-of-exile.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238960/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/path-of-exile.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238960/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/path-of-exile.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238960/header.jpg"
       }
     ]
   },
@@ -2676,8 +2676,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=genshin-impact",
     "featureTag": "Action RPG",
-    "image": "/images/games/genshin-impact.webp",
-    "banner": "/images/banners/genshin-impact.webp",
+    "image": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg",
+    "banner": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2696,17 +2696,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/genshin-impact.webp"
+        "src": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/genshin-impact.webp"
+        "src": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/genshin-impact.webp"
+        "src": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg"
       }
     ]
   },
@@ -2747,8 +2747,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=call-of-duty-modern-warfare-iii",
     "featureTag": "FPS",
-    "image": "/images/games/call-of-duty-modern-warfare-iii.webp",
-    "banner": "/images/banners/call-of-duty-modern-warfare-iii.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2767,17 +2767,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/call-of-duty-modern-warfare-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/call-of-duty-modern-warfare-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/call-of-duty-modern-warfare-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/header.jpg"
       }
     ]
   },
@@ -2818,8 +2818,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=call-of-duty-warzone",
     "featureTag": "FPS",
-    "image": "/images/games/call-of-duty-warzone.webp",
-    "banner": "/images/banners/call-of-duty-warzone.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962660/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962660/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2838,17 +2838,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/call-of-duty-warzone.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962660/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/call-of-duty-warzone.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962660/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/call-of-duty-warzone.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962660/header.jpg"
       }
     ]
   },
@@ -2889,8 +2889,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=call-of-duty-black-ops-6",
     "featureTag": "FPS",
-    "image": "/images/games/call-of-duty-black-ops-6.webp",
-    "banner": "/images/banners/call-of-duty-black-ops-6.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2933620/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2909,17 +2909,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/call-of-duty-black-ops-6.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/call-of-duty-black-ops-6.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/call-of-duty-black-ops-6.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2933620/header.jpg"
       }
     ]
   },
@@ -2960,8 +2960,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=counter-strike-2",
     "featureTag": "FPS",
-    "image": "/images/games/counter-strike-2.webp",
-    "banner": "/images/banners/counter-strike-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -2980,17 +2980,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/counter-strike-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/counter-strike-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/counter-strike-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/header.jpg"
       }
     ]
   },
@@ -3031,8 +3031,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=valorant",
     "featureTag": "FPS",
-    "image": "/images/games/valorant.webp",
-    "banner": "/images/banners/valorant.webp",
+    "image": "https://cdn.playvalorant.com/playvalorant-com/img/share-graphic.png",
+    "banner": "https://cdn.playvalorant.com/playvalorant-com/img/bg-ep8-act2.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3051,17 +3051,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/valorant.webp"
+        "src": "https://cdn.playvalorant.com/playvalorant-com/img/bg-ep8-act2.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/valorant.webp"
+        "src": "https://cdn.playvalorant.com/playvalorant-com/img/bg-ep8-act2.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/valorant.webp"
+        "src": "https://cdn.playvalorant.com/playvalorant-com/img/bg-ep8-act2.jpg"
       }
     ]
   },
@@ -3102,8 +3102,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=apex-legends",
     "featureTag": "FPS",
-    "image": "/images/games/apex-legends.webp",
-    "banner": "/images/banners/apex-legends.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3122,17 +3122,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/apex-legends.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/apex-legends.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/apex-legends.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/header.jpg"
       }
     ]
   },
@@ -3173,8 +3173,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=overwatch-2",
     "featureTag": "FPS",
-    "image": "/images/games/overwatch-2.webp",
-    "banner": "/images/banners/overwatch-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2356560/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2356560/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3193,17 +3193,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/overwatch-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2356560/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/overwatch-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2356560/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/overwatch-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2356560/header.jpg"
       }
     ]
   },
@@ -3244,8 +3244,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=tom-clancy-s-rainbow-six-siege",
     "featureTag": "FPS",
-    "image": "/images/games/tom-clancy-s-rainbow-six-siege.webp",
-    "banner": "/images/banners/tom-clancy-s-rainbow-six-siege.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3264,17 +3264,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/tom-clancy-s-rainbow-six-siege.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/tom-clancy-s-rainbow-six-siege.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/tom-clancy-s-rainbow-six-siege.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/header.jpg"
       }
     ]
   },
@@ -3315,8 +3315,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=doom-eternal",
     "featureTag": "FPS",
-    "image": "/images/games/doom-eternal.webp",
-    "banner": "/images/banners/doom-eternal.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/481970/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/481970/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3335,17 +3335,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/doom-eternal.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/481970/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/doom-eternal.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/481970/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/doom-eternal.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/481970/header.jpg"
       }
     ]
   },
@@ -3386,8 +3386,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=halo-infinite",
     "featureTag": "FPS",
-    "image": "/images/games/halo-infinite.webp",
-    "banner": "/images/banners/halo-infinite.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3406,17 +3406,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/halo-infinite.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/halo-infinite.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/halo-infinite.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/header.jpg"
       }
     ]
   },
@@ -3457,8 +3457,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=halo-the-master-chief-collection",
     "featureTag": "FPS",
-    "image": "/images/games/halo-the-master-chief-collection.webp",
-    "banner": "/images/banners/halo-the-master-chief-collection.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3477,17 +3477,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/halo-the-master-chief-collection.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/halo-the-master-chief-collection.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/halo-the-master-chief-collection.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg"
       }
     ]
   },
@@ -3529,8 +3529,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=destiny-2",
     "featureTag": "FPS",
-    "image": "/images/games/destiny-2.webp",
-    "banner": "/images/banners/destiny-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3549,17 +3549,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/destiny-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/destiny-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/destiny-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/header.jpg"
       }
     ]
   },
@@ -3600,8 +3600,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=escape-from-tarkov",
     "featureTag": "FPS",
-    "image": "/images/games/escape-from-tarkov.webp",
-    "banner": "/images/banners/escape-from-tarkov.webp",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600&h=900",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3620,17 +3620,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/escape-from-tarkov.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/escape-from-tarkov.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/escape-from-tarkov.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       }
     ]
   },
@@ -3671,8 +3671,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=half-life-alyx",
     "featureTag": "FPS",
-    "image": "/images/games/half-life-alyx.webp",
-    "banner": "/images/banners/half-life-alyx.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546560/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546560/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3691,17 +3691,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/half-life-alyx.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546560/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/half-life-alyx.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546560/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/half-life-alyx.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546560/header.jpg"
       }
     ]
   },
@@ -3742,8 +3742,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=left-4-dead-2",
     "featureTag": "FPS",
-    "image": "/images/games/left-4-dead-2.webp",
-    "banner": "/images/banners/left-4-dead-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3762,17 +3762,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/left-4-dead-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/left-4-dead-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/left-4-dead-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg"
       }
     ]
   },
@@ -3813,8 +3813,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=team-fortress-2",
     "featureTag": "FPS",
-    "image": "/images/games/team-fortress-2.webp",
-    "banner": "/images/banners/team-fortress-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3833,17 +3833,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/team-fortress-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/team-fortress-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/team-fortress-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/header.jpg"
       }
     ]
   },
@@ -3884,8 +3884,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=battlefield-2042",
     "featureTag": "FPS",
-    "image": "/images/games/battlefield-2042.webp",
-    "banner": "/images/banners/battlefield-2042.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3904,17 +3904,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/battlefield-2042.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/battlefield-2042.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/battlefield-2042.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg"
       }
     ]
   },
@@ -3955,8 +3955,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=forza-horizon-5",
     "featureTag": "Racing",
-    "image": "/images/games/forza-horizon-5.webp",
-    "banner": "/images/banners/forza-horizon-5.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -3975,17 +3975,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/forza-horizon-5.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/forza-horizon-5.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/forza-horizon-5.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg"
       }
     ]
   },
@@ -4025,8 +4025,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=forza-motorsport",
     "featureTag": "Racing",
-    "image": "/images/games/forza-motorsport.webp",
-    "banner": "/images/banners/forza-motorsport.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2440510/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2440510/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4045,17 +4045,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/forza-motorsport.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2440510/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/forza-motorsport.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2440510/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/forza-motorsport.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2440510/header.jpg"
       }
     ]
   },
@@ -4095,8 +4095,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=gran-turismo-7",
     "featureTag": "Racing",
-    "image": "/images/games/gran-turismo-7.webp",
-    "banner": "/images/banners/gran-turismo-7.webp",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600&h=900",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4115,17 +4115,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/gran-turismo-7.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/gran-turismo-7.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/gran-turismo-7.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       }
     ]
   },
@@ -4165,8 +4165,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=f1-23",
     "featureTag": "Racing",
-    "image": "/images/games/f1-23.webp",
-    "banner": "/images/banners/f1-23.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2108330/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2108330/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4185,17 +4185,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/f1-23.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2108330/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/f1-23.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2108330/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/f1-23.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2108330/header.jpg"
       }
     ]
   },
@@ -4236,8 +4236,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=need-for-speed-unbound",
     "featureTag": "Racing",
-    "image": "/images/games/need-for-speed-unbound.webp",
-    "banner": "/images/banners/need-for-speed-unbound.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1846380/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1846380/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4256,17 +4256,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/need-for-speed-unbound.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1846380/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/need-for-speed-unbound.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1846380/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/need-for-speed-unbound.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1846380/header.jpg"
       }
     ]
   },
@@ -4307,8 +4307,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=need-for-speed-heat",
     "featureTag": "Racing",
-    "image": "/images/games/need-for-speed-heat.webp",
-    "banner": "/images/banners/need-for-speed-heat.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222680/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222680/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4327,17 +4327,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/need-for-speed-heat.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222680/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/need-for-speed-heat.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222680/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/need-for-speed-heat.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222680/header.jpg"
       }
     ]
   },
@@ -4377,8 +4377,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=dirt-rally-2-0",
     "featureTag": "Racing",
-    "image": "/images/games/dirt-rally-2-0.webp",
-    "banner": "/images/banners/dirt-rally-2-0.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/690790/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/690790/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4397,17 +4397,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/dirt-rally-2-0.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/690790/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/dirt-rally-2-0.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/690790/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/dirt-rally-2-0.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/690790/header.jpg"
       }
     ]
   },
@@ -4447,8 +4447,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=assetto-corsa-competizione",
     "featureTag": "Racing",
-    "image": "/images/games/assetto-corsa-competizione.webp",
-    "banner": "/images/banners/assetto-corsa-competizione.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/805550/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/805550/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4467,17 +4467,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/assetto-corsa-competizione.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/805550/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/assetto-corsa-competizione.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/805550/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/assetto-corsa-competizione.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/805550/header.jpg"
       }
     ]
   },
@@ -4517,8 +4517,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=mario-kart-8-deluxe",
     "featureTag": "Racing",
-    "image": "/images/games/mario-kart-8-deluxe.webp",
-    "banner": "/images/banners/mario-kart-8-deluxe.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4537,17 +4537,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/mario-kart-8-deluxe.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/mario-kart-8-deluxe.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/mario-kart-8-deluxe.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -4589,8 +4589,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=rocket-league",
     "featureTag": "Racing",
-    "image": "/images/games/rocket-league.webp",
-    "banner": "/images/banners/rocket-league.webp",
+    "image": "https://cdn2.unrealengine.com/rl-s16-keyart-16x9-a1b412b186b5.jpg",
+    "banner": "https://cdn2.unrealengine.com/rl-s16-keyart-16x9-a1b412b186b5.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4609,17 +4609,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/rocket-league.webp"
+        "src": "https://cdn2.unrealengine.com/rl-s16-keyart-16x9-a1b412b186b5.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/rocket-league.webp"
+        "src": "https://cdn2.unrealengine.com/rl-s16-keyart-16x9-a1b412b186b5.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/rocket-league.webp"
+        "src": "https://cdn2.unrealengine.com/rl-s16-keyart-16x9-a1b412b186b5.jpg"
       }
     ]
   },
@@ -4660,8 +4660,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=the-crew-motorfest",
     "featureTag": "Racing",
-    "image": "/images/games/the-crew-motorfest.webp",
-    "banner": "/images/banners/the-crew-motorfest.webp",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600&h=900",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4680,17 +4680,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/the-crew-motorfest.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/the-crew-motorfest.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/the-crew-motorfest.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       }
     ]
   },
@@ -4730,8 +4730,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=civilization-vi",
     "featureTag": "Strategy",
-    "image": "/images/games/civilization-vi.webp",
-    "banner": "/images/banners/civilization-vi.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4750,17 +4750,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/civilization-vi.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/civilization-vi.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/civilization-vi.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg"
       }
     ]
   },
@@ -4800,8 +4800,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=crusader-kings-iii",
     "featureTag": "Strategy",
-    "image": "/images/games/crusader-kings-iii.webp",
-    "banner": "/images/banners/crusader-kings-iii.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4820,17 +4820,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/crusader-kings-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/crusader-kings-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/crusader-kings-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/header.jpg"
       }
     ]
   },
@@ -4870,8 +4870,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=age-of-empires-iv",
     "featureTag": "Strategy",
-    "image": "/images/games/age-of-empires-iv.webp",
-    "banner": "/images/banners/age-of-empires-iv.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466860/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466860/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4890,17 +4890,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/age-of-empires-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466860/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/age-of-empires-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466860/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/age-of-empires-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466860/header.jpg"
       }
     ]
   },
@@ -4940,8 +4940,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=starcraft-ii",
     "featureTag": "Strategy",
-    "image": "/images/games/starcraft-ii.webp",
-    "banner": "/images/banners/starcraft-ii.webp",
+    "image": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/m5/M597UXEPEBKT1506559388339.jpg",
+    "banner": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/m5/M597UXEPEBKT1506559388339.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -4960,17 +4960,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/starcraft-ii.webp"
+        "src": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/m5/M597UXEPEBKT1506559388339.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/starcraft-ii.webp"
+        "src": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/m5/M597UXEPEBKT1506559388339.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/starcraft-ii.webp"
+        "src": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/m5/M597UXEPEBKT1506559388339.jpg"
       }
     ]
   },
@@ -5010,8 +5010,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=total-war-warhammer-iii",
     "featureTag": "Strategy",
-    "image": "/images/games/total-war-warhammer-iii.webp",
-    "banner": "/images/banners/total-war-warhammer-iii.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145980/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145980/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5030,17 +5030,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/total-war-warhammer-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145980/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/total-war-warhammer-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145980/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/total-war-warhammer-iii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145980/header.jpg"
       }
     ]
   },
@@ -5080,8 +5080,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=stellaris",
     "featureTag": "Strategy",
-    "image": "/images/games/stellaris.webp",
-    "banner": "/images/banners/stellaris.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5100,17 +5100,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/stellaris.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/stellaris.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/stellaris.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/header.jpg"
       }
     ]
   },
@@ -5150,8 +5150,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=xcom-2",
     "featureTag": "Strategy",
-    "image": "/images/games/xcom-2.webp",
-    "banner": "/images/banners/xcom-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5170,17 +5170,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/xcom-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/xcom-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/xcom-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/header.jpg"
       }
     ]
   },
@@ -5220,8 +5220,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=cities-skylines",
     "featureTag": "Strategy",
-    "image": "/images/games/cities-skylines.webp",
-    "banner": "/images/banners/cities-skylines.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5240,17 +5240,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/cities-skylines.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/cities-skylines.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/cities-skylines.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg"
       }
     ]
   },
@@ -5290,8 +5290,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=cities-skylines-ii",
     "featureTag": "Strategy",
-    "image": "/images/games/cities-skylines-ii.webp",
-    "banner": "/images/banners/cities-skylines-ii.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5310,17 +5310,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/cities-skylines-ii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/cities-skylines-ii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/cities-skylines-ii.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg"
       }
     ]
   },
@@ -5360,8 +5360,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=manor-lords",
     "featureTag": "Strategy",
-    "image": "/images/games/manor-lords.webp",
-    "banner": "/images/banners/manor-lords.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5380,17 +5380,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/manor-lords.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/manor-lords.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/manor-lords.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1363080/header.jpg"
       }
     ]
   },
@@ -5430,8 +5430,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=hearts-of-iron-iv",
     "featureTag": "Strategy",
-    "image": "/images/games/hearts-of-iron-iv.webp",
-    "banner": "/images/banners/hearts-of-iron-iv.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394360/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394360/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5450,17 +5450,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/hearts-of-iron-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394360/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/hearts-of-iron-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394360/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/hearts-of-iron-iv.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394360/header.jpg"
       }
     ]
   },
@@ -5500,8 +5500,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=ea-sports-fc-24",
     "featureTag": "Sports",
-    "image": "/images/games/ea-sports-fc-24.webp",
-    "banner": "/images/banners/ea-sports-fc-24.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2195250/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2195250/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5520,17 +5520,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/ea-sports-fc-24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2195250/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/ea-sports-fc-24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2195250/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/ea-sports-fc-24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2195250/header.jpg"
       }
     ]
   },
@@ -5570,8 +5570,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=nba-2k24",
     "featureTag": "Sports",
-    "image": "/images/games/nba-2k24.webp",
-    "banner": "/images/banners/nba-2k24.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2338770/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2338770/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5590,17 +5590,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/nba-2k24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2338770/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/nba-2k24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2338770/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/nba-2k24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2338770/header.jpg"
       }
     ]
   },
@@ -5640,8 +5640,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=madden-nfl-24",
     "featureTag": "Sports",
-    "image": "/images/games/madden-nfl-24.webp",
-    "banner": "/images/banners/madden-nfl-24.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2140330/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2140330/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5660,17 +5660,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/madden-nfl-24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2140330/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/madden-nfl-24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2140330/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/madden-nfl-24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2140330/header.jpg"
       }
     ]
   },
@@ -5711,8 +5711,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=wwe-2k24",
     "featureTag": "Sports",
-    "image": "/images/games/wwe-2k24.webp",
-    "banner": "/images/banners/wwe-2k24.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2315690/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2315690/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5731,17 +5731,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/wwe-2k24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2315690/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/wwe-2k24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2315690/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/wwe-2k24.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2315690/header.jpg"
       }
     ]
   },
@@ -5781,8 +5781,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=pga-tour-2k23",
     "featureTag": "Sports",
-    "image": "/images/games/pga-tour-2k23.webp",
-    "banner": "/images/banners/pga-tour-2k23.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1358660/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1358660/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5801,17 +5801,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/pga-tour-2k23.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1358660/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/pga-tour-2k23.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1358660/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/pga-tour-2k23.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1358660/header.jpg"
       }
     ]
   },
@@ -5851,8 +5851,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=tony-hawk-s-pro-skater-1-2",
     "featureTag": "Sports",
-    "image": "/images/games/tony-hawk-s-pro-skater-1-2.webp",
-    "banner": "/images/banners/tony-hawk-s-pro-skater-1-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2397460/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2397460/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5871,17 +5871,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/tony-hawk-s-pro-skater-1-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2397460/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/tony-hawk-s-pro-skater-1-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2397460/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/tony-hawk-s-pro-skater-1-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2397460/header.jpg"
       }
     ]
   },
@@ -5922,8 +5922,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=riders-republic",
     "featureTag": "Sports",
-    "image": "/images/games/riders-republic.webp",
-    "banner": "/images/banners/riders-republic.webp",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600&h=900",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -5942,17 +5942,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/riders-republic.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/riders-republic.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/riders-republic.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       }
     ]
   },
@@ -5994,8 +5994,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=football-manager-2024",
     "featureTag": "Sports",
-    "image": "/images/games/football-manager-2024.webp",
-    "banner": "/images/banners/football-manager-2024.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2252570/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2252570/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6014,17 +6014,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/football-manager-2024.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2252570/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/football-manager-2024.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2252570/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/football-manager-2024.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2252570/header.jpg"
       }
     ]
   },
@@ -6065,8 +6065,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=ufc-5",
     "featureTag": "Sports",
-    "image": "/images/games/ufc-5.webp",
-    "banner": "/images/banners/ufc-5.webp",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600&h=900",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6085,17 +6085,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/ufc-5.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/ufc-5.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/ufc-5.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       }
     ]
   },
@@ -6135,8 +6135,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=mlb-the-show-24",
     "featureTag": "Sports",
-    "image": "/images/games/mlb-the-show-24.webp",
-    "banner": "/images/banners/mlb-the-show-24.webp",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600&h=900",
+    "banner": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6155,17 +6155,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/mlb-the-show-24.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/mlb-the-show-24.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/mlb-the-show-24.webp"
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1920&h=1080"
       }
     ]
   },
@@ -6206,8 +6206,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=hollow-knight",
     "featureTag": "Indie",
-    "image": "/images/games/hollow-knight.webp",
-    "banner": "/images/banners/hollow-knight.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6226,17 +6226,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/hollow-knight.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/hollow-knight.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/hollow-knight.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg"
       }
     ]
   },
@@ -6277,8 +6277,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=hades",
     "featureTag": "Indie",
-    "image": "/images/games/hades.webp",
-    "banner": "/images/banners/hades.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6297,17 +6297,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/hades.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/hades.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/hades.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg"
       }
     ]
   },
@@ -6347,8 +6347,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=celeste",
     "featureTag": "Indie",
-    "image": "/images/games/celeste.webp",
-    "banner": "/images/banners/celeste.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6367,17 +6367,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/celeste.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/celeste.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/celeste.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg"
       }
     ]
   },
@@ -6418,8 +6418,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=stardew-valley",
     "featureTag": "Indie",
-    "image": "/images/games/stardew-valley.webp",
-    "banner": "/images/banners/stardew-valley.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6438,17 +6438,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/stardew-valley.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/stardew-valley.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/stardew-valley.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg"
       }
     ]
   },
@@ -6489,8 +6489,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=dead-cells",
     "featureTag": "Indie",
-    "image": "/images/games/dead-cells.webp",
-    "banner": "/images/banners/dead-cells.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6509,17 +6509,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/dead-cells.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/dead-cells.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/dead-cells.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/header.jpg"
       }
     ]
   },
@@ -6560,8 +6560,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=terraria",
     "featureTag": "Indie",
-    "image": "/images/games/terraria.webp",
-    "banner": "/images/banners/terraria.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6580,17 +6580,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/terraria.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/terraria.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/terraria.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg"
       }
     ]
   },
@@ -6631,8 +6631,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=disco-elysium",
     "featureTag": "Indie",
-    "image": "/images/games/disco-elysium.webp",
-    "banner": "/images/banners/disco-elysium.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6651,17 +6651,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/disco-elysium.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/disco-elysium.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/disco-elysium.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/header.jpg"
       }
     ]
   },
@@ -6701,8 +6701,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=outer-wilds",
     "featureTag": "Indie",
-    "image": "/images/games/outer-wilds.webp",
-    "banner": "/images/banners/outer-wilds.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6721,17 +6721,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/outer-wilds.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/outer-wilds.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/outer-wilds.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg"
       }
     ]
   },
@@ -6772,8 +6772,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=slay-the-spire",
     "featureTag": "Indie",
-    "image": "/images/games/slay-the-spire.webp",
-    "banner": "/images/banners/slay-the-spire.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6792,17 +6792,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/slay-the-spire.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/slay-the-spire.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/slay-the-spire.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/header.jpg"
       }
     ]
   },
@@ -6843,8 +6843,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=cuphead",
     "featureTag": "Indie",
-    "image": "/images/games/cuphead.webp",
-    "banner": "/images/banners/cuphead.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6863,17 +6863,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/cuphead.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/cuphead.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/cuphead.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/header.jpg"
       }
     ]
   },
@@ -6914,8 +6914,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=valheim",
     "featureTag": "Indie",
-    "image": "/images/games/valheim.webp",
-    "banner": "/images/banners/valheim.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -6934,17 +6934,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/valheim.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/valheim.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/valheim.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/header.jpg"
       }
     ]
   },
@@ -6986,8 +6986,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=palworld",
     "featureTag": "Indie",
-    "image": "/images/games/palworld.webp",
-    "banner": "/images/banners/palworld.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7006,17 +7006,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/palworld.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/palworld.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/palworld.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/header.jpg"
       }
     ]
   },
@@ -7058,8 +7058,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=lethal-company",
     "featureTag": "Indie",
-    "image": "/images/games/lethal-company.webp",
-    "banner": "/images/banners/lethal-company.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7078,17 +7078,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/lethal-company.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/lethal-company.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/lethal-company.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg"
       }
     ]
   },
@@ -7129,8 +7129,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=undertale",
     "featureTag": "Indie",
-    "image": "/images/games/undertale.webp",
-    "banner": "/images/banners/undertale.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7149,17 +7149,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/undertale.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/undertale.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/undertale.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/header.jpg"
       }
     ]
   },
@@ -7200,8 +7200,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=vampire-survivors",
     "featureTag": "Indie",
-    "image": "/images/games/vampire-survivors.webp",
-    "banner": "/images/banners/vampire-survivors.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1794680/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1794680/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7220,17 +7220,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/vampire-survivors.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1794680/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/vampire-survivors.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1794680/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/vampire-survivors.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1794680/header.jpg"
       }
     ]
   },
@@ -7271,8 +7271,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=pubg-mobile",
     "featureTag": "Mobile",
-    "image": "/images/games/pubg-mobile.webp",
-    "banner": "/images/banners/pubg-mobile.webp",
+    "image": "https://play-lh.googleusercontent.com/JRd05pyBH41qjgsJuWduxIMPQ3kO8S7zE0_U6P2J21M3tqjBks5z7nNq9nZ7Y3vO8g",
+    "banner": "https://play-lh.googleusercontent.com/JRd05pyBH41qjgsJuWduxIMPQ3kO8S7zE0_U6P2J21M3tqjBks5z7nNq9nZ7Y3vO8g",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7291,17 +7291,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/pubg-mobile.webp"
+        "src": "https://play-lh.googleusercontent.com/JRd05pyBH41qjgsJuWduxIMPQ3kO8S7zE0_U6P2J21M3tqjBks5z7nNq9nZ7Y3vO8g"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/pubg-mobile.webp"
+        "src": "https://play-lh.googleusercontent.com/JRd05pyBH41qjgsJuWduxIMPQ3kO8S7zE0_U6P2J21M3tqjBks5z7nNq9nZ7Y3vO8g"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/pubg-mobile.webp"
+        "src": "https://play-lh.googleusercontent.com/JRd05pyBH41qjgsJuWduxIMPQ3kO8S7zE0_U6P2J21M3tqjBks5z7nNq9nZ7Y3vO8g"
       }
     ]
   },
@@ -7342,8 +7342,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=call-of-duty-mobile",
     "featureTag": "Mobile",
-    "image": "/images/games/call-of-duty-mobile.webp",
-    "banner": "/images/banners/call-of-duty-mobile.webp",
+    "image": "https://play-lh.googleusercontent.com/1-xH12Kx1Vl5N4E1zP1T1hW2Q3L5_Q7A4_k09_9B1g9y1o9N2J3Q4K0z5K9S7o6",
+    "banner": "https://play-lh.googleusercontent.com/1-xH12Kx1Vl5N4E1zP1T1hW2Q3L5_Q7A4_k09_9B1g9y1o9N2J3Q4K0z5K9S7o6",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7362,17 +7362,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/call-of-duty-mobile.webp"
+        "src": "https://play-lh.googleusercontent.com/1-xH12Kx1Vl5N4E1zP1T1hW2Q3L5_Q7A4_k09_9B1g9y1o9N2J3Q4K0z5K9S7o6"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/call-of-duty-mobile.webp"
+        "src": "https://play-lh.googleusercontent.com/1-xH12Kx1Vl5N4E1zP1T1hW2Q3L5_Q7A4_k09_9B1g9y1o9N2J3Q4K0z5K9S7o6"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/call-of-duty-mobile.webp"
+        "src": "https://play-lh.googleusercontent.com/1-xH12Kx1Vl5N4E1zP1T1hW2Q3L5_Q7A4_k09_9B1g9y1o9N2J3Q4K0z5K9S7o6"
       }
     ]
   },
@@ -7413,8 +7413,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=league-of-legends-wild-rift",
     "featureTag": "Mobile",
-    "image": "/images/games/league-of-legends-wild-rift.webp",
-    "banner": "/images/banners/league-of-legends-wild-rift.webp",
+    "image": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt02dd32b665c25036/5f4defe8b553152466d1b21a/Wild_Rift_Logo.png",
+    "banner": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt02dd32b665c25036/5f4defe8b553152466d1b21a/Wild_Rift_Banner.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7433,17 +7433,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/league-of-legends-wild-rift.webp"
+        "src": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt02dd32b665c25036/5f4defe8b553152466d1b21a/Wild_Rift_Banner.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/league-of-legends-wild-rift.webp"
+        "src": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt02dd32b665c25036/5f4defe8b553152466d1b21a/Wild_Rift_Banner.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/league-of-legends-wild-rift.webp"
+        "src": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt02dd32b665c25036/5f4defe8b553152466d1b21a/Wild_Rift_Banner.jpg"
       }
     ]
   },
@@ -7483,8 +7483,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=clash-of-clans",
     "featureTag": "Mobile",
-    "image": "/images/games/clash-of-clans.webp",
-    "banner": "/images/banners/clash-of-clans.webp",
+    "image": "https://supercell.com/images/154/og_clashofclans.jpg",
+    "banner": "https://supercell.com/images/154/og_clashofclans.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7503,17 +7503,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/clash-of-clans.webp"
+        "src": "https://supercell.com/images/154/og_clashofclans.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/clash-of-clans.webp"
+        "src": "https://supercell.com/images/154/og_clashofclans.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/clash-of-clans.webp"
+        "src": "https://supercell.com/images/154/og_clashofclans.jpg"
       }
     ]
   },
@@ -7554,8 +7554,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=minecraft",
     "featureTag": "Sandbox",
-    "image": "/images/games/minecraft.webp",
-    "banner": "/images/banners/minecraft.webp",
+    "image": "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg",
+    "banner": "https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Village-and-Pillage_1280x768.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7574,17 +7574,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/minecraft.webp"
+        "src": "https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Village-and-Pillage_1280x768.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/minecraft.webp"
+        "src": "https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Village-and-Pillage_1280x768.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/minecraft.webp"
+        "src": "https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Village-and-Pillage_1280x768.jpg"
       }
     ]
   },
@@ -7625,8 +7625,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=roblox",
     "featureTag": "Sandbox",
-    "image": "/images/games/roblox.webp",
-    "banner": "/images/banners/roblox.webp",
+    "image": "https://images.rbxcdn.com/f9c968e7ec894f068521a00a2b0ebff1",
+    "banner": "https://images.rbxcdn.com/f9c968e7ec894f068521a00a2b0ebff1",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7645,17 +7645,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/roblox.webp"
+        "src": "https://images.rbxcdn.com/f9c968e7ec894f068521a00a2b0ebff1"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/roblox.webp"
+        "src": "https://images.rbxcdn.com/f9c968e7ec894f068521a00a2b0ebff1"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/roblox.webp"
+        "src": "https://images.rbxcdn.com/f9c968e7ec894f068521a00a2b0ebff1"
       }
     ]
   },
@@ -7695,8 +7695,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=world-of-warcraft",
     "featureTag": "MMORPG",
-    "image": "/images/games/world-of-warcraft.webp",
-    "banner": "/images/banners/world-of-warcraft.webp",
+    "image": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/74/743E51R9Y2R81636573887019.jpg",
+    "banner": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/74/743E51R9Y2R81636573887019.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7715,17 +7715,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/world-of-warcraft.webp"
+        "src": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/74/743E51R9Y2R81636573887019.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/world-of-warcraft.webp"
+        "src": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/74/743E51R9Y2R81636573887019.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/world-of-warcraft.webp"
+        "src": "https://bnetcmsus-a.akamaihd.net/cms/blog_header/74/743E51R9Y2R81636573887019.jpg"
       }
     ]
   },
@@ -7765,8 +7765,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=final-fantasy-xiv",
     "featureTag": "MMORPG",
-    "image": "/images/games/final-fantasy-xiv.webp",
-    "banner": "/images/banners/final-fantasy-xiv.webp",
+    "image": "https://img.finalfantasyxiv.com/lds/h/w/5S3iB2rJ6o3P8r1Z.jpg",
+    "banner": "https://img.finalfantasyxiv.com/lds/h/w/5S3iB2rJ6o3P8r1Z.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7785,17 +7785,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/final-fantasy-xiv.webp"
+        "src": "https://img.finalfantasyxiv.com/lds/h/w/5S3iB2rJ6o3P8r1Z.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/final-fantasy-xiv.webp"
+        "src": "https://img.finalfantasyxiv.com/lds/h/w/5S3iB2rJ6o3P8r1Z.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/final-fantasy-xiv.webp"
+        "src": "https://img.finalfantasyxiv.com/lds/h/w/5S3iB2rJ6o3P8r1Z.jpg"
       }
     ]
   },
@@ -7835,8 +7835,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=among-us",
     "featureTag": "Multiplayer",
-    "image": "/images/games/among-us.webp",
-    "banner": "/images/banners/among-us.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7855,17 +7855,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/among-us.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/among-us.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/among-us.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/header.jpg"
       }
     ]
   },
@@ -7906,8 +7906,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=fall-guys",
     "featureTag": "Multiplayer",
-    "image": "/images/games/fall-guys.webp",
-    "banner": "/images/banners/fall-guys.webp",
+    "image": "https://cdn2.unrealengine.com/egs-fallguys-mediatonic-s2-1200x1600-b8ecb34ceaf9.jpg",
+    "banner": "https://cdn2.unrealengine.com/egs-fallguys-mediatonic-s1-2560x1440-2560x1440-f42f3efceeb3.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7926,17 +7926,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/fall-guys.webp"
+        "src": "https://cdn2.unrealengine.com/egs-fallguys-mediatonic-s1-2560x1440-2560x1440-f42f3efceeb3.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/fall-guys.webp"
+        "src": "https://cdn2.unrealengine.com/egs-fallguys-mediatonic-s1-2560x1440-2560x1440-f42f3efceeb3.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/fall-guys.webp"
+        "src": "https://cdn2.unrealengine.com/egs-fallguys-mediatonic-s1-2560x1440-2560x1440-f42f3efceeb3.jpg"
       }
     ]
   },
@@ -7977,8 +7977,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=helldivers-2",
     "featureTag": "Action",
-    "image": "/images/games/helldivers-2.webp",
-    "banner": "/images/banners/helldivers-2.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2536850/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2536850/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -7997,17 +7997,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/helldivers-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2536850/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/helldivers-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2536850/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/helldivers-2.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2536850/header.jpg"
       }
     ]
   },
@@ -8047,8 +8047,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=tekken-8",
     "featureTag": "Fighting",
-    "image": "/images/games/tekken-8.webp",
-    "banner": "/images/banners/tekken-8.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8067,17 +8067,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/tekken-8.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/tekken-8.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/tekken-8.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/header.jpg"
       }
     ]
   },
@@ -8117,8 +8117,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=street-fighter-6",
     "featureTag": "Fighting",
-    "image": "/images/games/street-fighter-6.webp",
-    "banner": "/images/banners/street-fighter-6.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1364780/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1364780/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8137,17 +8137,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/street-fighter-6.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1364780/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/street-fighter-6.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1364780/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/street-fighter-6.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1364780/header.jpg"
       }
     ]
   },
@@ -8187,8 +8187,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=mortal-kombat-1",
     "featureTag": "Fighting",
-    "image": "/images/games/mortal-kombat-1.webp",
-    "banner": "/images/banners/mortal-kombat-1.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971870/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971870/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8207,17 +8207,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/mortal-kombat-1.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971870/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/mortal-kombat-1.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971870/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/mortal-kombat-1.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971870/header.jpg"
       }
     ]
   },
@@ -8257,8 +8257,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=super-smash-bros-ultimate",
     "featureTag": "Fighting",
-    "image": "/images/games/super-smash-bros-ultimate.webp",
-    "banner": "/images/banners/super-smash-bros-ultimate.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8277,17 +8277,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/super-smash-bros-ultimate.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/super-smash-bros-ultimate.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/super-smash-bros-ultimate.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -8329,8 +8329,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=the-legend-of-zelda-tears-of-the-kingdom",
     "featureTag": "Action RPG",
-    "image": "/images/games/the-legend-of-zelda-tears-of-the-kingdom.webp",
-    "banner": "/images/banners/the-legend-of-zelda-tears-of-the-kingdom.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8349,17 +8349,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/the-legend-of-zelda-tears-of-the-kingdom.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/the-legend-of-zelda-tears-of-the-kingdom.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/the-legend-of-zelda-tears-of-the-kingdom.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -8401,8 +8401,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=the-legend-of-zelda-breath-of-the-wild",
     "featureTag": "Action RPG",
-    "image": "/images/games/the-legend-of-zelda-breath-of-the-wild.webp",
-    "banner": "/images/banners/the-legend-of-zelda-breath-of-the-wild.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8421,17 +8421,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/the-legend-of-zelda-breath-of-the-wild.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/the-legend-of-zelda-breath-of-the-wild.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/the-legend-of-zelda-breath-of-the-wild.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -8471,8 +8471,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=super-mario-odyssey",
     "featureTag": "Platformer",
-    "image": "/images/games/super-mario-odyssey.webp",
-    "banner": "/images/banners/super-mario-odyssey.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8491,17 +8491,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/super-mario-odyssey.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/super-mario-odyssey.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/super-mario-odyssey.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -8541,8 +8541,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=animal-crossing-new-horizons",
     "featureTag": "Simulation",
-    "image": "/images/games/animal-crossing-new-horizons.webp",
-    "banner": "/images/banners/animal-crossing-new-horizons.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8561,17 +8561,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/animal-crossing-new-horizons.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/animal-crossing-new-horizons.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/animal-crossing-new-horizons.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -8612,8 +8612,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=splatoon-3",
     "featureTag": "Shooter",
-    "image": "/images/games/splatoon-3.webp",
-    "banner": "/images/banners/splatoon-3.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8632,17 +8632,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/splatoon-3.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/splatoon-3.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/splatoon-3.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -8683,8 +8683,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=super-mario-bros-wonder",
     "featureTag": "Platformer",
-    "image": "/images/games/super-mario-bros-wonder.webp",
-    "banner": "/images/banners/super-mario-bros-wonder.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8703,17 +8703,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/super-mario-bros-wonder.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/super-mario-bros-wonder.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/super-mario-bros-wonder.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -8753,8 +8753,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=mario-party-superstars",
     "featureTag": "Party",
-    "image": "/images/games/mario-party-superstars.webp",
-    "banner": "/images/banners/mario-party-superstars.webp",
+    "image": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
+    "banner": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8773,17 +8773,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/mario-party-superstars.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/mario-party-superstars.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/mario-party-superstars.webp"
+        "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000000025/7137262b5a64d6f5f1909e3e78f9f692db2b70f08922896da8f6540c7ed216da"
       }
     ]
   },
@@ -8824,8 +8824,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=it-takes-two",
     "featureTag": "Co-op",
-    "image": "/images/games/it-takes-two.webp",
-    "banner": "/images/banners/it-takes-two.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8844,17 +8844,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/it-takes-two.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/it-takes-two.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/it-takes-two.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header.jpg"
       }
     ]
   },
@@ -8895,8 +8895,8 @@ const gameConfigs = [
     "launchWindow": "Available now",
     "officialUrl": "https://google.com/search?q=a-way-out",
     "featureTag": "Co-op",
-    "image": "/images/games/a-way-out.webp",
-    "banner": "/images/banners/a-way-out.webp",
+    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222700/library_600x900.jpg",
+    "banner": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222700/header.jpg",
     "vaultNote": "Game Vault routes this page to official sources only. No pirated files, cracked installers, or mirrored downloads are used anywhere in the experience.",
     "highlights": [
       "Official Downloads",
@@ -8915,17 +8915,17 @@ const gameConfigs = [
       {
         "title": "Cinematic View",
         "caption": "Immersive world rendering.",
-        "src": "/images/banners/a-way-out.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222700/header.jpg"
       },
       {
         "title": "Action Combat",
         "caption": "High-octane gameplay.",
-        "src": "/images/banners/a-way-out.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222700/header.jpg"
       },
       {
         "title": "Exploration",
         "caption": "Discover vast new lands.",
-        "src": "/images/banners/a-way-out.webp"
+        "src": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222700/header.jpg"
       }
     ]
   }
