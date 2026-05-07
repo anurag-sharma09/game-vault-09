@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowLeft, Gamepad2, ShieldCheck, Sparkles } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Gamepad2, ShieldCheck, Sparkles, Star, Clock, PlayCircle } from 'lucide-react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useMemo } from 'react'
 import { categoryLookup, games } from '../data/siteData.js'
@@ -162,13 +162,87 @@ function CategoryDetailPage() {
           </div>
         </div>
 
+        {/* ── Featured Game Panel (The 'Game Panel' requested) ── */}
+        {categoryGames[0] && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={reveal}
+            className="group relative mb-16 overflow-hidden rounded-[40px] border border-white/10 bg-slate-900/40 backdrop-blur-sm"
+          >
+            <div className="flex flex-col lg:flex-row">
+              {/* Image Side */}
+              <div className="relative aspect-video w-full overflow-hidden lg:aspect-auto lg:w-3/5">
+                <img
+                  src={categoryGames[0].banner || categoryGames[0].image}
+                  alt={categoryGames[0].title}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/20 to-transparent lg:block hidden" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent lg:hidden block" />
+              </div>
+
+              {/* Content Side */}
+              <div className="relative flex flex-1 flex-col justify-center p-8 lg:p-12">
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-violet-300 border border-violet-500/20">
+                    <Sparkles className="h-3 w-3" />
+                    Category Pick
+                  </span>
+                  <div className="flex items-center gap-1 text-amber-400">
+                    <Star className="h-3 w-3 fill-current" />
+                    <span className="text-xs font-bold">{categoryGames[0].rating}</span>
+                  </div>
+                </div>
+
+                <h2 className="font-display text-4xl uppercase leading-none text-white lg:text-6xl">
+                  {categoryGames[0].title}
+                </h2>
+                
+                <p className="mt-6 line-clamp-3 text-base leading-relaxed text-slate-300">
+                  {categoryGames[0].description}
+                </p>
+
+                <div className="mt-8 flex flex-wrap items-center gap-6">
+                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-400">
+                    <Clock className="h-4 w-4" />
+                    {categoryGames[0].releaseRank > 80 ? 'Recent Release' : 'Classic Entry'}
+                  </div>
+                  <div className="h-1 w-1 rounded-full bg-white/20" />
+                  <div className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+                    {categoryGames[0].priceModel}
+                  </div>
+                </div>
+
+                <div className="mt-10 flex flex-wrap gap-4">
+                  <button 
+                    onClick={() => navigate(`/games/${categoryGames[0].slug}`)}
+                    className="btn-neon flex items-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-black"
+                  >
+                    View Experience
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                  <button 
+                    onClick={() => navigate(`/games/${categoryGames[0].slug}`)}
+                    className="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-white/10"
+                  >
+                    <PlayCircle className="h-4 w-4" />
+                    Gallery
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
         <motion.div 
           initial="hidden" 
           animate="visible" 
           variants={stagger} 
           className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {categoryGames.map((game, idx) => (
+          {categoryGames.slice(1).map((game, idx) => (
             <motion.div key={game.id} variants={reveal}>
               <GameCard game={game} />
             </motion.div>
