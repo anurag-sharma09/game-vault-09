@@ -12,6 +12,8 @@ import {
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { games, categories } from '../data/siteData.js'
+import { useGameImage } from '../components/useGameImage.js'
+import FallbackArtwork from '../components/FallbackArtwork.jsx'
 
 /* ─── Framer variants ──────────────────────────────────────── */
 const heroStagger = {
@@ -45,32 +47,34 @@ function useFadeIn() {
 
 /* ─── Trending Card ───────────────────────────────────────── */
 function TrendingCard({ game }) {
-  const [imgOk, setImgOk] = useState(true)
-  const [loaded, setLoaded] = useState(false)
+  const { activeSrc, isLoading, isGradient } = useGameImage(game.image)
+
   return (
     <Link
       to={`/games/${game.slug}`}
       className="card-hover shelf-item relative w-[260px] overflow-hidden rounded-2xl border border-white/10 bg-slate-900 sm:w-[300px]"
     >
       <div className="relative aspect-[2/3] overflow-hidden">
-        {/* Skeleton */}
-        {!loaded && <div className="absolute inset-0 skeleton-shimmer" />}
+        {isGradient && (
+          <FallbackArtwork
+            title={game.title}
+            categories={game.categories}
+            genres={game.genres}
+            className="absolute inset-0 h-full w-full"
+            compact={true}
+          />
+        )}
 
-        {imgOk ? (
+        {isLoading && !isGradient && (
+          <div className="absolute inset-0 skeleton-shimmer" />
+        )}
+
+        {!isGradient && (
           <img
-            src={game.image}
+            src={activeSrc}
             alt={game.title}
             loading="lazy"
-            onLoad={() => setLoaded(true)}
-            onError={() => setImgOk(false)}
-            className={`card-img h-full w-full object-cover object-center transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-          />
-        ) : (
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `radial-gradient(circle at 30% 20%, ${game.palette?.[0] ?? '#8b5cf6'}, transparent 60%), radial-gradient(circle at 80% 80%, ${game.palette?.[1] ?? '#22d3ee'}, transparent 60%)`
-            }}
+            className={`card-img absolute inset-0 h-full w-full object-cover object-center ${!isLoading ? 'game-img-loaded' : 'opacity-0'}`}
           />
         )}
 
@@ -96,31 +100,34 @@ function TrendingCard({ game }) {
 
 /* ─── Section Game Card (grid) ───────────────────────────── */
 function GridCard({ game }) {
-  const [imgOk, setImgOk] = useState(true)
-  const [loaded, setLoaded] = useState(false)
+  const { activeSrc, isLoading, isGradient } = useGameImage(game.banner, game.image)
+
   return (
     <Link
       to={`/games/${game.slug}`}
       className="card-hover group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 transition-all duration-300 hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.18)]"
     >
-      <div className="relative overflow-hidden" style={{ aspectRatio: '16/9' }}>
-        {!loaded && <div className="absolute inset-0 skeleton-shimmer" />}
+      <div className="relative overflow-hidden aspect-[16/9]">
+        {isGradient && (
+          <FallbackArtwork
+            title={game.title}
+            categories={game.categories}
+            genres={game.genres}
+            className="absolute inset-0 h-full w-full"
+            compact={true}
+          />
+        )}
 
-        {imgOk ? (
+        {isLoading && !isGradient && (
+          <div className="absolute inset-0 skeleton-shimmer" />
+        )}
+
+        {!isGradient && (
           <img
-            src={game.banner}
+            src={activeSrc}
             alt={game.title}
             loading="lazy"
-            onLoad={() => setLoaded(true)}
-            onError={() => setImgOk(false)}
-            className={`card-img h-full w-full object-cover object-center transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
-          />
-        ) : (
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(135deg, ${game.palette?.[0] ?? '#4c1d95'}, ${game.palette?.[1] ?? '#0e7490'})`
-            }}
+            className={`card-img absolute inset-0 h-full w-full object-cover object-center ${!isLoading ? 'game-img-loaded' : 'opacity-0'}`}
           />
         )}
 
@@ -215,8 +222,6 @@ function HomePage() {
   const heroImgY     = useTransform(scrollY, [0, 700], [0, 110])
   const heroImgScale = useTransform(scrollY, [0, 700], [1, 1.1])
 
-  const [heroBannerLoaded, setHeroBannerLoaded] = useState(false)
-
   /* featured hero game — GTA VI first (local image), then fallbacks */
   const heroGame = (() => {
     const preferred = [
@@ -232,6 +237,8 @@ function HomePage() {
     }
     return games[0]
   })()
+
+  const { activeSrc: heroSrc, isLoading: heroLoading, isGradient: heroGradient } = useGameImage(heroGame.banner, heroGame.image)
 
   /* shelf: top trending */
   const trending = [...games].sort((a, b) => b.popularity - a.popularity).slice(0, 12)
@@ -256,16 +263,28 @@ function HomePage() {
           style={{ y: heroImgY, scale: heroImgScale }}
           className="absolute inset-0 origin-center"
         >
-          <img
-            src={heroGame.banner}
-            alt={`${heroGame.title} hero`}
-            loading="eager"
-            fetchPriority="high"
-            onLoad={() => setHeroBannerLoaded(true)}
-            className={`h-full w-full object-cover object-center transition-opacity duration-1000 ${heroBannerLoaded ? 'opacity-100' : 'opacity-0'}`}
-          />
-          {!heroBannerLoaded && (
+          {heroGradient && (
+            <FallbackArtwork
+              title={heroGame.title}
+              categories={heroGame.categories}
+              genres={heroGame.genres}
+              className="absolute inset-0 h-full w-full"
+              compact={false}
+            />
+          )}
+
+          {heroLoading && !heroGradient && (
             <div className="absolute inset-0 skeleton-shimmer" />
+          )}
+
+          {!heroGradient && (
+            <img
+              src={heroSrc}
+              alt={`${heroGame.title} hero`}
+              loading="eager"
+              fetchPriority="high"
+              className={`absolute inset-0 h-full w-full object-cover object-center ${!heroLoading ? 'game-img-loaded' : 'opacity-0'}`}
+            />
           )}
         </motion.div>
 

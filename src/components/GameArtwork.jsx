@@ -1,5 +1,16 @@
 import { useState, useEffect } from 'react'
+import FallbackArtwork from './FallbackArtwork.jsx'
 
+/**
+ * GameArtwork – the primary image container used in full GameCards.
+ *
+ * Features:
+ * - Animated skeleton shimmer while loading
+ * - Smooth fade-in when image successfully loads
+ * - Instantly switches to cinematic FallbackArtwork on any error
+ * - Never shows broken image icons or blank containers
+ * - Maintains exact aspect ratio at all times (no layout shifts)
+ */
 function GameArtwork({
   title,
   subtitle,
@@ -11,33 +22,44 @@ function GameArtwork({
   titleSize = 'text-2xl sm:text-3xl',
   loading = 'lazy',
   priority = false,
+  categories = [],
+  genres = [],
 }) {
-  const [primary, secondary, tertiary] = palette
   const [imgStatus, setImgStatus] = useState('loading')
 
+  // Reset on imageSrc change
   useEffect(() => {
+    if (!imageSrc) {
+      setImgStatus('gradient')
+      return
+    }
     setImgStatus('loading')
   }, [imageSrc])
 
-  const showFallback = !imageSrc || imgStatus === 'error'
+  const showFallback = !imageSrc || imgStatus === 'error' || imgStatus === 'gradient'
+  const imageLoaded  = imgStatus === 'loaded'
 
   return (
     <div
       className={`scan-lines relative overflow-hidden border border-white/12 bg-slate-950 ${className}`}
     >
-      {/* Background/Fallback Gradient */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 18% 20%, ${primary} 0%, transparent 34%),
-            radial-gradient(circle at 88% 8%, ${secondary} 0%, transparent 36%),
-            linear-gradient(135deg, rgba(2, 6, 23, 0.96) 0%, rgba(15, 23, 42, 0.86) 42%, ${tertiary} 140%)
-          `,
-        }}
-      />
+      {/* ── Fallback: cinematic CSS art ──────────────────────── */}
+      {showFallback && (
+        <FallbackArtwork
+          title={title}
+          categories={categories}
+          genres={genres}
+          className="absolute inset-0 h-full w-full"
+          compact={false}
+        />
+      )}
 
-      {/* Actual Image */}
+      {/* ── Skeleton shimmer (while primary image loads) ───── */}
+      {imgStatus === 'loading' && !showFallback && (
+        <div className="absolute inset-0 skeleton-shimmer" />
+      )}
+
+      {/* ── Actual image ─────────────────────────────────────── */}
       {!showFallback && (
         <img
           src={imageSrc}
@@ -46,30 +68,30 @@ function GameArtwork({
           decoding="async"
           fetchPriority={priority ? 'high' : 'auto'}
           onLoad={() => setImgStatus('loaded')}
-          onError={() => {
-            console.warn(`Failed to load image for: ${title}`)
-            setImgStatus('error')
-          }}
-          className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-300 ${
-            imgStatus === 'loaded' ? 'opacity-100' : 'opacity-0'
+          onError={() => setImgStatus('error')}
+          className={`absolute inset-0 h-full w-full object-cover object-center ${
+            imageLoaded ? 'game-img-loaded' : 'opacity-0'
           }`}
         />
       )}
 
-      {/* Loading Skeleton Overlay */}
-      {imgStatus === 'loading' && !showFallback && (
-        <div className="absolute inset-0 animate-pulse bg-slate-800/80 backdrop-blur-sm" />
+      {/* ── Overlay layers (work over both image and fallback) ── */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_18%,rgba(255,255,255,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.06),transparent_22%,rgba(2,6,23,0.78))]" />
+
+      {/* Floating orbs (only over real image to add depth) */}
+      {!showFallback && (
+        <>
+          <div className="hero-orb absolute -left-10 top-1/2 h-36 w-36 -translate-y-1/2 rounded-full bg-white/10 blur-3xl" />
+          <div className="hero-orb-delay absolute -right-10 top-10 h-28 w-28 rounded-full border border-white/10 bg-white/12 blur-2xl" />
+        </>
       )}
 
-
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_18%,rgba(255,255,255,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.06),transparent_22%,rgba(2,6,23,0.78))]" />
-      <div className="hero-orb absolute -left-10 top-1/2 h-36 w-36 -translate-y-1/2 rounded-full bg-white/10 blur-3xl" />
-      <div className="hero-orb-delay absolute -right-10 top-10 h-28 w-28 rounded-full border border-white/10 bg-white/12 blur-2xl" />
       <div className="absolute inset-[1px] rounded-[inherit] border border-white/5" />
 
+      {/* ── Badges + title content ───────────────────────────── */}
       <div className="relative flex h-full flex-col justify-between p-5 sm:p-6">
         <div className="flex flex-wrap gap-2">
-          {badges.slice(0, 3).map((badge) => (
+          {badges.slice(0, 3).filter(Boolean).map((badge) => (
             <span
               key={badge}
               className="rounded-full border border-white/16 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-slate-100/88 backdrop-blur-sm"
@@ -80,9 +102,9 @@ function GameArtwork({
         </div>
 
         <div className="max-w-xl">
-          <h3 className={`font-display ${titleSize} leading-tight text-white`}>{title}</h3>
+          <h3 className={`font-display ${titleSize} leading-tight text-white drop-shadow-lg`}>{title}</h3>
           {subtitle ? (
-            <p className="mt-3 max-w-lg text-sm leading-6 text-slate-100/82 sm:text-base">
+            <p className="mt-3 max-w-lg text-sm leading-6 text-slate-100/82 sm:text-base drop-shadow-md">
               {subtitle}
             </p>
           ) : null}

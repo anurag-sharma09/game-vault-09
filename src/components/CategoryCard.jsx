@@ -27,7 +27,7 @@ function CategoryCard({ category, count }) {
   const Icon = iconMap[category.slug] ?? Gamepad2
 
   return (
-    <Link to={`/games?category=${category.slug}`} className="block h-full">
+    <Link to={`/categories/${category.slug}`} className="block h-full">
       <motion.article
         whileHover={{ y: -8 }}
         transition={{ duration: 0.28, ease: 'easeOut' }}

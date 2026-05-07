@@ -6,11 +6,13 @@ import {
   Search,
   ShieldCheck,
   Sparkles,
+  Heart,
   X,
 } from 'lucide-react'
 import { useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import SearchField from './SearchField.jsx'
+import { useStoreData } from '../hooks/useStoreData.js'
 
 const navItems = [
   { label: 'Games', to: '/games', type: 'route' },
@@ -27,6 +29,8 @@ function Navbar({ playerTag, onOpenSignIn }) {
   const [isScrolled, setIsScrolled] = useState(false)
   const routeQuery = new URLSearchParams(location.search).get('q') ?? ''
   const { scrollY } = useScroll()
+
+  const { wishlist } = useStoreData()
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setIsScrolled(latest > 36)
@@ -128,8 +132,28 @@ function Navbar({ playerTag, onOpenSignIn }) {
 
           <button
             type="button"
+            className="relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/8 text-white transition hover:border-violet-400/40 hover:bg-white/12 hover:text-violet-300"
+            title="Wishlist"
+          >
+            <Heart className="h-4 w-4" />
+            <AnimatePresence>
+              {wishlist.length > 0 && (
+                <motion.span
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-violet-500 text-[9px] font-bold text-white shadow-[0_0_10px_rgba(139,92,246,0.5)]"
+                >
+                  {wishlist.length}
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </button>
+
+          <button
+            type="button"
             onClick={onOpenSignIn}
-            className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2.5 text-sm font-semibold tracking-[0.16em] uppercase text-white transition hover:border-cyan-300/26 hover:bg-white/12"
+            className="inline-flex h-10 items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 text-sm font-semibold tracking-[0.16em] uppercase text-white transition hover:border-cyan-300/26 hover:bg-white/12"
           >
             <ShieldCheck className="h-4 w-4 text-cyan-200" />
             {playerTag || 'Profile'}

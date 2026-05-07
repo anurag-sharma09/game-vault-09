@@ -92,6 +92,14 @@ textarea {
     0 26px 70px rgba(5, 8, 22, 0.48),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(22px);
+  transition: all 0.4s ease-out;
+}
+.glass-panel:hover {
+  border-color: rgba(168, 85, 247, 0.25);
+  box-shadow:
+    0 26px 70px rgba(5, 8, 22, 0.48),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 60px rgba(139, 92, 246, 0.08);
 }
 
 .glass-panel::after {
@@ -107,6 +115,19 @@ textarea {
   box-shadow:
     0 30px 80px rgba(76, 29, 149, 0.22),
     0 22px 44px rgba(2, 132, 199, 0.12);
+}
+
+@keyframes ticker {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-ticker {
+  animation: ticker 20s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
 }
 
 .text-gradient {
@@ -334,4 +355,47 @@ textarea {
     rgba(56, 189, 248, 0.82)
   );
   border-radius: 999px;
+}
+
+/* ─── FallbackArtwork grid overlay ───────────────────────── */
+.fallback-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+/* ─── FallbackArtwork subtle noise overlay ────────────────── */
+.fallback-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ─── Game image fade-in on load ──────────────────────────── */
+@keyframes img-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.game-img-loaded {
+  animation: img-fade-in 0.45s ease-out forwards;
+}
+
+/* ─── Skeleton pulse (enhanced) ───────────────────────────── */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+.skeleton-pulse {
+  animation: skeleton-pulse 1.6s ease-in-out infinite;
+}
+
+/* ─── Aspect ratio containers ─────────────────────────────── */
+.aspect-card-cover {
+  aspect-ratio: 2 / 3;
+}
+.aspect-card-banner {
+  aspect-ratio: 16 / 9;
 }

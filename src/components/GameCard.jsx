@@ -1,28 +1,50 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Star } from 'lucide-react'
+import { ArrowRight, Star, Heart } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import GameArtwork from './GameArtwork.jsx'
+import { useStoreData } from '../hooks/useStoreData.js'
 
 function GameCard({ game, compact = false }) {
+  const { wishlist, toggleWishlist } = useStoreData()
+  const inWishlist = wishlist.includes(game.id)
   return (
     <motion.article
       whileHover={{ y: -10 }}
       transition={{ duration: 0.28, ease: 'easeOut' }}
       className="glass-panel group flex h-full flex-col overflow-hidden rounded-[30px]"
     >
-      <Link to={`/games/${game.slug}`} className="block">
-        <GameArtwork
-          title={game.title}
-          subtitle={compact ? game.genre : game.tagline}
-          imageSrc={game.image}
-          alt={`${game.title} cover art`}
-          palette={game.palette}
-          badges={[game.featureTag, game.platforms[0], game.priceModel]}
-          className={compact ? 'aspect-[2/3] w-full rounded-none' : 'aspect-[2/3] w-full rounded-none'}
-          titleSize={compact ? 'text-3xl' : 'text-[2.2rem]'}
-          loading="lazy"
-        />
-      </Link>
+      <div className="relative">
+        <Link to={`/games/${game.slug}`} className="block">
+          <GameArtwork
+            title={game.title}
+            subtitle={compact ? game.genre : game.tagline}
+            imageSrc={game.image}
+            alt={`${game.title} cover art`}
+            palette={game.palette}
+            badges={[game.featureTag, game.platforms[0], game.priceModel]}
+            className={compact ? 'aspect-[2/3] w-full rounded-none' : 'aspect-[2/3] w-full rounded-none'}
+            titleSize={compact ? 'text-3xl' : 'text-[2.2rem]'}
+            loading="lazy"
+            categories={game.categories}
+            genres={game.genres}
+          />
+        </Link>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleWishlist(game.id);
+          }}
+          className={`absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border backdrop-blur-md transition-all ${
+            inWishlist 
+              ? 'border-violet-500/50 bg-violet-500/20 text-violet-300 shadow-[0_0_15px_rgba(139,92,246,0.4)]' 
+              : 'border-white/10 bg-black/40 text-white/70 hover:border-white/30 hover:bg-black/60 hover:text-white'
+          }`}
+          title={inWishlist ? "Remove from Wishlist" : "Add to Wishlist"}
+        >
+          <Heart className={`h-5 w-5 ${inWishlist ? 'fill-current' : ''}`} />
+        </button>
+      </div>
 
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <div className="flex items-start justify-between gap-4">
