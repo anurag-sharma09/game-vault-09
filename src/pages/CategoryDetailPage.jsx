@@ -105,8 +105,15 @@ function CategoryDetailPage() {
     <div className={`min-h-screen bg-[#05070D] ${theme.bgTheme} transition-colors duration-1000`}>
       {/* ── Cinematic Hero ── */}
       <section className="relative flex min-h-[50svh] flex-col justify-end overflow-hidden border-b border-white/5 pb-16 pt-32">
-        <motion.div style={{ y: bannerY }} className="absolute inset-0 opacity-40">
-          <div className={`absolute inset-0 bg-gradient-to-t from-[#05070D] to-transparent`} />
+        <motion.div style={{ y: bannerY }} className="absolute inset-0">
+          {categoryGames[0] && (
+            <img 
+              src={categoryGames[0].banner || categoryGames[0].image} 
+              alt="" 
+              className="h-full w-full object-cover opacity-20"
+            />
+          )}
+          <div className={`absolute inset-0 bg-gradient-to-t from-[#05070D] via-[#05070D]/40 to-transparent`} />
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
         </motion.div>
 

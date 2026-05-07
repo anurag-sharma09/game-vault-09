@@ -9,6 +9,8 @@ import {
   Star,
   TrendingUp,
   Zap,
+  Gamepad2,
+  Layout,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { games, categories } from '../data/siteData.js'
@@ -438,6 +440,53 @@ function HomePage() {
           {newReleases.map((game) => (
             <GridCard key={game.id} game={game} />
           ))}
+        </div>
+      </Section>
+
+      {/* ══════════════ BROWSE BY GENRE ══════════════════════════ */}
+      <Section
+        eyebrow="Discovery Lanes"
+        icon={Layout}
+        title="Browse by Genre"
+        action={
+          <Link
+            to="/categories"
+            className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/14 bg-white/6 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white sm:inline-flex"
+          >
+            All Categories <ArrowRight className="h-4 w-4" />
+          </Link>
+        }
+      >
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {categories.slice(0, 4).map((cat) => {
+            const catGames = games.filter(g => g.categories.includes(cat.slug));
+            const repImage = catGames[0]?.image || catGames[0]?.banner;
+            return (
+              <Link 
+                key={cat.slug}
+                to={`/categories/${cat.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 aspect-[4/3] flex items-end p-6"
+              >
+                {/* Background Image */}
+                {repImage && (
+                  <img 
+                    src={repImage} 
+                    alt="" 
+                    className="absolute inset-0 h-full w-full object-cover opacity-30 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-50"
+                  />
+                )}
+                <div className={`absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent`} />
+                <div className="relative z-10">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400">
+                    {catGames.length} Games
+                  </p>
+                  <h3 className="mt-1 font-display text-2xl uppercase text-white group-hover:text-cyan-200 transition-colors">
+                    {cat.name}
+                  </h3>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </Section>
 

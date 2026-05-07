@@ -4,8 +4,12 @@ import CategoryCard from '../components/CategoryCard.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import { categories, games } from '../data/siteData.js'
 
-function countGames(categorySlug) {
-  return games.filter((game) => game.categories.includes(categorySlug)).length
+function getCategoryInfo(categorySlug) {
+  const categoryGames = games.filter((game) => game.categories.includes(categorySlug))
+  return {
+    count: categoryGames.length,
+    image: categoryGames[0]?.image || categoryGames[0]?.banner
+  }
 }
 
 function CategoriesPage() {
@@ -49,9 +53,17 @@ function CategoriesPage() {
       </section>
 
       <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {categories.map((category) => (
-          <CategoryCard key={category.slug} category={category} count={countGames(category.slug)} />
-        ))}
+        {categories.map((category) => {
+          const info = getCategoryInfo(category.slug)
+          return (
+            <CategoryCard 
+              key={category.slug} 
+              category={category} 
+              count={info.count} 
+              image={info.image}
+            />
+          )
+        })}
       </section>
     </div>
   )

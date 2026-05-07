@@ -23,7 +23,7 @@ const iconMap = {
   'open-world': Globe2,
 }
 
-function CategoryCard({ category, count }) {
+function CategoryCard({ category, count, image }) {
   const Icon = iconMap[category.slug] ?? Gamepad2
 
   return (
@@ -33,10 +33,21 @@ function CategoryCard({ category, count }) {
         transition={{ duration: 0.28, ease: 'easeOut' }}
         className="glass-panel group relative flex h-full overflow-hidden rounded-[30px] p-6"
       >
+        {/* Background Image */}
+        {image && (
+          <div className="absolute inset-0 overflow-hidden">
+            <img 
+              src={image} 
+              alt="" 
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-30 group-hover:opacity-40"
+            />
+          </div>
+        )}
+        
         <div
-          className={`absolute inset-0 bg-gradient-to-br ${category.accent} opacity-55 transition duration-300 group-hover:opacity-90`}
+          className={`absolute inset-0 bg-gradient-to-br ${category.accent} opacity-40 transition duration-300 group-hover:opacity-60`}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_22%),linear-gradient(180deg,rgba(255,255,255,0.08),transparent_28%,rgba(2,6,23,0.4))]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/40 to-transparent" />
 
         <div className="relative flex h-full flex-col">
           <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] border border-white/14 bg-black/18 text-cyan-100">
