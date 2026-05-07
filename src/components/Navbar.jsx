@@ -17,7 +17,7 @@ import { useStoreData } from '../hooks/useStoreData.js'
 const navItems = [
   { label: 'Games', to: '/games', type: 'route' },
   { label: 'Categories', to: '/categories', type: 'route' },
-  { label: 'News', to: '/#news', type: 'hash' },
+  { label: 'News', to: '/news', type: 'route' },
   { label: 'Contact', to: '/contact', type: 'route' },
 ]
 
