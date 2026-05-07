@@ -7,7 +7,7 @@ function SectionHeading({ eyebrow, title, description, action }) {
             {eyebrow}
           </p>
         ) : null}
-        <h2 className="font-display text-3xl text-white sm:text-4xl">{title}</h2>
+        <h2 className="font-display uppercase text-white" style={{ fontSize: 'var(--fluid-h2)' }}>{title}</h2>
         {description ? (
           <p className="mt-4 text-sm leading-7 text-slate-300/78 sm:text-base">
             {description}

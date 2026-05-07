@@ -294,50 +294,47 @@ function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(168,85,247,0.22),transparent_40%)]" />
 
         {/* Content */}
-        <div className="relative mx-auto flex w-full max-w-7xl flex-1 items-center px-6 pb-28 pt-36">
+        <div className="relative mx-auto flex w-full max-w-7xl flex-1 items-end px-4 pb-16 pt-48 sm:px-6 sm:pb-24 lg:px-8">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={heroStagger}
-            className="max-w-3xl"
+            className="w-full max-w-4xl"
           >
-            {/* Label */}
-            <motion.div variants={heroItem}>
-              <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.4em] text-violet-300 backdrop-blur-sm">
-                <Sparkles className="h-3.5 w-3.5" />
-                Game Vault — Official Gaming Platform
+            <motion.div variants={heroItem} className="mb-6 flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-violet-500/40 bg-violet-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-violet-300 backdrop-blur-md sm:text-xs">
+                <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
+                Featured Launch
+              </span>
+              <span className="rounded-full border border-white/14 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md sm:text-xs">
+                {heroGame.store}
               </span>
             </motion.div>
 
-            {/* Heading */}
             <motion.h1
               variants={heroItem}
-              className="mt-8 font-display text-[4.5rem] uppercase leading-[0.88] text-white sm:text-[6rem] lg:text-[7.5rem]"
+              className="font-display uppercase leading-[0.9] text-white drop-shadow-2xl"
+              style={{ fontSize: 'var(--fluid-h1)' }}
             >
-              Play Without{' '}
-              <span className="text-neon">Limits</span>
+              {heroGame.title}
             </motion.h1>
 
-            {/* Sub */}
             <motion.p
               variants={heroItem}
-              className="mt-7 max-w-xl text-base leading-8 text-slate-300/80 sm:text-lg"
+              className="mt-6 max-w-2xl text-base leading-relaxed text-slate-200/90 drop-shadow-md sm:text-lg lg:text-xl"
             >
-              Discover every major title in one cinematic space. Official sources, premium artwork,
-              and a zero-noise experience built for serious gamers.
+              {heroGame.description}
             </motion.p>
 
-            {/* CTAs */}
-            <motion.div variants={heroItem} className="mt-10 flex flex-wrap gap-4">
+            <motion.div variants={heroItem} className="mt-8 flex flex-col flex-wrap gap-4 sm:flex-row">
               <Link
-                to="/games"
-                className="btn-neon inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-black"
+                to={`/games/${heroGame.slug}`}
+                className="btn-neon inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.95),rgba(34,211,238,0.95))] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-black sm:w-auto"
               >
-                Explore Games
+                Launch Experience
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="#trending"
                 className="btn-ghost inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/8 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm"
               >
                 <PlayCircle className="h-4 w-4" />

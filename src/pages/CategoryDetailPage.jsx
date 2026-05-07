@@ -129,7 +129,7 @@ function CategoryDetailPage() {
                 <p className={`text-[10px] font-bold uppercase tracking-[0.3em] ${theme.accent}`}>
                   {theme.tagline}
                 </p>
-                <h1 className="font-display text-[4rem] sm:text-[5rem] uppercase leading-none text-white drop-shadow-2xl">
+                <h1 className="font-display uppercase leading-none text-white drop-shadow-2xl" style={{ fontSize: 'var(--fluid-h1)' }}>
                   {category.name}
                 </h1>
               </div>

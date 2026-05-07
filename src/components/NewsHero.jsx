@@ -43,47 +43,58 @@ function NewsHero({ article }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(168,85,247,0.18),transparent_50%)]" />
 
       {/* Content */}
-      <div className="relative mx-auto flex w-full max-w-7xl flex-1 items-end px-6 pb-20 pt-36">
+      <div className="relative mx-auto flex h-full w-full max-w-[92rem] flex-col justify-end px-4 pb-20 sm:px-6 lg:px-10">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl"
+          initial="hidden"
+          animate="visible"
+          variants={stagger}
+          className="w-full max-w-4xl"
         >
-          {/* Breaking News Tag */}
-          <div className="mb-6 flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-red-500/40 bg-red-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-red-300 backdrop-blur-md">
-              <Flame className="h-3 w-3" />
-              Latest News
+          <motion.div variants={reveal} className="mb-6 flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-red-500/40 bg-red-500/20 px-3 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-red-300 backdrop-blur-md">
+              <Flame className="h-3 w-3 sm:h-4 sm:w-4" />
+              Top Story
             </span>
-            <span className="rounded-full border border-white/14 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+            <span className="rounded-full border border-white/14 bg-white/10 px-3 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md">
               {article.source}
             </span>
-            <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300">
-              <Clock className="h-3.5 w-3.5" />
-              {getRelativeTime(article.pubDate)}
-            </span>
-          </div>
+            {article.category && (
+              <span className="rounded-full border border-white/14 bg-white/10 px-3 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-cyan-300 backdrop-blur-md">
+                {article.category}
+              </span>
+            )}
+          </motion.div>
 
-          <Link to={`/news/${article.slug}`}>
-            <h1 className="font-display text-[3.5rem] uppercase leading-[0.9] text-white transition hover:text-cyan-200 sm:text-[4.5rem] lg:text-[5.5rem] drop-shadow-2xl">
-              {article.title}
-            </h1>
-          </Link>
+          <motion.h1
+            variants={reveal}
+            className="font-display uppercase leading-[0.9] text-white drop-shadow-2xl"
+            style={{ fontSize: 'var(--fluid-h1)' }}
+          >
+            {article.title}
+          </motion.h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200/90 sm:text-lg drop-shadow-md">
+          <motion.p
+            variants={reveal}
+            className="mt-6 max-w-2xl text-base sm:text-lg lg:text-xl leading-relaxed text-slate-200/90 drop-shadow-md line-clamp-3"
+          >
             {article.snippet}
-          </p>
+          </motion.p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              to={`/news/${article.slug}`}
-              className="btn-neon inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-black"
+          <motion.div variants={reveal} className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href={article.url}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-neon inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-black w-full sm:w-auto justify-center"
             >
               Read Full Story
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+              <ExternalLink className="h-4 w-4" />
+            </a>
+            <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-400">
+              <Clock className="h-4 w-4" />
+              {article.publishedAt}
+            </span>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -47,20 +47,20 @@ function GameCard({ game, compact = false }) {
       </div>
 
       <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <div className="flex items-start justify-between gap-4">
-          <div>
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-4">
+          <div className="flex-1 min-w-0">
             <Link to={`/games/${game.slug}`}>
-              <h3 className="line-clamp-2 font-display text-[2rem] uppercase leading-none text-white transition group-hover:text-cyan-100">
+              <h3 className="line-clamp-2 font-display text-[1.8rem] sm:text-[2rem] uppercase leading-none text-white transition group-hover:text-cyan-100">
                 {game.title}
               </h3>
             </Link>
-            <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-400">
+            <p className="mt-2 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-400">
               {game.genre}
             </p>
           </div>
 
           <span
-            className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] ${
+            className={`self-start shrink-0 rounded-full px-3 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.24em] ${
               game.priceModel === 'Free'
                 ? 'bg-cyan-400/14 text-cyan-200'
                 : game.priceModel === 'Coming Soon'

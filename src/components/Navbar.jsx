@@ -101,9 +101,9 @@ function Navbar({ playerTag, onOpenSignIn }) {
           <motion.div
             animate={{ scale: isScrolled ? 0.94 : 1 }}
             transition={{ duration: 0.28 }}
-            className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/12 bg-[linear-gradient(135deg,rgba(168,85,247,0.94),rgba(34,211,238,0.86))] text-slate-950 shadow-[0_18px_40px_rgba(56,189,248,0.18)]"
+            className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl shadow-[0_0_20px_rgba(56,189,248,0.3)]"
           >
-            <Gamepad2 className="h-5 w-5" />
+            <img src="/logo.png" alt="Game Vault Logo" className="h-full w-full object-cover" />
           </motion.div>
 
           <div>
@@ -183,13 +183,13 @@ function Navbar({ playerTag, onOpenSignIn }) {
       <AnimatePresence>
         {mobileMenuOpen ? (
           <motion.div
-            initial={{ opacity: 0, y: -18 }}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.24 }}
-            className="border-t border-white/8 bg-slate-950/88 px-4 pb-5 pt-4 backdrop-blur-2xl sm:px-6 lg:hidden"
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute left-0 top-[72px] h-[calc(100svh-72px)] w-full overflow-y-auto bg-slate-950/95 px-4 pb-20 pt-6 backdrop-blur-3xl sm:px-6 lg:hidden"
           >
-            <div className="space-y-4">
+            <div className="space-y-6">
               <SearchField
                 key={`mobile-${location.search}`}
                 defaultValue={routeQuery}
@@ -197,23 +197,23 @@ function Navbar({ playerTag, onOpenSignIn }) {
                 placeholder="Search worlds, launches..."
               />
 
-              <nav className="glass-panel rounded-[30px] p-4">
-                <div className="flex flex-col gap-2">
+              <nav className="glass-panel rounded-[30px] p-6">
+                <div className="flex flex-col gap-4">
                   {navItems.map((item) => renderNavItem(item, true))}
                 </div>
               </nav>
 
-              <div className="glass-panel rounded-[28px] p-4">
+              <div className="glass-panel rounded-[28px] p-6">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/72">
                       Player Profile
                     </p>
-                    <p className="mt-2 font-display text-3xl uppercase leading-none text-white">
+                    <p className="mt-2 font-display text-4xl uppercase leading-none text-white">
                       {playerTag || 'Join In'}
                     </p>
                   </div>
-                  <Sparkles className="h-6 w-6 text-cyan-100" />
+                  <Sparkles className="h-8 w-8 text-cyan-100" />
                 </div>
 
                 <button
@@ -222,10 +222,10 @@ function Navbar({ playerTag, onOpenSignIn }) {
                     setMobileMenuOpen(false)
                     onOpenSignIn()
                   }}
-                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.96),rgba(34,211,238,0.92))] px-4 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:brightness-110"
+                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.96),rgba(34,211,238,0.92))] px-4 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:brightness-110"
                 >
                   Open Profile
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-5 w-5" />
                 </button>
               </div>
             </div>

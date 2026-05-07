@@ -173,14 +173,14 @@ function GamesPage() {
       </section>
 
       {filteredGames.length ? (
-        <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredGames.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
         </section>
       ) : (
         <section className="glass-panel rounded-[32px] px-6 py-12 text-center">
-          <h2 className="font-display text-3xl text-white">No games found</h2>
+          <h2 className="font-display uppercase text-white" style={{ fontSize: 'var(--fluid-h2)' }}>No games found</h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-300/76">
             Try a different title, clear one of the filters, or switch back to popular sorting to reopen the full official catalog.
           </p>

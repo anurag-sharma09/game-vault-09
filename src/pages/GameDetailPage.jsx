@@ -103,10 +103,10 @@ function GameDetailPage() {
                 </span>
               ))}
             </motion.div>
-            <motion.h1 variants={reveal} className="font-display text-[4rem] sm:text-[6rem] uppercase leading-none text-white drop-shadow-2xl">
+            <motion.h1 variants={reveal} className="font-display uppercase leading-none text-white drop-shadow-2xl" style={{ fontSize: 'var(--fluid-h1)' }}>
               {game.title}
             </motion.h1>
-            <motion.p variants={reveal} className="mt-6 text-lg leading-8 text-slate-300">
+            <motion.p variants={reveal} className="mt-6 text-lg sm:text-xl leading-8 text-slate-300 drop-shadow-md">
               {game.description}
             </motion.p>
           </motion.div>
@@ -114,15 +114,15 @@ function GameDetailPage() {
       </section>
 
       {/* ── Store Layout (Main + Sticky Sidebar) ── */}
-      <section className="relative mx-auto max-w-7xl px-6 lg:px-8 py-12">
+      <section className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           
           {/* Main Content (Left) */}
-          <div className="flex-1 space-y-16 min-w-0">
+          <div className="flex-1 space-y-16 min-w-0 w-full">
             {/* Screenshots Gallery */}
             {game.screenshots && game.screenshots.length > 0 && (
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}>
-                <h2 className="font-display text-3xl uppercase text-white mb-6">Gallery</h2>
+                <h2 className="font-display uppercase text-white mb-6" style={{ fontSize: 'var(--fluid-h2)' }}>Gallery</h2>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {game.screenshots.slice(0, 4).map((shot, idx) => (
                     <motion.div key={idx} variants={reveal} className="overflow-hidden rounded-[24px] border border-white/5">
@@ -134,16 +134,16 @@ function GameDetailPage() {
             )}
 
             {/* About Experience */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger} className="glass-panel p-8 rounded-[32px]">
-              <h2 className="font-display text-3xl uppercase text-white mb-6">About the Experience</h2>
-              <p className="text-slate-300/90 leading-relaxed">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger} className="glass-panel p-6 sm:p-8 rounded-[32px]">
+              <h2 className="font-display uppercase text-white mb-6" style={{ fontSize: 'var(--fluid-h2)' }}>About the Experience</h2>
+              <p className="text-slate-300/90 leading-relaxed text-sm sm:text-base">
                 {game.vaultNote || "Immerse yourself in this premium experience securely routed through official channels. Game Vault ensures all interactions point exclusively to verified storefronts."}
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {game.highlights?.map((highlight, idx) => (
                   <div key={idx} className="flex items-start gap-3 rounded-2xl bg-white/5 p-4">
-                    <Sparkles className="h-5 w-5 text-violet-400 shrink-0 mt-0.5" />
-                    <span className="text-sm text-slate-200">{highlight}</span>
+                    <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-violet-400 shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm text-slate-200">{highlight}</span>
                   </div>
                 ))}
               </div>
@@ -152,7 +152,7 @@ function GameDetailPage() {
             {/* System Requirements */}
             {game.systemRequirements && (
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}>
-                <h2 className="font-display text-3xl uppercase text-white mb-6">System Requirements</h2>
+                <h2 className="font-display uppercase text-white mb-6" style={{ fontSize: 'var(--fluid-h2)' }}>System Requirements</h2>
                 <div className="glass-panel p-8 rounded-[32px] grid gap-6 sm:grid-cols-2">
                   {Object.entries(game.systemRequirements).map(([key, val]) => (
                     <div key={key} className="border-b border-white/5 pb-4">
