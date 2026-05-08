@@ -9,14 +9,16 @@ import { useState, useEffect, useRef } from 'react'
  *   3. 'fallback' – primary failed, try fallbackSrc (if provided)
  *   4. 'gradient' – both images failed, CSS gradient art shown
  */
-export function useGameImage(primarySrc, fallbackSrc = null) {
+export function useGameImage(primarySrc, fallbackSrc = null, options = {}) {
   const [status, setStatus] = useState('loading')
   const imgRef = useRef(null)
   const attemptRef = useRef(0)
+  const { onError } = options
 
   useEffect(() => {
     if (!primarySrc) {
       setStatus('gradient')
+      if (onError) onError()
       return
     }
     setStatus('loading')
@@ -41,10 +43,12 @@ export function useGameImage(primarySrc, fallbackSrc = null) {
         }
         fallbackImg.onerror = () => {
           setStatus('gradient')
+          if (onError) onError()
         }
         fallbackImg.src = fallbackSrc
       } else {
         setStatus('gradient')
+        if (onError) onError()
       }
     }
 
@@ -56,7 +60,7 @@ export function useGameImage(primarySrc, fallbackSrc = null) {
         imgRef.current.onerror = null
       }
     }
-  }, [primarySrc, fallbackSrc])
+  }, [primarySrc, fallbackSrc, onError])
 
   const activeSrc =
     status === 'loaded'

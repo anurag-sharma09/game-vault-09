@@ -102,6 +102,45 @@ async function fetchNewsFromFeeds() {
   return uniqueArticles.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 }
 
+const MOCK_ARTICLES = [
+  {
+    id: 'mock-1',
+    slug: 'gta-vi-leaks-confirmed',
+    title: 'Grand Theft Auto VI: New Gameplay Features Leaked',
+    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2070',
+    source: 'Game Vault News',
+    pubDate: new Date().toISOString(),
+    link: 'https://www.rockstargames.com/vi',
+    author: 'Vault Staff',
+    snippet: 'Recent leaks suggest that GTA VI will feature a dynamic weather system and more interactive interiors than any previous Rockstar title.',
+    category: 'Leaks',
+  },
+  {
+    id: 'mock-2',
+    slug: 'ps6-rumors-surface',
+    title: 'PlayStation 6: Early Specs and Release Window Rumors',
+    image: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=2070',
+    source: 'TechRadar',
+    pubDate: new Date(Date.now() - 3600000).toISOString(),
+    link: 'https://www.playstation.com',
+    author: 'Jane Doe',
+    snippet: 'Industry insiders claim Sony is already in early development of the next generation console, targeting a 2028 release date.',
+    category: 'Hardware',
+  },
+  {
+    id: 'mock-3',
+    slug: 'elden-ring-dlc-update',
+    title: 'Elden Ring: Shadow of the Erdtree Patch Notes Released',
+    image: 'https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&q=80&w=2071',
+    source: 'IGN',
+    pubDate: new Date(Date.now() - 7200000).toISOString(),
+    link: 'https://www.ign.com',
+    author: 'Mark Smith',
+    snippet: 'The latest update for Shadow of the Erdtree brings balance changes to several boss encounters and improves performance on PC.',
+    category: 'Updates',
+  }
+];
+
 /**
  * Main hook/service method for components to call.
  * Uses sessionStorage caching to prevent rate limits and ensure instant loads.
@@ -137,11 +176,25 @@ export async function getLiveNews(forceRefresh = false) {
         return JSON.parse(staleCached).data;
     }
 
-    return [];
+    // Ultimate fallback to mock data
+    return MOCK_ARTICLES;
   } catch (error) {
     console.error("Error in getLiveNews:", error);
-    // Ultimate fallback
+    // Try stale cache first
     const staleCached = sessionStorage.getItem(CACHE_KEY);
-    return staleCached ? JSON.parse(staleCached).data : [];
+    if (staleCached) return JSON.parse(staleCached).data;
+    
+    // Then mock data
+    return MOCK_ARTICLES;
   }
+}
+
+/**
+ * Convenience method to fetch a specific number of articles that strictly have an image.
+ * This is useful for high-impact sections like the homepage to ensure visual consistency.
+ */
+export async function getNewsWithImages(count = 3, forceRefresh = false) {
+  const allNews = await getLiveNews(forceRefresh);
+  const newsWithImages = allNews.filter(article => article.image && article.image.trim() !== '');
+  return newsWithImages.slice(0, count);
 }

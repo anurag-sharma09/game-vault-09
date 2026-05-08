@@ -54,22 +54,24 @@ function NewsPage() {
     })
   }, [articles, activeCategory, searchQuery])
 
-  const heroArticle = articles.length > 0 ? articles[0] : null
-  const gridArticles = articles.length > 0 ? filteredArticles.filter(a => a.id !== heroArticle.id) : []
+  const heroArticle = articles.length > 0 
+    ? (articles.find(a => a.image && a.image.trim() !== '') || articles[0]) 
+    : null
+  const gridArticles = articles.length > 0 ? filteredArticles.filter(a => a.id !== heroArticle?.id) : []
 
   return (
-    <div className="min-h-screen bg-[#0B0F19] pt-[72px]">
+    <div className="min-h-screen bg-[#0B0F19] pt-[80px]">
       {/* ── Breaking News Ticker ── */}
       {articles.length > 0 && (
-        <div className="bg-red-500/10 border-b border-red-500/20 overflow-hidden relative flex items-center h-10 w-full z-10 backdrop-blur-md">
-          <div className="absolute left-0 top-0 bottom-0 z-20 flex items-center bg-red-500 px-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-[10px_0_20px_rgba(239,68,68,0.3)]">
+        <div className="bg-red-500/10 border-b border-red-500/20 overflow-hidden relative flex items-center h-10 w-full z-20 backdrop-blur-md">
+          <div className="absolute left-0 top-0 bottom-0 z-30 flex items-center bg-red-500 px-3 sm:px-4 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-[10px_0_20px_rgba(239,68,68,0.3)]">
             Breaking News
           </div>
-          <div className="flex animate-ticker whitespace-nowrap pl-32 items-center">
-            {articles.slice(0, 5).map((article, i) => (
-              <div key={article.id} className="flex items-center">
-                <span className="text-xs font-semibold text-slate-200">{article.title}</span>
-                {i < 4 && <span className="mx-6 h-1 w-1 rounded-full bg-red-500/50" />}
+          <div className="flex animate-ticker whitespace-nowrap pl-24 sm:pl-32 items-center">
+            {[...articles.slice(0, 5), ...articles.slice(0, 5)].map((article, i) => (
+              <div key={`${article.id}-${i}`} className="flex items-center">
+                <span className="text-[11px] sm:text-xs font-semibold text-slate-200">{article.title}</span>
+                <span className="mx-4 sm:mx-6 h-1 w-1 rounded-full bg-red-500/50" />
               </div>
             ))}
           </div>

@@ -130,7 +130,7 @@ function NewsDetailPage() {
               </span>
             </motion.div>
 
-            <motion.h1 variants={reveal} className="font-display text-[3.5rem] uppercase leading-[0.95] text-white sm:text-[5rem] lg:text-[6rem] drop-shadow-2xl">
+            <motion.h1 variants={reveal} className="font-display text-[2.5rem] xs:text-[3rem] sm:text-[4.5rem] lg:text-[6rem] uppercase leading-[0.95] text-white drop-shadow-2xl">
               {article.title}
             </motion.h1>
 

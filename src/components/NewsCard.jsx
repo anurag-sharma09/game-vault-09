@@ -26,9 +26,13 @@ function getRelativeTime(dateString) {
   return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
 }
 
-function NewsCard({ article, index }) {
+function NewsCard({ article, index, hideOnError = false }) {
   const { activeSrc, isLoading, isGradient } = useGameImage(article.image)
   const delay = Math.min(index * 0.05, 0.5) // Stagger effect
+
+  if (hideOnError && isGradient) {
+    return null;
+  }
 
   return (
     <motion.article

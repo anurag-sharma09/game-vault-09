@@ -11,11 +11,14 @@ import {
   Zap,
   Gamepad2,
   Layout,
+  Newspaper,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { games, categories } from '../data/siteData.js'
 import { useGameImage } from '../components/useGameImage.js'
 import FallbackArtwork from '../components/FallbackArtwork.jsx'
+import NewsCard from '../components/NewsCard.jsx'
+import { getNewsWithImages } from '../services/newsService.js'
 
 /* ─── Framer variants ──────────────────────────────────────── */
 const heroStagger = {
@@ -221,6 +224,15 @@ function TrendingSection({ games: trendingGames }) {
 /* ─── HomePage ────────────────────────────────────────────── */
 function HomePage() {
   const { scrollY } = useScroll()
+  const [news, setNews] = useState([])
+
+  useEffect(() => {
+    async function loadNews() {
+      const data = await getNewsWithImages(3)
+      setNews(data)
+    }
+    loadNews()
+  }, [])
   const heroImgY     = useTransform(scrollY, [0, 700], [0, 110])
   const heroImgScale = useTransform(scrollY, [0, 700], [1, 1.1])
 
@@ -489,6 +501,29 @@ function HomePage() {
           })}
         </div>
       </Section>
+
+      {/* ══════════════ LATEST NEWS ════════════════════════════ */}
+      {news.length > 0 && (
+        <Section
+          eyebrow="Inside Gaming"
+          icon={Newspaper}
+          title="Latest News"
+          action={
+            <Link
+              to="/news"
+              className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/14 bg-white/6 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white sm:inline-flex"
+            >
+              News Hub <ArrowRight className="h-4 w-4" />
+            </Link>
+          }
+        >
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {news.map((article, idx) => (
+              <NewsCard key={article.id} article={article} index={idx} />
+            ))}
+          </div>
+        </Section>
+      )}
 
       {/* ══════════════ CTA BANNER ════════════════════════════ */}
       <section className="py-20">

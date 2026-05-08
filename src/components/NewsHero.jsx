@@ -1,9 +1,19 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Clock, Flame } from 'lucide-react'
+import { ArrowRight, Clock, Flame, ExternalLink } from 'lucide-react'
 import { useGameImage } from './useGameImage.js'
 import FallbackArtwork from './FallbackArtwork.jsx'
 import { getRelativeTime } from './NewsCard.jsx'
+
+const reveal = {
+  hidden: { opacity: 0, y: 38 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } },
+}
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
+}
 
 function NewsHero({ article }) {
   if (!article) return null
@@ -43,7 +53,7 @@ function NewsHero({ article }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(168,85,247,0.18),transparent_50%)]" />
 
       {/* Content */}
-      <div className="relative mx-auto flex h-full w-full max-w-[92rem] flex-col justify-end px-4 pb-20 sm:px-6 lg:px-10">
+      <div className="relative mx-auto flex h-full w-full max-w-[92rem] flex-1 flex-col justify-end px-4 pb-20 sm:px-6 lg:px-10">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -67,8 +77,7 @@ function NewsHero({ article }) {
 
           <motion.h1
             variants={reveal}
-            className="font-display uppercase leading-[0.9] text-white drop-shadow-2xl"
-            style={{ fontSize: 'var(--fluid-h1)' }}
+            className="font-display uppercase leading-[0.9] text-white drop-shadow-2xl text-[2rem] xs:text-[2.5rem] sm:text-[var(--fluid-h1)]"
           >
             {article.title}
           </motion.h1>
@@ -82,17 +91,17 @@ function NewsHero({ article }) {
 
           <motion.div variants={reveal} className="mt-8 flex flex-wrap items-center gap-4">
             <a
-              href={article.url}
+              href={article.link}
               target="_blank"
               rel="noreferrer"
-              className="btn-neon inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-black w-full sm:w-auto justify-center"
+              className="btn-neon inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-slate-950 w-full sm:w-auto justify-center transition hover:bg-cyan-100"
             >
               Read Full Story
               <ExternalLink className="h-4 w-4" />
             </a>
             <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-400">
               <Clock className="h-4 w-4" />
-              {article.publishedAt}
+              {getRelativeTime(article.pubDate)}
             </span>
           </motion.div>
         </motion.div>
@@ -102,3 +111,4 @@ function NewsHero({ article }) {
 }
 
 export default NewsHero
+
