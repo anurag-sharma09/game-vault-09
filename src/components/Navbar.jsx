@@ -1,18 +1,19 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import {
   ChevronRight,
-  Gamepad2,
   Menu,
   Search,
   ShieldCheck,
   Sparkles,
   Heart,
   X,
+  LogOut,
 } from 'lucide-react'
 import { useState } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import SearchField from './SearchField.jsx'
 import { useStoreData } from '../hooks/useStoreData.js'
+import { useAuth } from '../context/AuthContext'
 
 const navItems = [
   { label: 'Games', to: '/games', type: 'route' },
@@ -23,8 +24,8 @@ const navItems = [
 
 function Navbar({ playerTag, onOpenSignIn }) {
   const navigate = useNavigate()
-  const PLAYER_TAG_KEY = 'gamevault-player-tag'
   const location = useLocation()
+  const { logout, user } = useAuth()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const routeQuery = new URLSearchParams(location.search).get('q') ?? ''
@@ -150,14 +151,27 @@ function Navbar({ playerTag, onOpenSignIn }) {
             </AnimatePresence>
           </button>
 
-          <button
-            type="button"
-            onClick={onOpenSignIn}
-            className="inline-flex h-10 items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 text-sm font-semibold tracking-[0.16em] uppercase text-white transition hover:border-cyan-300/26 hover:bg-white/12"
-          >
-            <ShieldCheck className="h-4 w-4 text-cyan-200" />
-            {playerTag || 'Profile'}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={onOpenSignIn}
+              className="inline-flex h-10 items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 text-sm font-semibold tracking-[0.16em] uppercase text-white transition hover:border-cyan-300/26 hover:bg-white/12"
+            >
+              <ShieldCheck className="h-4 w-4 text-cyan-200" />
+              {playerTag || 'Profile'}
+            </button>
+
+            {user && (
+              <button
+                type="button"
+                onClick={logout}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/8 text-slate-300 transition hover:border-red-400/40 hover:bg-red-500/10 hover:text-red-400"
+                title="Logout"
+              >
+                <LogOut className="h-4 w-4" />
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="ml-auto flex items-center gap-2 lg:hidden">
@@ -216,17 +230,33 @@ function Navbar({ playerTag, onOpenSignIn }) {
                   <Sparkles className="h-8 w-8 text-cyan-100" />
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    setMobileMenuOpen(false)
-                    onOpenSignIn()
-                  }}
-                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.96),rgba(34,211,238,0.92))] px-4 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:brightness-110"
-                >
-                  Open Profile
-                  <ChevronRight className="h-5 w-5" />
-                </button>
+                <div className="flex flex-col gap-3 mt-6">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setMobileMenuOpen(false)
+                      onOpenSignIn()
+                    }}
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.96),rgba(34,211,238,0.92))] px-4 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:brightness-110"
+                  >
+                    Open Profile
+                    <ChevronRight className="h-5 w-5" />
+                  </button>
+
+                  {user && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        logout()
+                        setMobileMenuOpen(false)
+                      }}
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-red-400 transition hover:bg-red-500/10"
+                    >
+                      Logout
+                      <LogOut className="h-5 w-5" />
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </motion.div>

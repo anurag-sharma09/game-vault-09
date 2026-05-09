@@ -1,30 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer.jsx'
 import Navbar from './Navbar.jsx'
 import SignInModal from './SignInModal.jsx'
-
-const PLAYER_TAG_KEY = 'gamevault-player-tag'
+import { useAuth } from '../context/AuthContext'
 
 function Layout() {
   const [signInOpen, setSignInOpen] = useState(false)
-  const [playerTag, setPlayerTag] = useState(() => {
-    if (typeof window === 'undefined') {
-      return ''
-    }
-
-    return window.localStorage.getItem(PLAYER_TAG_KEY) ?? ''
-  })
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (playerTag) {
-        window.localStorage.setItem(PLAYER_TAG_KEY, playerTag)
-      } else {
-        window.localStorage.removeItem(PLAYER_TAG_KEY)
-      }
-    }
-  }, [playerTag])
+  const { user, loading } = useAuth()
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
@@ -35,7 +18,10 @@ function Layout() {
         <div className="absolute inset-x-0 bottom-0 h-[28rem] bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.08),transparent_58%)]" />
       </div>
 
-      <Navbar playerTag={playerTag} onOpenSignIn={() => setSignInOpen(true)} />
+      <Navbar 
+        playerTag={user?.playerTag || ''} 
+        onOpenSignIn={() => setSignInOpen(true)} 
+      />
 
       <main className="w-full pb-16">
         <Outlet />
@@ -47,8 +33,6 @@ function Layout() {
         <SignInModal
           open={signInOpen}
           onClose={() => setSignInOpen(false)}
-          onSave={setPlayerTag}
-          playerTag={playerTag}
         />
       ) : null}
     </div>
