@@ -89,22 +89,22 @@ function GameArtwork({
       <div className="absolute inset-[1px] rounded-[inherit] border border-white/5" />
 
       {/* ── Badges + title content ───────────────────────────── */}
-      <div className="relative flex h-full flex-col justify-between p-5 sm:p-6">
-        <div className="flex flex-wrap gap-2">
-          {badges.slice(0, 3).filter(Boolean).map((badge) => (
+      <div className="relative flex h-full flex-col justify-between p-4 sm:p-6">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
+          {badges.slice(0, 2).filter(Boolean).map((badge) => (
             <span
               key={badge}
-              className="rounded-full border border-white/16 bg-black/28 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-slate-100/88 backdrop-blur-sm"
+              className="rounded-full border border-white/14 bg-black/30 px-2.5 py-0.5 text-[8px] font-bold uppercase tracking-[0.2em] text-white/90 backdrop-blur-md sm:px-3 sm:py-1 sm:text-[10px] sm:tracking-[0.28em]"
             >
               {badge}
             </span>
           ))}
         </div>
 
-        <div className="max-w-xl">
-          <h3 className={`font-display ${titleSize} leading-tight text-white drop-shadow-lg`}>{title}</h3>
+        <div className={`max-w-xl ${titleSize === 'hidden' ? 'hidden' : ''}`}>
+          <h3 className={`font-display ${titleSize} leading-[1.1] text-white drop-shadow-2xl`}>{title}</h3>
           {subtitle ? (
-            <p className="mt-3 max-w-lg text-sm leading-6 text-slate-100/82 sm:text-base drop-shadow-md">
+            <p className="mt-2 line-clamp-2 max-w-lg text-[10px] leading-relaxed text-white/80 drop-shadow-md sm:mt-3 sm:text-sm sm:leading-6 md:text-base">
               {subtitle}
             </p>
           ) : null}

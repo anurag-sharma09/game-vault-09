@@ -14,45 +14,36 @@ function getCategoryInfo(categorySlug) {
 
 function CategoriesPage() {
   return (
-    <div className="mx-auto max-w-[92rem] space-y-10 px-4 pt-32 sm:px-6 lg:px-10">
-      <section className="glass-panel rounded-[36px] px-6 py-10 sm:px-8 lg:px-10">
+    <div className="mx-auto max-w-[92rem] px-4 pt-24 sm:px-6 lg:px-10 sm:pt-32 pb-20">
+      <section className="glass-panel rounded-[24px] sm:rounded-[36px] p-6 sm:p-10">
         <SectionHeading
-          eyebrow="Categories"
-          title="Explore every discovery lane"
-          description="Your attached catalog is now organized into Action, RPG, FPS, Racing, Strategy, Sports, Indie, and Open World discovery lanes."
-          action={
-            <Link
-              to="/games"
-              className="inline-flex items-center gap-2 rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.95),rgba(34,211,238,0.95))] px-5 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110"
-            >
-              Browse All Games
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          }
+          eyebrow="Game Vault Library"
+          title="Discovery Lanes"
+          description="Explore our curated catalog organized by official genres and discovery lanes. Every link leads to a verified storefront."
         />
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <div className="glass-panel rounded-[26px] p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/76">Total Categories</p>
-            <p className="mt-3 font-display text-3xl text-white">{categories.length}</p>
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="glass-panel rounded-[20px] p-4 sm:rounded-[26px] sm:p-5">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-200/60 sm:text-xs">Categories</p>
+            <p className="mt-2 font-display text-2xl text-white sm:mt-3 sm:text-3xl">{categories.length}</p>
           </div>
-          <div className="glass-panel rounded-[26px] p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/76">Linked Games</p>
-            <p className="mt-3 font-display text-3xl text-white">{games.length}</p>
+          <div className="glass-panel rounded-[20px] p-4 sm:rounded-[26px] sm:p-5">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-200/60 sm:text-xs">Official Titles</p>
+            <p className="mt-2 font-display text-2xl text-white sm:mt-3 sm:text-3xl">{games.length}</p>
           </div>
-          <div className="glass-panel rounded-[26px] p-5">
-            <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-100/76">
+          <div className="glass-panel rounded-[20px] p-4 sm:rounded-[26px] sm:p-5">
+            <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-100/60 sm:text-xs">
               <ShieldCheck className="h-4 w-4" />
-              Official Rule
+              Verified
             </p>
-            <p className="mt-3 text-sm leading-7 text-slate-300/76">
-              Every category funnels users toward legal publisher and storefront links only.
+            <p className="mt-2 text-xs leading-relaxed text-slate-400 sm:mt-3 sm:text-sm">
+              All links are officially verified legal sources.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <section className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:grid-cols-2 xl:grid-cols-3">
         {categories.map((category) => {
           const info = getCategoryInfo(category.slug)
           return (

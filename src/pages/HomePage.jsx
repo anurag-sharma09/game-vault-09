@@ -23,11 +23,11 @@ import { getNewsWithImages } from '../services/newsService.js'
 /* ─── Framer variants ──────────────────────────────────────── */
 const heroStagger = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
 }
 const heroItem = {
-  hidden: { opacity: 0, y: 38 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
 }
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -42,7 +42,7 @@ function useFadeIn() {
     if (!el) return
     const obs = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) { el.classList.add('is-visible'); obs.disconnect() } },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     )
     obs.observe(el)
     return () => obs.disconnect()
@@ -57,7 +57,7 @@ function TrendingCard({ game }) {
   return (
     <Link
       to={`/games/${game.slug}`}
-      className="card-hover shelf-item relative w-[260px] overflow-hidden rounded-2xl border border-white/10 bg-slate-900 sm:w-[300px]"
+      className="card-hover shelf-item relative w-[200px] overflow-hidden rounded-2xl border border-white/10 bg-slate-900 sm:w-[280px]"
     >
       <div className="relative aspect-[2/3] overflow-hidden">
         {isGradient && (
@@ -83,19 +83,17 @@ function TrendingCard({ game }) {
           />
         )}
 
-        {/* Hover dark overlay */}
-        <div className="card-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+        <div className="card-overlay absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
 
-        {/* Hover text */}
-        <div className="card-text-lift absolute inset-x-0 bottom-0 p-5">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-cyan-300">
+        <div className="card-text-lift absolute inset-x-0 bottom-0 p-4 sm:p-5">
+          <p className="text-[9px] font-bold uppercase tracking-[0.24em] text-cyan-400 sm:text-[10px]">
             {game.genre}
           </p>
-          <h3 className="mt-1 font-display text-2xl uppercase leading-tight text-white">
+          <h3 className="line-clamp-1 mt-1 font-display text-lg uppercase leading-tight text-white sm:text-2xl">
             {game.title}
           </h3>
-          <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-violet-300">
-            View Game <ArrowRight className="h-3 w-3" />
+          <span className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-violet-300 sm:mt-3 sm:text-xs">
+            View <ArrowRight className="h-3 w-3" />
           </span>
         </div>
       </div>
@@ -110,7 +108,7 @@ function GridCard({ game }) {
   return (
     <Link
       to={`/games/${game.slug}`}
-      className="card-hover group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 transition-all duration-300 hover:border-violet-500/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.18)]"
+      className="card-hover group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 transition-all duration-300 hover:border-violet-500/40"
     >
       <div className="relative overflow-hidden aspect-[16/9]">
         {isGradient && (
@@ -138,24 +136,23 @@ function GridCard({ game }) {
 
         <div className="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-        {/* Price tag */}
-        <div className="absolute right-3 top-3 rounded-full border border-white/14 bg-black/50 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.3em] text-white backdrop-blur-sm">
+        <div className="absolute right-2.5 top-2.5 rounded-full border border-white/14 bg-black/50 px-2 py-0.5 text-[8px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-sm sm:right-3 sm:top-3 sm:px-3 sm:py-1 sm:text-[9px]">
           {game.priceModel}
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="p-3.5 sm:p-4">
         <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
-            <p className="truncate font-display text-xl uppercase leading-tight text-white">
+          <div className="min-w-0 flex-1">
+            <p className="truncate font-display text-lg uppercase leading-tight text-white sm:text-xl">
               {game.title}
             </p>
-            <p className="mt-1 text-xs text-slate-400">{game.genre}</p>
+            <p className="mt-1 text-[10px] text-slate-400 sm:text-xs">{game.genre}</p>
           </div>
           {game.rating && (
-            <div className="flex shrink-0 items-center gap-1 rounded-full bg-yellow-400/10 px-2.5 py-1">
-              <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-              <span className="text-xs font-bold text-yellow-300">{game.rating}</span>
+            <div className="flex shrink-0 items-center gap-1 rounded-full bg-yellow-400/10 px-2 py-0.5 sm:px-2.5 sm:py-1">
+              <Star className="h-2.5 w-2.5 fill-yellow-400 text-yellow-400 sm:h-3 sm:w-3" />
+              <span className="text-[10px] font-bold text-yellow-300 sm:text-xs">{game.rating}</span>
             </div>
           )}
         </div>
@@ -168,21 +165,26 @@ function GridCard({ game }) {
 function Section({ eyebrow, icon: Icon, title, action, children, className = '' }) {
   const ref = useFadeIn()
   return (
-    <section ref={ref} className={`fade-in-section py-20 ${className}`}>
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-10 flex items-end justify-between gap-4">
-          <div>
-            <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.38em] text-violet-400">
-              {Icon && <Icon className="h-3.5 w-3.5" />}
+    <section ref={ref} className={`fade-in-section py-12 sm:py-20 ${className}`}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 flex items-end justify-between gap-4 sm:mb-12">
+          <div className="max-w-[70%]">
+            <p className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.3em] text-violet-400 sm:text-[10px] sm:tracking-[0.38em]">
+              {Icon && <Icon className="h-3 w-3 sm:h-3.5 sm:w-3.5" />}
               {eyebrow}
             </p>
-            <h2 className="mt-3 font-display text-4xl uppercase leading-tight text-white sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl uppercase leading-tight text-white sm:mt-3 sm:text-5xl">
               {title}
             </h2>
           </div>
-          {action && action}
+          {action && <div className="hidden min-[450px]:block">{action}</div>}
         </div>
         {children}
+        {action && (
+          <div className="mt-8 flex justify-center min-[450px]:hidden">
+            {action}
+          </div>
+        )}
       </div>
     </section>
   )
@@ -192,29 +194,37 @@ function Section({ eyebrow, icon: Icon, title, action, children, className = '' 
 function TrendingSection({ games: trendingGames }) {
   const ref = useFadeIn()
   return (
-    <section id="trending" className="py-20">
-      <div className="mx-auto max-w-7xl px-6">
-        <div ref={ref} className="fade-in-section mb-10 flex items-end justify-between gap-4">
+    <section id="trending" className="py-12 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div ref={ref} className="fade-in-section mb-8 flex items-end justify-between gap-4 sm:mb-12">
           <div>
-            <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.38em] text-cyan-400">
-              <TrendingUp className="h-3.5 w-3.5" />
+            <p className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.3em] text-cyan-400 sm:text-[10px] sm:tracking-[0.38em]">
+              <TrendingUp className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               Trending Now
             </p>
-            <h2 className="mt-3 font-display text-4xl uppercase text-white sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl uppercase text-white sm:mt-3 sm:text-5xl">
               Most Played
             </h2>
           </div>
           <Link
             to="/games?sort=popular"
-            className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/14 bg-white/6 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white sm:inline-flex"
+            className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-[10px] font-bold uppercase tracking-widest text-white transition hover:bg-white/10 sm:flex sm:px-5 sm:py-3 sm:text-sm"
           >
             See All <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        <div className="shelf">
+        <div className="shelf -mx-4 px-4 sm:mx-0 sm:px-0">
           {trendingGames.map((game) => (
             <TrendingCard key={game.id} game={game} />
           ))}
+        </div>
+        <div className="mt-8 flex justify-center sm:hidden">
+          <Link
+            to="/games?sort=popular"
+            className="btn-ghost flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-[10px] font-bold uppercase tracking-widest text-white"
+          >
+            Browse All <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>
@@ -233,8 +243,8 @@ function HomePage() {
     }
     loadNews()
   }, [])
-  const heroImgY     = useTransform(scrollY, [0, 700], [0, 110])
-  const heroImgScale = useTransform(scrollY, [0, 700], [1, 1.1])
+  const heroImgY     = useTransform(scrollY, [0, 600], [0, 80])
+  const heroImgScale = useTransform(scrollY, [0, 600], [1, 1.08])
 
   /* featured hero game — GTA VI first (local image), then fallbacks */
   const heroGame = (() => {
@@ -257,20 +267,16 @@ function HomePage() {
   /* shelf: top trending */
   const trending = [...games].sort((a, b) => b.popularity - a.popularity).slice(0, 12)
 
-  /* section: free games */
+  /* sections data */
   const freeGames = games.filter((g) => g.priceModel === 'Free').slice(0, 6)
-
-  /* section: popular */
   const popular = [...games].sort((a, b) => b.popularity - a.popularity).slice(0, 6)
-
-  /* section: new releases */
   const newReleases = [...games].sort((a, b) => b.releaseRank - a.releaseRank).slice(0, 6)
 
   return (
-    <div style={{ background: '#0B0F19' }}>
+    <div className="bg-[#0B0F19]">
 
       {/* ══════════════ HERO ══════════════════════════════════ */}
-      <section className="relative flex min-h-[100svh] flex-col">
+      <section className="relative flex min-h-[90svh] flex-col overflow-hidden sm:min-h-[100svh]">
 
         {/* Cinematic background */}
         <motion.div
@@ -303,83 +309,79 @@ function HomePage() {
         </motion.div>
 
         {/* Layered overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/50 to-transparent sm:from-black/90" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-black/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(168,85,247,0.22),transparent_40%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(168,85,247,0.18),transparent_40%)]" />
 
         {/* Content */}
-        <div className="relative mx-auto flex w-full max-w-7xl flex-1 items-end px-4 pb-16 pt-48 sm:px-6 sm:pb-24 lg:px-8">
+        <div className="relative mx-auto flex w-full max-w-7xl flex-1 items-end px-4 pb-12 pt-32 sm:px-6 sm:pb-24 lg:px-8">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={heroStagger}
             className="w-full max-w-4xl"
           >
-            <motion.div variants={heroItem} className="mb-6 flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-violet-500/40 bg-violet-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-violet-300 backdrop-blur-md sm:text-xs">
+            <motion.div variants={heroItem} className="mb-5 flex flex-wrap items-center gap-2 sm:mb-6 sm:gap-3">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-violet-500/40 bg-violet-500/20 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-violet-300 backdrop-blur-md sm:px-3 sm:text-xs sm:tracking-[0.2em]">
                 <Sparkles className="h-3 w-3 sm:h-4 sm:w-4" />
                 Featured Launch
               </span>
-              <span className="rounded-full border border-white/14 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md sm:text-xs">
+              <span className="rounded-full border border-white/10 bg-white/8 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-white backdrop-blur-md sm:px-3 sm:text-xs sm:tracking-[0.2em]">
                 {heroGame.store}
               </span>
             </motion.div>
 
             <motion.h1
               variants={heroItem}
-              className="font-display uppercase leading-[0.9] text-white drop-shadow-2xl"
-              style={{ fontSize: 'var(--fluid-h1)' }}
+              className="font-display text-[12vw] uppercase leading-[0.95] text-white drop-shadow-2xl sm:text-[max(4.5rem,7vw)] lg:text-[8rem]"
             >
               {heroGame.title}
             </motion.h1>
 
             <motion.p
               variants={heroItem}
-              className="mt-6 max-w-2xl text-base leading-relaxed text-slate-200/90 drop-shadow-md sm:text-lg lg:text-xl"
+              className="mt-5 max-w-2xl text-sm leading-relaxed text-slate-200/80 drop-shadow-md sm:mt-6 sm:text-lg lg:text-xl"
             >
               {heroGame.description}
             </motion.p>
 
-            <motion.div variants={heroItem} className="mt-8 flex flex-col flex-wrap gap-4 sm:flex-row">
+            <motion.div variants={heroItem} className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4">
               <Link
                 to={`/games/${heroGame.slug}`}
-                className="btn-neon inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.95),rgba(34,211,238,0.95))] px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-black sm:w-auto"
+                className="btn-neon inline-flex items-center justify-center gap-2.5 rounded-full bg-[linear-gradient(135deg,rgba(168,85,247,0.95),rgba(34,211,238,0.95))] px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-slate-950 transition hover:scale-[1.02] sm:text-sm sm:tracking-[0.18em]"
               >
-                Launch Experience
-                <ArrowRight className="h-4 w-4" />
+                Launch Experience <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                className="btn-ghost inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/8 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm"
+                href="#trending"
+                className="btn-ghost inline-flex items-center justify-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white backdrop-blur-sm transition hover:bg-white/10 sm:text-sm sm:tracking-[0.18em]"
               >
-                <PlayCircle className="h-4 w-4" />
-                View Trending
+                <PlayCircle className="h-4 w-4" /> View Trending
               </a>
             </motion.div>
 
-            {/* Stats */}
+            {/* Stats - Hidden on smallest phones */}
             <motion.div
               variants={heroItem}
-              className="mt-14 flex flex-wrap items-center gap-8 border-t border-white/10 pt-8"
+              className="mt-12 hidden flex-wrap items-center gap-8 border-t border-white/10 pt-8 min-[450px]:flex sm:mt-14 sm:gap-12"
             >
               {[
-                { value: `${games.length}+`, label: 'Official Games' },
+                { value: `${games.length}+`, label: 'Titles' },
                 { value: `${categories.length}`, label: 'Genres' },
-                { value: '0', label: 'Pirated Links' },
+                { value: 'Official', label: 'Verified' },
               ].map((s) => (
                 <div key={s.label}>
-                  <p className="font-display text-3xl uppercase text-white">{s.value}</p>
-                  <p className="mt-1 text-xs uppercase tracking-widest text-slate-400">{s.label}</p>
+                  <p className="font-display text-2xl uppercase text-white sm:text-3xl">{s.value}</p>
+                  <p className="mt-1 text-[9px] uppercase tracking-[0.2em] text-slate-400 sm:text-xs">{s.label}</p>
                 </div>
               ))}
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Scroll cue */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="scroll-indicator flex flex-col items-center gap-2 text-white/40">
-            <ChevronDown className="h-6 w-6" />
-            <span className="text-[9px] font-semibold uppercase tracking-[0.4em]">Scroll</span>
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 sm:bottom-8">
+          <div className="flex flex-col items-center gap-2 text-white/30">
+            <ChevronDown className="h-5 w-5 animate-bounce" />
           </div>
         </div>
       </section>
@@ -387,114 +389,45 @@ function HomePage() {
       {/* ══════════════ TRENDING NOW SHELF ═══════════════════ */}
       <TrendingSection games={trending} />
 
-      {/* Divider */}
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      </div>
-
-      {/* ══════════════ TOP FREE GAMES ════════════════════════ */}
-      <Section
-        eyebrow="Free To Play"
-        icon={Zap}
-        title="Top Free Games"
-        action={
-          <Link
-            to="/games?pricing=Free"
-            className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/14 bg-white/6 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white sm:inline-flex"
-          >
-            See All <ArrowRight className="h-4 w-4" />
-          </Link>
-        }
+      {/* ══════════════ SECTIONS GRID ═════════════════════════ */}
+      
+      <Section eyebrow="Free To Play" icon={Zap} title="Top Free Games"
+        action={<Link to="/games?pricing=Free" className="btn-ghost flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-300">See All <ArrowRight className="h-4 w-4" /></Link>}
       >
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {freeGames.map((game) => (
-            <GridCard key={game.id} game={game} />
-          ))}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {freeGames.map((game) => <GridCard key={game.id} game={game} />)}
         </div>
       </Section>
 
-      {/* ══════════════ POPULAR RIGHT NOW ════════════════════ */}
-      <Section
-        eyebrow="Popular Right Now"
-        icon={Flame}
-        title="Community Favourites"
-        action={
-          <Link
-            to="/games?sort=popular"
-            className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/14 bg-white/6 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white sm:inline-flex"
-          >
-            See All <ArrowRight className="h-4 w-4" />
-          </Link>
-        }
+      <Section eyebrow="Popular Right Now" icon={Flame} title="Community Hits"
+        action={<Link to="/games?sort=popular" className="btn-ghost flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-300">See All <ArrowRight className="h-4 w-4" /></Link>}
       >
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {popular.map((game) => (
-            <GridCard key={game.id} game={game} />
-          ))}
-        </div>
-      </Section>
-
-      {/* ══════════════ NEW RELEASES ══════════════════════════ */}
-      <Section
-        eyebrow="New Releases"
-        icon={Sparkles}
-        title="Just Dropped"
-        action={
-          <Link
-            to="/games?sort=new"
-            className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/14 bg-white/6 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white sm:inline-flex"
-          >
-            See All <ArrowRight className="h-4 w-4" />
-          </Link>
-        }
-      >
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {newReleases.map((game) => (
-            <GridCard key={game.id} game={game} />
-          ))}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {popular.map((game) => <GridCard key={game.id} game={game} />)}
         </div>
       </Section>
 
       {/* ══════════════ BROWSE BY GENRE ══════════════════════════ */}
-      <Section
-        eyebrow="Discovery Lanes"
-        icon={Layout}
-        title="Browse by Genre"
-        action={
-          <Link
-            to="/categories"
-            className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/14 bg-white/6 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white sm:inline-flex"
-          >
-            All Categories <ArrowRight className="h-4 w-4" />
-          </Link>
-        }
+      <Section eyebrow="Discovery" icon={Layout} title="Browse Genres"
+        action={<Link to="/categories" className="btn-ghost flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-300">All Genres <ArrowRight className="h-4 w-4" /></Link>}
       >
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {categories.slice(0, 4).map((cat) => {
             const catGames = games.filter(g => g.categories.includes(cat.slug));
             const repImage = catGames[0]?.image || catGames[0]?.banner;
             return (
-              <Link 
-                key={cat.slug}
-                to={`/categories/${cat.slug}`}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 aspect-[4/3] flex items-end p-6"
+              <Link key={cat.slug} to={`/categories/${cat.slug}`}
+                className="group relative flex aspect-[2/1] items-end overflow-hidden rounded-2xl border border-white/10 p-5 sm:aspect-[4/3] sm:p-6"
               >
-                {/* Background Image */}
                 {repImage && (
-                  <img 
-                    src={repImage} 
-                    alt="" 
-                    className="absolute inset-0 h-full w-full object-cover opacity-30 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-50"
+                  <img src={repImage} alt="" 
+                    className="absolute inset-0 h-full w-full object-cover opacity-30 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-50"
                   />
                 )}
-                <div className={`absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent`} />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
                 <div className="relative z-10">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400">
-                    {catGames.length} Games
-                  </p>
-                  <h3 className="mt-1 font-display text-2xl uppercase text-white group-hover:text-cyan-200 transition-colors">
-                    {cat.name}
-                  </h3>
+                  <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-cyan-400">{catGames.length} Games</p>
+                  <h3 className="mt-1 font-display text-xl uppercase text-white group-hover:text-cyan-200 transition-colors sm:text-2xl">{cat.name}</h3>
                 </div>
               </Link>
             );
@@ -504,67 +437,32 @@ function HomePage() {
 
       {/* ══════════════ LATEST NEWS ════════════════════════════ */}
       {news.length > 0 && (
-        <Section
-          eyebrow="Inside Gaming"
-          icon={Newspaper}
-          title="Latest News"
-          action={
-            <Link
-              to="/news"
-              className="btn-ghost hidden shrink-0 items-center gap-2 rounded-full border border-white/14 bg-white/6 px-5 py-3 text-sm font-semibold uppercase tracking-widest text-white sm:inline-flex"
-            >
-              News Hub <ArrowRight className="h-4 w-4" />
-            </Link>
-          }
+        <Section eyebrow="Insights" icon={Newspaper} title="Inside Gaming"
+          action={<Link to="/news" className="btn-ghost flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-300">News Hub <ArrowRight className="h-4 w-4" /></Link>}
         >
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {news.map((article, idx) => (
-              <NewsCard key={article.id} article={article} index={idx} />
-            ))}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {news.map((article, idx) => <NewsCard key={article.id} article={article} index={idx} />)}
           </div>
         </Section>
       )}
 
-      {/* ══════════════ CTA BANNER ════════════════════════════ */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
-            variants={fadeUp}
-            className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-gradient-to-br from-violet-900/30 via-slate-900 to-cyan-900/20 p-12 text-center lg:p-20"
-          >
-            {/* bg decoration */}
-            <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-violet-600/20 blur-3xl" />
-            <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-cyan-600/20 blur-3xl" />
-
-            <p className="relative text-[10px] font-bold uppercase tracking-[0.46em] text-violet-400">
-              Game Vault
-            </p>
-            <h2 className="relative mt-5 font-display text-5xl uppercase leading-tight text-white sm:text-6xl lg:text-7xl">
-              Your Next Game<br className="hidden sm:block" />{' '}
-              <span className="text-neon">Starts Here</span>
+      {/* ══════════════ CTA ════════════════════════════ */}
+      <section className="py-12 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="relative overflow-hidden rounded-[40px] border border-violet-500/20 bg-gradient-to-br from-violet-900/20 via-slate-900 to-cyan-900/10 p-10 text-center sm:p-20">
+            <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-violet-600/10 blur-[100px]" />
+            <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-cyan-600/10 blur-[100px]" />
+            
+            <p className="relative text-[9px] font-bold uppercase tracking-[0.4em] text-violet-400 sm:text-[10px]">Game Vault</p>
+            <h2 className="relative mt-6 font-display text-4xl uppercase leading-[1.1] text-white sm:text-6xl lg:text-7xl">
+              Find Your Next <br /> <span className="text-neon">Favorite World</span>
             </h2>
-            <p className="relative mx-auto mt-6 max-w-xl text-base leading-8 text-slate-300/80">
-              Every link points to an official source. No piracy, no mirrors — just premium
-              discovery from the world's biggest titles.
-            </p>
-            <div className="relative mt-10 flex flex-wrap justify-center gap-4">
-              <Link
-                to="/games"
-                className="btn-neon inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-black"
-              >
-                Browse All Games <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                to="/categories"
-                className="btn-ghost inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/6 px-8 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white"
-              >
-                Explore Categories
+            <div className="relative mt-10 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+              <Link to="/games" className="btn-neon rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 px-10 py-4.5 text-[11px] font-bold uppercase tracking-widest text-black transition hover:scale-105">
+                Browse All Games
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

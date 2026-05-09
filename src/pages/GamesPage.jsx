@@ -59,49 +59,49 @@ function GamesPage() {
   const activeCategory = category ? categoryLookup[category] : null
 
   return (
-    <div className="mx-auto max-w-[92rem] space-y-10 px-4 pt-32 sm:px-6 lg:px-10">
-      <section className="glass-panel rounded-[36px] px-6 py-10 sm:px-8 lg:px-10">
+    <div className="mx-auto max-w-[92rem] px-4 pt-24 sm:px-6 lg:px-10 sm:pt-32 pb-20">
+      <section className="glass-panel rounded-[24px] sm:rounded-[36px] p-6 sm:p-10">
         <SectionHeading
-          eyebrow="Games Listing"
-          title={activeCategory ? `${activeCategory.name} Games` : 'Discover Premium Official Game Links'}
+          eyebrow="Game Vault Catalog"
+          title={activeCategory ? `${activeCategory.name} Games` : 'Discover Premium Worlds'}
           description={
             activeCategory
-              ? `${activeCategory.blurb} Filter by platform, price model, and popularity while keeping every redirect legal and official.`
-              : 'Search live by title, narrow the catalog by platform or genre, and keep every click pointed toward official sources only inside the Game Vault experience.'
+              ? `${activeCategory.blurb}`
+              : 'Browse our full collection of official, legal game sources curated for the ultimate discovery experience.'
           }
         />
 
-        <div className="mt-8 grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+        <div className="mt-8 grid gap-4 lg:grid-cols-[1.5fr_0.5fr]">
           <SearchField
             value={query}
             onChange={(event) => updateParam('q', event.target.value)}
-            placeholder="Search by game title..."
+            placeholder="Search by title, genre..."
             className="w-full"
           />
 
-          <div className="glass-panel flex items-center gap-4 rounded-[28px] px-5 py-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-300/12 text-emerald-100">
+          <div className="glass-panel flex items-center gap-3 rounded-[20px] px-4 py-3 sm:gap-4 sm:rounded-[28px] sm:px-5 sm:py-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-300/12 text-emerald-100 sm:h-12 sm:w-12 sm:rounded-2xl">
               <ShieldCheck className="h-5 w-5" />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-100/78">
-                Legal only
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-100/70 sm:text-xs sm:tracking-[0.28em]">
+                Verified
               </p>
-              <p className="mt-1 text-sm leading-6 text-slate-300/76">
-                No pirated downloads, no mirrors, no cracked builds.
+              <p className="mt-0.5 text-xs text-slate-300/70 sm:mt-1 sm:text-sm">
+                100% Official Sources
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-          <div className="glass-panel flex items-center gap-3 rounded-[28px] px-5 py-4 md:col-span-2 xl:col-span-1">
-            <Filter className="h-5 w-5 text-cyan-100" />
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/76">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4 lg:grid-cols-5">
+          <div className="glass-panel col-span-2 flex items-center gap-3 rounded-[20px] px-4 py-3 sm:rounded-[28px] sm:px-5 sm:py-4 lg:col-span-1">
+            <Filter className="h-4 w-4 text-cyan-200 sm:h-5 sm:w-5" />
+            <div className="min-w-0">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-cyan-200/70">
                 Filters
               </p>
-              <p className="mt-1 text-sm text-slate-300/72">{filteredGames.length} results live</p>
+              <p className="truncate text-xs text-slate-300/70 sm:text-sm">{filteredGames.length} Results</p>
             </div>
           </div>
 
@@ -126,7 +126,7 @@ function GamesPage() {
           />
 
           <FilterSelect
-            label="Free / Paid"
+            label="Pricing"
             value={pricing}
             onChange={(event) => updateParam('pricing', event.target.value)}
             options={[
@@ -138,24 +138,24 @@ function GamesPage() {
           />
 
           <FilterSelect
-            label="Popular / New"
+            label="Sort"
             value={sort}
             onChange={(event) => updateParam('sort', event.target.value)}
             options={[
               { label: 'Popular', value: 'popular' },
-              { label: 'New', value: 'new' },
+              { label: 'Newest', value: 'new' },
             ]}
           />
         </div>
 
         {(query || platform || genre || pricing || category) ? (
-          <div className="mt-6 flex flex-wrap items-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center gap-2">
             {[query && `Search: ${query}`, platform, genre, pricing, activeCategory?.name]
               .filter(Boolean)
               .map((chip) => (
                 <span
                   key={chip}
-                  className="rounded-full border border-white/12 bg-white/6 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-slate-200"
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[9px] font-bold uppercase tracking-widest text-slate-300 sm:px-4 sm:py-2 sm:text-xs"
                 >
                   {chip}
                 </span>
@@ -164,25 +164,25 @@ function GamesPage() {
             <button
               type="button"
               onClick={() => setSearchParams({}, { replace: true })}
-              className="rounded-full border border-rose-300/18 bg-rose-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-rose-100 transition hover:bg-rose-300/16"
+              className="rounded-full border border-rose-400/20 bg-rose-400/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-widest text-rose-300 transition hover:bg-rose-400/20 sm:px-4 sm:py-2 sm:text-xs"
             >
-              Clear Filters
+              Reset
             </button>
           </div>
         ) : null}
       </section>
 
       {filteredGames.length ? (
-        <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <section className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:mt-12">
           {filteredGames.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
         </section>
       ) : (
-        <section className="glass-panel rounded-[32px] px-6 py-12 text-center">
-          <h2 className="font-display uppercase text-white" style={{ fontSize: 'var(--fluid-h2)' }}>No games found</h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-300/76">
-            Try a different title, clear one of the filters, or switch back to popular sorting to reopen the full official catalog.
+        <section className="glass-panel mt-10 rounded-[24px] px-6 py-16 text-center sm:rounded-[32px] sm:py-20">
+          <h2 className="font-display text-3xl uppercase text-white sm:text-5xl">No results found</h2>
+          <p className="mx-auto mt-4 max-w-lg text-sm leading-7 text-slate-400 sm:text-base">
+            Try adjusting your filters or search query to find the official sources you're looking for.
           </p>
         </section>
       )}
