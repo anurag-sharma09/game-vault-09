@@ -17,8 +17,11 @@ const stagger = {
 
 function NewsHero({ article }) {
   if (!article) return null
-
-  const { activeSrc, isLoading, isGradient } = useGameImage(article.image)
+  
+  const { activeSrc, isLoading, isGradient } = useGameImage(article.image, null, { 
+    title: article.title, 
+    type: 'news' 
+  })
 
   return (
     <section className="relative flex min-h-[70svh] flex-col overflow-hidden border-b border-white/10">

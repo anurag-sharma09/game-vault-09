@@ -16,6 +16,7 @@ import {
 import { Link } from 'react-router-dom'
 import { games, categories } from '../data/siteData.js'
 import { useGameImage } from '../components/useGameImage.js'
+import { getCategoryImageUrl } from '../utils/cloudinary.js'
 import FallbackArtwork from '../components/FallbackArtwork.jsx'
 import NewsCard from '../components/NewsCard.jsx'
 import { getNewsWithImages } from '../services/newsService.js'
@@ -52,7 +53,7 @@ function useFadeIn() {
 
 /* ─── Trending Card ───────────────────────────────────────── */
 function TrendingCard({ game }) {
-  const { activeSrc, isLoading, isGradient } = useGameImage(game.image)
+  const { activeSrc, isLoading, isGradient } = useGameImage(game.image, null, { title: game.title })
 
   return (
     <Link
@@ -103,7 +104,10 @@ function TrendingCard({ game }) {
 
 /* ─── Section Game Card (grid) ───────────────────────────── */
 function GridCard({ game }) {
-  const { activeSrc, isLoading, isGradient } = useGameImage(game.banner, game.image)
+  const { activeSrc, isLoading, isGradient } = useGameImage(game.banner, game.image, { 
+    title: game.title,
+    isBanner: true
+  })
 
   return (
     <Link
@@ -262,7 +266,10 @@ function HomePage() {
     return games[0]
   })()
 
-  const { activeSrc: heroSrc, isLoading: heroLoading, isGradient: heroGradient } = useGameImage(heroGame.banner, heroGame.image)
+  const { activeSrc: heroSrc, isLoading: heroLoading, isGradient: heroGradient } = useGameImage(heroGame.banner, heroGame.image, {
+    title: heroGame.title,
+    isBanner: true
+  })
 
   /* shelf: top trending */
   const trending = [...games].sort((a, b) => b.popularity - a.popularity).slice(0, 12)
@@ -420,8 +427,9 @@ function HomePage() {
                 className="group relative flex aspect-[2/1] items-end overflow-hidden rounded-2xl border border-white/10 p-5 sm:aspect-[4/3] sm:p-6"
               >
                 {repImage && (
-                  <img src={repImage} alt="" 
+                  <img src={(!repImage || (typeof repImage === 'string' && repImage.startsWith('/images/'))) ? getCategoryImageUrl(cat.name) : repImage} alt="" 
                     className="absolute inset-0 h-full w-full object-cover opacity-30 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-50"
+                    loading="lazy"
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />

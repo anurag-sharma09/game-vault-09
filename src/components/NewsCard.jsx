@@ -27,7 +27,10 @@ function getRelativeTime(dateString) {
 }
 
 function NewsCard({ article, index, hideOnError = false }) {
-  const { activeSrc, isLoading, isGradient } = useGameImage(article.image)
+  const { activeSrc, isLoading, isGradient } = useGameImage(article.image, null, { 
+    title: article.title, 
+    type: 'news' 
+  })
   const delay = Math.min(index * 0.05, 0.5) // Stagger effect
 
   if (hideOnError && isGradient) {

@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { getCategoryImageUrl } from '../utils/cloudinary'
 
 const iconMap = {
   action: Crosshair,
@@ -25,6 +26,11 @@ const iconMap = {
 
 function CategoryCard({ category, count, image }) {
   const Icon = iconMap[category.slug] ?? Gamepad2
+  
+  // Resolve Cloudinary if image is local or missing
+  const resolvedImage = (!image || (typeof image === 'string' && image.startsWith('/images/')))
+    ? getCategoryImageUrl(category.name)
+    : image;
 
   return (
     <Link to={`/categories/${category.slug}`} className="block h-full">
@@ -34,12 +40,13 @@ function CategoryCard({ category, count, image }) {
         className="glass-panel group relative flex h-full overflow-hidden rounded-[30px] p-6"
       >
         {/* Background Image */}
-        {image && (
+        {resolvedImage && (
           <div className="absolute inset-0 overflow-hidden">
             <img 
-              src={image} 
+              src={resolvedImage} 
               alt="" 
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-30 group-hover:opacity-40"
+              loading="lazy"
             />
           </div>
         )}

@@ -19,6 +19,7 @@ import GameArtwork from '../components/GameArtwork.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import { games, getGameBySlug } from '../data/siteData.js'
 import { useGameImage } from '../components/useGameImage.js'
+import { getGameImageUrl, getGameBannerUrl } from '../utils/cloudinary.js'
 import FallbackArtwork from '../components/FallbackArtwork.jsx'
 import { useStoreData } from '../hooks/useStoreData.js'
 
@@ -42,7 +43,10 @@ function GameDetailPage() {
   const bannerY = useTransform(scrollY, [0, 800], [0, 150])
   const bannerScale = useTransform(scrollY, [0, 800], [1, 1.1])
 
-  const { activeSrc: bannerSrc, isLoading: bannerLoading, isGradient: bannerGradient } = useGameImage(game?.banner, game?.image)
+  const { activeSrc: bannerSrc, isLoading: bannerLoading, isGradient: bannerGradient } = useGameImage(game?.banner, game?.image, {
+    title: game?.title,
+    isBanner: true
+  })
 
   useEffect(() => {
     if (game) {
@@ -171,7 +175,7 @@ function GameDetailPage() {
             {/* Action Panel */}
             <div className="glass-panel p-6 rounded-[32px] shadow-2xl shadow-black/50">
               <div className="relative aspect-[16/9] mb-6 overflow-hidden rounded-[20px] border border-white/10">
-                <img src={game.image} alt={game.title} className="absolute inset-0 h-full w-full object-cover" />
+                <img src={(!game.image || (typeof game.image === 'string' && game.image.startsWith('/images/'))) ? getGameImageUrl(game.title) : game.image} alt={game.title} className="absolute inset-0 h-full w-full object-cover" />
               </div>
 
               <div className="flex items-center justify-between mb-6">
@@ -231,7 +235,7 @@ function GameDetailPage() {
                 <h3 className="font-display text-2xl uppercase text-white border-b border-white/10 pb-2">Players Also Liked</h3>
                 {relatedGames.map(rg => (
                   <Link key={rg.id} to={`/games/${rg.slug}`} className="group flex gap-4 rounded-[20px] p-2 hover:bg-white/5 transition">
-                    <img src={rg.image} alt={rg.title} className="h-16 w-16 rounded-xl object-cover" />
+                    <img src={(!rg.image || (typeof rg.image === 'string' && rg.image.startsWith('/images/'))) ? getGameImageUrl(rg.title) : rg.image} alt={rg.title} className="h-16 w-16 rounded-xl object-cover" />
                     <div className="flex flex-col justify-center">
                       <span className="line-clamp-1 text-sm font-bold text-slate-200 group-hover:text-cyan-300">{rg.title}</span>
                       <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-500">{rg.genre}</span>

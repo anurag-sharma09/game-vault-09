@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
+import { getGameImageUrl, getGameBannerUrl, getNewsImageUrl } from '../utils/cloudinary'
 
 /**
- * useGameImage – robust image loading hook with multi-stage fallback.
+ * useGameImage – robust image loading hook with multi-stage fallback and Cloudinary integration.
  *
  * Stages:
  *   1. 'loading'  – skeleton shimmer shown, waiting for primary src
@@ -11,16 +12,29 @@ import { useState, useEffect, useRef } from 'react'
  */
 export function useGameImage(primarySrc, fallbackSrc = null, options = {}) {
   const [status, setStatus] = useState('loading')
+  const [activeSrc, setActiveSrc] = useState(null)
   const imgRef = useRef(null)
   const attemptRef = useRef(0)
-  const { onError } = options
+  const { onError, title, type = 'game', isBanner = false } = options
 
   useEffect(() => {
-    if (!primarySrc) {
+    let resolvedSrc = primarySrc
+
+    // Resolve Cloudinary if src is local or missing and we have a title
+    if (title && (!primarySrc || (typeof primarySrc === 'string' && primarySrc.startsWith('/images/')))) {
+      if (type === 'news') {
+        resolvedSrc = getNewsImageUrl(title)
+      } else {
+        resolvedSrc = isBanner ? getGameBannerUrl(title) : getGameImageUrl(title)
+      }
+    }
+
+    if (!resolvedSrc) {
       setStatus('gradient')
       if (onError) onError()
       return
     }
+
     setStatus('loading')
     attemptRef.current = 0
 
@@ -29,6 +43,7 @@ export function useGameImage(primarySrc, fallbackSrc = null, options = {}) {
 
     img.onload = () => {
       setStatus('loaded')
+      setActiveSrc(resolvedSrc)
     }
 
     img.onerror = () => {
@@ -40,6 +55,7 @@ export function useGameImage(primarySrc, fallbackSrc = null, options = {}) {
 
         fallbackImg.onload = () => {
           setStatus('loaded-fallback')
+          setActiveSrc(fallbackSrc)
         }
         fallbackImg.onerror = () => {
           setStatus('gradient')
@@ -52,7 +68,7 @@ export function useGameImage(primarySrc, fallbackSrc = null, options = {}) {
       }
     }
 
-    img.src = primarySrc
+    img.src = resolvedSrc
 
     return () => {
       if (imgRef.current) {
@@ -60,14 +76,7 @@ export function useGameImage(primarySrc, fallbackSrc = null, options = {}) {
         imgRef.current.onerror = null
       }
     }
-  }, [primarySrc, fallbackSrc, onError])
-
-  const activeSrc =
-    status === 'loaded'
-      ? primarySrc
-      : status === 'loaded-fallback'
-        ? fallbackSrc
-        : null
+  }, [primarySrc, fallbackSrc, onError, title, type, isBanner])
 
   const isLoading = status === 'loading'
   const isLoaded = status === 'loaded' || status === 'loaded-fallback'

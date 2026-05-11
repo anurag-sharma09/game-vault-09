@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import FallbackArtwork from './FallbackArtwork.jsx'
+import { getGameImageUrl, getGameBannerUrl } from '../utils/cloudinary'
 
 /**
  * GameArtwork – the primary image container used in full GameCards.
  *
  * Features:
+ * - Integrated Cloudinary CDN mapping based on game title
  * - Animated skeleton shimmer while loading
  * - Smooth fade-in when image successfully loads
  * - Instantly switches to cinematic FallbackArtwork on any error
@@ -24,17 +26,30 @@ function GameArtwork({
   priority = false,
   categories = [],
   genres = [],
+  isBanner = false,
 }) {
   const [imgStatus, setImgStatus] = useState('loading')
+  const [finalSrc, setFinalSrc] = useState('')
 
-  // Reset on imageSrc change
+  // Resolve image source (Cloudinary vs Local vs Fallback)
   useEffect(() => {
-    if (!imageSrc) {
-      setImgStatus('gradient')
-      return
+    let resolvedSrc = imageSrc;
+
+    // If imageSrc is a local path or missing, use Cloudinary mapping
+    if (!imageSrc || (typeof imageSrc === 'string' && imageSrc.startsWith('/images/'))) {
+      resolvedSrc = isBanner 
+        ? getGameBannerUrl(title) 
+        : getGameImageUrl(title);
     }
-    setImgStatus('loading')
-  }, [imageSrc])
+
+    setFinalSrc(resolvedSrc);
+    
+    if (!resolvedSrc) {
+      setImgStatus('gradient')
+    } else {
+      setImgStatus('loading')
+    }
+  }, [imageSrc, title, isBanner])
 
   const showFallback = !imageSrc || imgStatus === 'error' || imgStatus === 'gradient'
   const imageLoaded  = imgStatus === 'loaded'
@@ -62,7 +77,7 @@ function GameArtwork({
       {/* ── Actual image ─────────────────────────────────────── */}
       {!showFallback && (
         <img
-          src={imageSrc}
+          src={finalSrc}
           alt={alt ?? title}
           loading={loading}
           decoding="async"
